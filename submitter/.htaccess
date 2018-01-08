@@ -1,0 +1,8 @@
+
+# Deny access to this directory
+Order allow,deny
+
+# ... except allow access to .json files
+<Files ~ ".\.json$">
+  Order deny,allow
+</Files>

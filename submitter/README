@@ -1,0 +1,45 @@
+Submitter Configuration
+=======================
+
+This file describes the contents of config.json, which defines the configuration for hte Eclipse
+submitter.
+
+min_version
+-----------
+The minimum allowed submitter version. If the submitter version is less than this, the user will be
+told to upgrade their Eclipse software and will not be able to submit.
+
+assignments_url
+---------------
+URL to a JSON file describing the assignments. The JSON file should be an array of objects, each
+object defining one assignment. The object must have the following properties:
+
+* Name: The human-readable name of the assignment, e.g. "Assignment 1: Karel."
+* DueDate: The due date in the form YYYY-MM-DD HH:MM:SS (24-hour).
+* DirectoryName: The directory in AFS where the assignment is to be stored, e.g. "assignment1."
+
+full_name_cmd
+-------------
+Shell command (or pipeline) for getting the logged in user's full name. Used
+for display only. Leave blank to not display full name.
+
+path
+----
+The root directory where submissions are stored. Submissions are stored as <path>/<assignment's
+directoryName>/<sunet>_<#>.
+
+server
+------
+An object describing the submission server. Its properties are:
+
+* host: The server hostname.
+* port: The port number SSH is running on.
+* auth:
+    The authentication methods to use. Use empty string to not set. "password,keyboard-interactive"
+    should work fine (essentially simulates ssh command). (Not setting this is a bad idea, because
+    any machine with Kerberos installed will try to use that and hang waiting for input.)
+* key:
+    The host key line for the server. To get this value, run "ssh-keyscan -t rsa <host>
+    2>/dev/null", where <host> is the server host above (must be exact match). Copy/paste the output
+    exactly, and make sure there are no line wraps. Use empty string to disable host key checking (NOT
+    RECOMMENDED, because, you know, security).

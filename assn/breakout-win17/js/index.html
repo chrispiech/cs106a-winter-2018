@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Babbage&rsquo;s Analytical Engine</title>
+<style type="text/css" media="screen">
+  #application {
+    border: 1px solid black;
+    background-color: #CCFFFF;
+    padding: 8px;
+  }
+  #printer {
+    background-color: white;
+    width: 200px;
+    height: 290px;
+  }
+  #view {
+    width: 920px;
+    height: 290px;
+  }
+  #editor {
+    width: 700px;
+    height: 290px;
+  }
+  #controls {
+    width: 720px;
+    height: 64px;
+  }
+</style>
+</head>
+<body>
+<center>
+<table id="application">
+<tr><td colspan=2><div id="view"></div></td></tr>
+<tr><td><div id="printer"></div></td><td><div id="editor"></div></td></tr>
+<tr><td align=center colspan=2><div id="controls"></div></td></tr>
+</table>
+</center>
+<script data-ace-base="js/ace" src="js/ace/ace.js"></script>
+<script data-main="AnalyticalEngine.js" src="js/requirejs/require.js"></script>
+</body>
+</html>

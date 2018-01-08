@@ -1,0 +1,20 @@
+{
+  "submit_host" : "cs106sub.stanford.edu",
+  
+  "sl_map_dir" : "/afs/ir.stanford.edu/class/cs106a/WWW/submitter/studentInfo",
+  
+  "assignment_map_dir" : "/afs/ir.stanford.edu/class/cs106a/WWW/submitter/assignmentMap.json",
+ 
+  "assignments_url" : "https://www.stanford.edu/class/cs198/cgi-bin/paperless/public/assn.php?class=cs106a", 
+  
+  "sl_url_base": "https://www.stanford.edu/class/cs198/cgi-bin/paperless/public/sl.php?student=",
+ 
+  "submission_dir" : "/afs/ir.stanford.edu/class/cs106a/submissions",
+  
+  "deprecated_submitters" : [{"code_name":"zebra"},{"code_name":"wildabeast"}],
+
+  "logging_on" : "true",
+
+  "logging_submit_dir" : "/afs/ir.stanford.edu/data/paulob/cs106a_2013_spring"
+
+}

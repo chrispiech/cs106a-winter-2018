@@ -1,0 +1,15 @@
+{
+    "min_version": "2.0.0",
+    "assignments_url": "https://web.stanford.edu/class/cs198/cgi-bin/paperless/public/assn.php?class=cs106a",
+
+    "full_name_cmd": "getent passwd `whoami` | cut -d: -f5",
+    "grade_tmpl": "/afs/ir/class/cs106a/WWW/submitter/GRADE.txt",
+    "git_path": null,
+    "submit_path": "/afs/ir/class/cs106a/submissions",
+    "server": {
+        "host": "corn.stanford.edu",
+        "port": 22,
+        "auth": "password,keyboard-interactive",
+        "key": "corn.stanford.edu ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEA0JdIt9gQQI+MhXm2qAUTbpPzw415z8/QjRnCPm2/53jbqt6pf7IRpnBt9BJuEJ9UzanY/2C9f+pj8IujPxeNBcFau2nMv6JbwrvxA5OOOsWCybazIB1eGr3yyYyU4Howo25YqXy9AuqN8zpI7Yii6ucV79gJW5TLbOKG6ia+sBb+fXwFTs02pxJOfLkBNuLFQRQTviBsi6d2QKpvIWlQ94oiIohkZ/Ie07K8zg5/bm5rFZNwyng7b3zRVJgkPqdvLyqsFUfanFXZXrP8JqtyFf88rW+MwsSVb+4B62vRNpkd5x9JQhCRstdGYyo3h/YpuIgUOJfQWqiF8dUUR94ybw=="
+    }
+}

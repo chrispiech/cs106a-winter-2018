@@ -1,0 +1,917 @@
+<head>
+
+<title>CS106A</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF8">
+
+
+<link href="plugins/bootstrap-custom/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<!-- Java Script -->
+<script src="plugins/jquery.min.js"></script>
+<script src="plugins/moment.min.js"></script>
+<script src="plugins/bootstrap-custom/js/bootstrap.min.js"></script>
+<script src="plugins/ace/ace.js" type="text/javascript"></script>
+
+
+<!-- Stanford -->
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600,700' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+<nav class="navbar navbar-inverse">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand brand" href="/">CS106A</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+        <!--<li><a href="#">Lectures</a></li>-->
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Lectures <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a><i>None yet!</i></a></li>
+            <!--<li><a href="lectures/1-Welcome">1-Welcome</a></li>
+            <li><a href="lectures/2-ControlFlow">2-Control Flow</a></li>
+            <li><a href="lectures/3-Decomposition">3-Decomposition</a></li>
+            <li><a href="lectures/4-Variables">4-Variables</a></li>
+            <li><a href="lectures/5-ControlFlowRevisited">5-ControlFlowRevisited</a></li>
+            <li><a href="lectures/6-SimpleJava">6-SimpleJava</a></li>
+            <li><a href="lectures/7-Methods">7-Methods</a></li>
+            <li><a href="lectures/8-Animation">8-Animation</a></li>
+            <li><a href="lectures/9-Events">9-Events</a></li>
+            <li><a href="lectures/10-References">10-References</a></li>
+            <li><a href="lectures/11-Memory">11-Memory</a></li>
+            <li><a href="lectures/12-TextProcessing">12-TextProcessing</a></li>
+            <li><a href="lectures/13-Files">13-FileReading</a></li>
+            <li><a href="lectures/14-Files+ArrayLists">14-FileReading+ArrayLists</a></li>
+            <li><a href="lectures/106AMidtermReviewSession.pdf">Midterm Review Session</a></li>
+            <li><a href="lectures/15-Arrays">15-Arrays</a></li>
+            <li><a href="lectures/16-Matrix">16-Matrix</a></li>
+            <li><a href="lectures/17-HashMaps">17-HashMaps</a></li>
+            <li><a href="lectures/18-Interactors">18-Interactors</a></li>
+            <li><a href="lectures/19-Classes1">19-Classes-1</a></li>
+            <li><a href="lectures/20-Classes2">20-Classes-2</a></li>-->
+          </ul>
+
+        </li>
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Handouts <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="handouts/1 - General Information.pdf">1-General Information</a></li>
+            <li><a href="handouts/2 - Course Placement.pdf">2-Course Placement</a></li>
+            <!--<li><a href="handouts/3 - Course Communication.pdf">3-Course Communication</a></li>
+            <li><a href="handouts/4 - Honor Code.pdf">4-Honor Code</a></li>
+            <li><a href="handouts/5 - Karel In Eclipse.pdf">5-Karel in Eclipse</a></li>
+            <li><a href="handouts/6 - Assignment-1.pdf">6-Assignment-1</a></li>
+            <li><a href="handouts/7 - Submitting Work.pdf">7-Submitting Work</a></li>
+            <li><a href="handouts/8 - Karel Examples.pdf">8-Karel Examples</a></li>
+            <li><a href="handouts/10 - Assignment-2.pdf">10-Assignment-2</a></li>
+            <li><a href="handouts/11 - Control Statements.pdf">11-Control Statements</a></li>
+            <li><a href="handouts/13 - Methods.pdf">13-Methods</a></li>
+            <li><a href="handouts/15 - Assignment-3.pdf">15-Assignment-3</a></li>
+            <li><a href="handouts/16 - Coding Style.pdf">16-Coding Style</a></li>
+            <li><a href="handouts/17 - Variables.pdf">17-Variables</a></li>
+            <li><a href="handouts/18 - Ufo Game.pdf">18-Ufo Game</a></li>
+            <li><a href="handouts/19 - Strings.pdf">19-String Examples</a></li>
+            <li><a href="handouts/20 - Assignment-4.pdf">20-Assignment 4</a></li>
+            <li><a href="handouts/21 - Practice Midterm.pdf">21-Practice Midterm</a></li>
+            <li><a href="handouts/22 - Exam Strategies.pdf">22-Exam Strategies</a></li>
+            <li><a href="handouts/23 - Practice Midterm Solutions.pdf">23-Practice Midterm Solutions</a></li>
+            <li><a href="handouts/25 - ArrayLists.pdf">25-ArrayLists</a></li>
+            <li><a href="handouts/26 - Graphics Contest.pdf">26-Graphics Contest</a></li>
+            <li><a href="handouts/29-assignment-5.pdf">27-Assignment 5</a></li>
+            <li><a href="handouts/28 - Debugging.pdf">28-Debugging</a></li>
+            <li><a href="handouts/29 - Midterm.pdf">29-Midterm</a></li>
+            <li><a href="handouts/30 - Midterm Solutions.pdf">30-Midterm Solutions</a></li>
+            <li><a href="handouts/31 - Assignment-6.pdf">31-Assignment 6</a></li>-->
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Assignments <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+           
+            <li><a href="https://goo.gl/forms/x2HTAbJ8soIMCztg1">0-Who are you</a></li>
+            <!--<li><a href="assn/karel.html">1-Karel</a></li>
+            <li><a href="assn/simpleJava.html">2-Simple Java</a></li>
+            <li><a href="assn/breakout.html">3-Breakout</a></li>
+            <li><a href="assn/hangman.html">4-Hangman</a></li>
+            <li><a href="assn/yahtzee.html">5-Yahtzee</a></li>
+            <li><a href="assn/nameSurfer.html">6-NameSurfer</a></li>-->
+            
+            <!--<li class="divider"></li>
+
+            <li><a href="assignments/GraphicsContest.zip">Graphics Contest Project</a></li>
+            <li><a href="assn/debugger.html">Extra Credit: Debugger</a></li>-->
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sections <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a><i>None yet!</i></a></li>
+            <!--<li><a href="handouts/9 - Section-1.pdf">Section Handout 1</a></li>
+            <li><a href="handouts/9a - Section-1-solutions.pdf">Section 1 Solutions</a></li>
+            <li class="divider"></li>
+            <li><a href="handouts/12-section-2.pdf">Section Handout 2</a></li>
+            <li><a href="handouts/12a-section-2-solutions.pdf">Section 2 Solutions</a></li>
+            <li class="divider"></li>
+            <li><a href="handouts/14-section-3.pdf">Section Handout 3</a></li>
+            <li><a href="handouts/14a-section-3-solutions.pdf">Section 3 Solutions</a></li>
+            <li class="divider"></li>
+            <li><a href="handouts/24-section-4.pdf">Section Handout 4</a></li>
+            <li><a href="handouts/24a-section-4-solutions.pdf">Section 4 Solutions</a></li>
+            <li class="divider"></li>
+            <li><a href="handouts/31-section-5.pdf">Section Handout 5</a></li>
+            <li><a href="handouts/31a-section-5-solutions.pdf">Section 5 Solutions</a></li>
+            <li class="divider"></li>
+            <li><a href="handouts/Section-6.pdf">Section Handout 6</a></li>
+            <li><a href="handouts/Section-6-solutions.pdf">Section 6 Solutions</a></li>
+            <li class="divider"></li>
+            <li><a href="handouts/Section-7.pdf">Section Handout 7</a></li>
+
+
+            <li class="divider"></li>
+
+            <li><a href="https://cs198.stanford.edu/cs106/auth/section/ViewSections.aspx?class=1">List of all section times/locations</a></li>-->
+          </ul>
+        </li>
+
+        <!--<li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tools <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="">Nothing Yet</a></li>
+          </ul>
+        </li>-->
+       
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="schedule.html"><span class="glyphicon glyphicon-th-large" aria-hidden="true"></span> Schedule</a></li>
+      </ul>
+      
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+	<div class="container">
+			
+		<!-- Header -->
+		<div class="row">
+			<div class="col-sm-12">
+				<div id="pageHeader">
+					<h1>
+						Course Schedule
+					</h1>
+					
+
+				</div>
+				<hr/>
+
+				<!--<center>
+				<img style="width:80%" src="img/overview/overview.png">	
+			</center>-->
+			</div>
+		</div>
+
+			
+
+		<!--<div class="row">
+			<div class="col-sm-12">
+				<p>
+					In CS106B you are going to learn great things! The main objective of the course is to learn how to model and solve complex problems with computers.
+				</p>
+
+				<hr/>
+			</div>
+		</div>-->
+		
+		
+				
+		<div class="row">
+			<div class="col-sm-12">
+				<p style="margin-bottom:20px">
+					The schedule is subject to change by the management at any time.
+				</p>
+
+                                
+				<p>
+<!--
+    Holidays Winter 2017:
+    Jan 16th MLK
+    Feb 20th President's Day
+    First day of class: Jan 9th
+    Last day of class: March 17th
+
+    Assns:
+    1. Karel
+    2. Simple Java
+    3. Breakout
+    4. Hangman
+    5. Yahtzee
+    6. NameSurfer
+    7. FacePamphlet
+-->
+
+<div class="table-responsive">
+<table class="table table-bordered">
+<thead>
+<tr>
+<th style="col-sm-3">Week</th>
+<th style="col-sm-3">Monday</th>
+<th style="col-sm-3">Wednesday</th>
+<th style="col-sm-3">Friday</th>
+</tr>
+</thead>
+<td class="calendarWeekCell">1</td>
+<td class="calendarCell col-sm-3">
+<div style="position:relative">
+<div class="inOut">
+</div>
+<p class="subtleHeading">Jan 8th</p>
+1: 
+Welcome to CS106A
+<p>
+<!--<a href="lectures/1-Welcome/1-Welcome.pptx"><span class="sidebaricon glyphicon glyphicon-blackboard" aria-hidden="true" title="pdf"></span> Slides</a> (<a href="lectures/1-Welcome/1-Welcome.pdf">pdf</a>)
+</p>-->
+
+
+
+</p>
+
+</div>
+</td>
+<td class="calendarCell col-sm-3">
+<div style="position:relative">
+<div class="inOut">
+<br><br>Read: Karel Ch. 1-3
+
+</div>
+<p class="subtleHeading">Jan 10th</p>
+2: 
+Control Flow
+
+<!--
+<p>
+<a href="lectures/2-ControlFlow/2-ControlFlow.pptx"><span class="sidebaricon glyphicon glyphicon-blackboard" aria-hidden="true" title="pdf"></span> Slides</a> (<a href="//web.stanford.edu/class/cs106a/lectures/2-ControlFlow/2-ControlFlow.pdf">pdf</a>)<br/>
+<a href="lectures/2-ControlFlow/MeetKarel"><span class="sidebaricon glyphicon glyphicon-leaf" aria-hidden="true" title="pdf"></span> Code</a> (<a href="//web.stanford.edu/class/cs106a/lectures/2-ControlFlow/MeetKarel.zip">zip</a>)
+	</p>
+-->
+
+</div>
+</td>
+<td class="calendarCell col-sm-3">
+<div style="position:relative">
+<div class="inOut">
+    <br>
+    <br>Read: Karel Ch. 4-6
+</div>
+<p class="subtleHeading">Jan 12th</p>
+3: 
+Problem Decomposition
+
+<!--
+    <p>
+        <a href="lectures/3-Decomposition/3-Decomposition.pptx"><span class="sidebaricon glyphicon glyphicon-blackboard" aria-hidden="true" title="pdf"></span> Slides</a> (<a href="//web.stanford.edu/class/cs106a/lectures/3-Decomposition/3-Decomposition.pdf">pdf</a>)<br/>
+
+        <a href="lectures/3-Decomposition/Decomposition"><span class="sidebaricon glyphicon glyphicon-leaf" aria-hidden="true" title="pdf"></span> Code</a> (<a href="//web.stanford.edu/class/cs106a/lectures/3-Decomposition/Decomposition.zip">zip</a>)
+    </p>
+-->
+
+</div>
+</td>
+</tr>
+<tr>
+<td class="calendarWeekCell">2</td>
+<td class="calendarCell" style="background-color:hsl(0, 0%, 95%)">
+<div style="position:relative">
+<div class="inOut">
+</div>
+<p class="subtleHeading">Jan 15th</p>
+Holiday: MLK Jr. Day
+<br/>No Class
+
+</div>
+</td>
+<td class="calendarCell">
+<div style="position:relative">
+<div class="inOut">
+    <br>
+    <br>
+    Read: Java Ch 1-2
+</div>
+<p class="subtleHeading">Jan 17th</p>
+4: Intro to Java
+<!--
+<p>
+        <a href="lectures/4-Variables/4-Variables.pptx"><span class="sidebaricon glyphicon glyphicon-blackboard" aria-hidden="true" title="pdf"></span> Slides</a> (<a href="//web.stanford.edu/class/cs106a/lectures/4-Variables/4-Variables.pdf">pdf</a>)<br/>
+
+        <a href="lectures/4-Variables/Variables"><span class="sidebaricon glyphicon glyphicon-leaf" aria-hidden="true" title="pdf"></span> Code</a> (<a href="//web.stanford.edu/class/cs106a/lectures/4-Variables/Variables.zip">zip</a>)
+    </p>
+-->
+
+</div>
+</td>
+<td class="calendarCell">
+<div style="position:relative">
+<div class="inOut">
+<br>Read: Chapter 3
+<br>Due: Assn #1
+
+</div>
+<p class="subtleHeading">Jan 19th</p>
+5: Control Flow Revisited
+<!--
+<p>
+        <a href="lectures/5-ControlFlowRevisited/5-ControlFlowRevisited.pptx"><span class="sidebaricon glyphicon glyphicon-blackboard" aria-hidden="true" title="pdf"></span> Slides</a> (<a href="lectures/5-ControlFlowRevisited/5-ControlFlowRevisited.pdf">pdf</a>)<br/>
+
+        <a href="lectures/5-ControlFlowRevisited/JavaFlow"><span class="sidebaricon glyphicon glyphicon-leaf" aria-hidden="true" title="pdf"></span> Code</a> (<a href="lectures/5-ControlFlowRevisited/JavaFlow.zip">zip</a>)
+    </p>
+-->
+
+</td>
+</tr>
+<tr>
+<td class="calendarWeekCell">3</td>
+<td class="calendarCell">
+<div style="position:relative">
+<div class="inOut">
+    <br><br>Read: Chapter 4
+</div>
+<p class="subtleHeading">Jan 22nd</p>
+6: Simple Java
+<!--
+<p>
+        <a href="lectures/6-SimpleJava/6-SimpleJava.pptx"><span class="sidebaricon glyphicon glyphicon-blackboard" aria-hidden="true" title="pdf"></span> Slides</a> (<a href="lectures/6-SimpleJava/6-SimpleJava.pdf">pdf</a>)<br/>
+
+        <a href="lectures/6-SimpleJava/SimpleJava"><span class="sidebaricon glyphicon glyphicon-leaf" aria-hidden="true" title="pdf"></span> Code</a> (<a href="lectures/6-SimpleJava/SimpleJava.zip">zip</a>)
+    </p>
+-->
+</div>
+
+
+</td>
+<td class="calendarCell">
+<div style="position:relative">
+<div class="inOut">
+    <br><br>Read: Chapter 5
+</div>
+<p class="subtleHeading">Jan 24th</p>
+7: Methods
+<!--
+<p>
+        <a href="lectures/7-Methods/7-Methods.pptx"><span class="sidebaricon glyphicon glyphicon-blackboard" aria-hidden="true" title="pdf"></span> Slides</a> (<a href="lectures/7-Methods/7-Methods.pdf">pdf</a>)<br/>
+
+        <a href="lectures/7-Methods/Methods"><span class="sidebaricon glyphicon glyphicon-leaf" aria-hidden="true" title="pdf"></span> Code</a> (<a href="lectures/7-Methods/Methods.zip">zip</a>)
+    </p>
+-->
+</div>
+
+</td>
+<td class="calendarCell">
+<div style="position:relative">
+<div class="inOut">
+    <br><br>Read: Chapter 6.1
+    
+</div>
+<p class="subtleHeading">Jan 26th</p>
+8: Animation
+<!--
+<p>
+        <a href="lectures/8-Animation/8-Animation.pptx"><span class="sidebaricon glyphicon glyphicon-blackboard" aria-hidden="true" title="pdf"></span> Slides</a> (<a href="lectures/8-Animation/8-Animation.pdf">pdf</a>)<br/>
+
+        <a href="lectures/8-Animation/Animations"><span class="sidebaricon glyphicon glyphicon-leaf" aria-hidden="true" title="pdf"></span> Code</a> (<a href="lectures/8-Animation/Animations.zip">zip</a>)
+    </p>
+-->
+
+</div>
+
+</td>
+</tr>
+<tr>
+<td class="calendarWeekCell">4</td>
+<td class="calendarCell">
+<div style="position:relative">
+<div class="inOut">
+    <br>Read: Chapter 10.1-10.4
+    <br>Due: Assn #2
+</div>
+<p class="subtleHeading">Jan 29th</p>
+9: Events
+
+<!-- <p>
+        <a href="lectures/9-Events/9-Events.pptx"><span class="sidebaricon glyphicon glyphicon-blackboard" aria-hidden="true" title="pdf"></span> Slides</a> (<a href="lectures/9-Events/9-Events.pdf">pdf</a>)<br/>
+
+        <a href="lectures/9-Events/Events"><span class="sidebaricon glyphicon glyphicon-leaf" aria-hidden="true" title="pdf"></span> Code</a> (<a href="lectures/9-Events/Events.zip">zip</a>)
+    </p> -->
+</div>
+
+
+</td>
+<td class="calendarCell">
+<div style="position:relative">
+<div class="inOut">
+    <br><br>Read: Chapter 10.1-10.4
+</div>
+<p class="subtleHeading">Jan 31st</p>
+10: References
+<!-- <p>
+        <a href="lectures/10-References/10-References.pptx"><span class="sidebaricon glyphicon glyphicon-blackboard" aria-hidden="true" title="pdf"></span> Slides</a> (<a href="lectures/10-References/10-References.pdf">pdf</a>)<br/>
+
+        <a href="lectures/10-References/Game"><span class="sidebaricon glyphicon glyphicon-leaf" aria-hidden="true" title="pdf"></span> Code</a> (<a href="lectures/10-References/Game.zip">zip</a>)
+    </p> -->
+</div>
+ 
+</td>
+<td class="calendarCell">
+<div style="position:relative">
+<div class="inOut">
+    <br><br>Read: Chapter 7
+</div>
+<p class="subtleHeading">Feb 2nd</p>
+11: Memory
+<!-- <p>
+        <a href="lectures/11-Memory/11-Memory.pptx"><span class="sidebaricon glyphicon glyphicon-blackboard" aria-hidden="true" title="pdf"></span> Slides</a> (<a href="lectures/11-Memory/11-Memory.pdf">pdf</a>)<br/>
+
+        <a href="lectures/11-Memory/Memory"><span class="sidebaricon glyphicon glyphicon-leaf" aria-hidden="true" title="pdf"></span> Code</a> (<a href="lectures/11-Memory/Memory.zip">zip</a>)
+    </p> -->
+
+</div>
+
+</td>
+</tr>
+<tr>
+
+<td class="calendarWeekCell">5</td>
+
+<td class="calendarCell">
+<div style="position:relative">
+<div class="inOut">
+<br><br>Read: Chapter 8.1-8.4
+
+</div>
+<p class="subtleHeading">Feb 5th</p>
+12: Text Processing
+<!-- <p>
+        <a href="lectures/12-TextProcessing/12-TextProcessing.pptx"><span class="sidebaricon glyphicon glyphicon-blackboard" aria-hidden="true" title="pdf"></span> Slides</a> (<a href="lectures/12-TextProcessing/12-TextProcessing.pdf">pdf</a>)<br/>
+
+        <a href="lectures/12-TextProcessing/Strings"><span class="sidebaricon glyphicon glyphicon-leaf" aria-hidden="true" title="pdf"></span> Code</a> (<a href="lectures/12-TextProcessing/Strings.zip">zip</a>)
+    </p> -->
+</div>
+
+
+</td>
+<td class="calendarCell">
+<div style="position:relative">
+<div class="inOut">
+ <br>Read: Chapter 8.5
+ <br>Due: Assn #3
+</div>
+<p class="subtleHeading">Feb 7th</p>
+13: File Reading
+<!-- <p>
+        <a href="lectures/13-Files/13-Files.pptx"><span class="sidebaricon glyphicon glyphicon-blackboard" aria-hidden="true" title="pdf"></span> Slides</a> (<a href="lectures/13-Files/13-Files.pdf">pdf</a>)<br/>
+
+        <a href="lectures/13-Files/Files"><span class="sidebaricon glyphicon glyphicon-leaf" aria-hidden="true" title="pdf"></span> Code</a> (<a href="lectures/13-Files/Files.zip">zip</a>)
+    </p> -->
+</div>
+
+</td>
+<td class="calendarCell">
+<div style="position:relative">
+<div class="inOut">
+     <br><br>Read: Chapter 12.4
+</div>
+<p class="subtleHeading">Feb 9th</p>
+14: File Reading + ArrayLists
+<!-- <p>
+        <a href="lectures/14-Files+ArrayLists/14-Files+ArrayLists.pptx"><span class="sidebaricon glyphicon glyphicon-blackboard" aria-hidden="true" title="pdf"></span> Slides</a> (<a href="lectures/14-Files+ArrayLists/14-Files+ArrayLists.pdf">pdf</a>)<br/>
+
+        <a href="lectures/14-Files+ArrayLists/Examples"><span class="sidebaricon glyphicon glyphicon-leaf" aria-hidden="true" title="pdf"></span> Code</a> (<a href="lectures/14-Files+ArrayLists/Examples.zip">zip</a>)
+    </p> -->
+</div>
+
+</td>
+</tr>
+<tr>
+<td class="calendarWeekCell">6</td>
+<td class="calendarCell" style="background-color:aliceblue">
+<div style="position:relative">
+<div class="inOut">
+    <br><br>Midterm: 7-9p
+</div>
+<p class="subtleHeading">Feb 12th</p>
+Midterm Day<br>No class
+
+</div>
+
+ 
+</td>
+<td class="calendarCell" >
+<div style="position:relative">
+<div class="inOut">
+<br><br>Read: 11.1-11.8
+</div>
+<p class="subtleHeading">Feb 14th</p>
+15: Arrays
+<!-- <p>
+        <a href="lectures/15-Arrays/15-Arrays.pptx"><span class="sidebaricon glyphicon glyphicon-blackboard" aria-hidden="true" title="pdf"></span> Slides</a> (<a href="lectures/15-Arrays/15-Arrays.pdf">pdf</a>)<br/>
+
+        <a href="lectures/15-Arrays/Arrays"><span class="sidebaricon glyphicon glyphicon-leaf" aria-hidden="true" title="pdf"></span> Code</a> (<a href="lectures/15-Arrays/Arrays.zip">zip</a>)
+    </p> -->
+</div>
+
+ 
+</td>
+<td class="calendarCell" >
+<div style="position:relative">
+<div class="inOut">
+    <br>Read: 11.1-11.8
+    <br>Due: Assn #4
+</div>
+<p class="subtleHeading">Feb 16th</p>
+16: Matrices
+<!-- <p>
+        <a href="lectures/16-Matrix/16-Matrix.pptx"><span class="sidebaricon glyphicon glyphicon-blackboard" aria-hidden="true" title="pdf"></span> Slides</a> (<a href="lectures/16-Matrix/16-Matrix.pdf">pdf</a>)<br/>
+
+        <a href="lectures/16-Matrix/Matrix"><span class="sidebaricon glyphicon glyphicon-leaf" aria-hidden="true" title="pdf"></span> Code</a> (<a href="lectures/16-Matrix/Matrix.zip">zip</a>)
+    </p> -->
+</div>
+
+</td>
+</tr>
+<tr>
+<td class="calendarWeekCell">7</td>
+<td class="calendarCell" style="background-color:hsl(0, 0%, 95%)">
+<div style="position:relative">
+<div class="inOut">
+
+</div>
+<p class="subtleHeading">Feb 19th</p>
+Holiday: President's Day<br/>
+No Class
+</div>
+
+</td>
+<td class="calendarCell">
+<div style="position:relative">
+<div class="inOut">
+</div>
+<p class="subtleHeading">Feb 21st</p>
+17: HashMaps
+<!-- <p>
+        <a href="lectures/17-HashMaps/17-HashMaps.pptx"><span class="sidebaricon glyphicon glyphicon-blackboard" aria-hidden="true" title="pdf"></span> Slides</a> (<a href="lectures/17-HashMaps/17-HashMaps.pdf">pdf</a>)<br/>
+
+        <a href="lectures/17-HashMaps/HashMaps"><span class="sidebaricon glyphicon glyphicon-leaf" aria-hidden="true" title="pdf"></span> Code</a> (<a href="lectures/17-HashMaps/HashMaps.zip">zip</a>)
+    </p> -->
+</div>
+
+</td>
+<td class="calendarCell">
+<div style="position:relative">
+<div class="inOut">
+    <br><br>Read: Chapter 13
+</div>
+<p class="subtleHeading">Feb 23rd</p>
+18: Interactors
+<!-- <p>
+        <a href="lectures/18-Interactors/18-Interactors.pptx"><span class="sidebaricon glyphicon glyphicon-blackboard" aria-hidden="true" title="pdf"></span> Slides</a> (<a href="lectures/18-Interactors/18-Interactors.pdf">pdf</a>)<br/>
+
+        <a href="lectures/18-Interactors/Interactors"><span class="sidebaricon glyphicon glyphicon-leaf" aria-hidden="true" title="pdf"></span> Code</a> (<a href="lectures/18-Interactors/Interactors.zip">zip</a>)
+    </p> -->
+
+</div>
+ 
+</td>
+</tr>
+
+
+<tr>
+<td class="calendarWeekCell">8</td>
+<td class="calendarCell">
+<div style="position:relative">
+<div class="inOut">
+    <br>Read: Chapter 10.5-10.8
+    <br>Due: Assn #5
+</div>
+<p class="subtleHeading">Feb 26th</p>
+19: Data Structure Design I
+
+<!-- <p>
+        <a href="lectures/19-Classes1/19-Classes1.pptx"><span class="sidebaricon glyphicon glyphicon-blackboard" aria-hidden="true" title="pdf"></span> Slides</a> (<a href="lectures/19-Classes1/19-Classes1.pdf">pdf</a>)<br/>
+
+        <a href="lectures/19-Classes1/Classes"><span class="sidebaricon glyphicon glyphicon-leaf" aria-hidden="true" title="pdf"></span> Code</a> (<a href="lectures/19-Classes1/Classes.zip">zip</a>)
+    </p> -->
+</div>
+
+
+</td>
+<td class="calendarCell">
+<div style="position:relative">
+<div class="inOut">
+
+</div>
+<p class="subtleHeading">Feb 28th</p>
+20: Data Structure Design II
+<!-- <p>
+        <a href="lectures/20-Classes2/20-Classes2.pptx"><span class="sidebaricon glyphicon glyphicon-blackboard" aria-hidden="true" title="pdf"></span> Slides</a> (<a href="lectures/20-Classes2/20-Classes2.pdf">pdf</a>)<br/>
+
+        <a href="lectures/20-Classes2/code"><span class="sidebaricon glyphicon glyphicon-leaf" aria-hidden="true" title="pdf"></span> Code</a> (<a href="lectures/20-Classes2/code.zip">zip</a>)
+    </p> -->
+</div>
+
+</td>
+<td class="calendarCell">
+<div style="position:relative">
+<div class="inOut">
+       
+</div>
+<p class="subtleHeading">Mar 2nd</p>
+21: Practice
+
+</div>
+
+
+</td>
+</tr>
+
+
+<tr>
+<td class="calendarWeekCell">9</td>
+<td class="calendarCell">
+<div style="position:relative">
+<div class="inOut">
+    <br><br>Read: Chapter 12.1-12.3
+</div>
+<p class="subtleHeading">Mar 5th</p>
+22: Algorithms
+
+</div>
+
+
+</td>
+<td class="calendarCell">
+<div style="position:relative">
+<div class="inOut">
+    <br><br>Due: Assn #6
+</div>
+<p class="subtleHeading">Mar 7th</p>
+23: Software engineering
+
+</div>
+
+</td>
+<td class="calendarCell">
+<div style="position:relative">
+<div class="inOut">
+
+</div>
+<p class="subtleHeading">Mar 9th</p>
+24: Social networks
+
+</div>
+
+
+</td>
+</tr>
+
+
+
+<tr>
+<td class="calendarWeekCell">10</td>
+<td class="calendarCell">
+<div style="position:relative">
+<div class="inOut">
+</div>
+<p class="subtleHeading">Mar 12th</p>
+25: Standard Java
+
+</div>
+
+</td>
+<td class="calendarCell">
+<div style="position:relative">
+<div class="inOut">
+</div>
+<p class="subtleHeading">Mar 14th</p>
+26: Review for Final Exam
+
+</div>
+
+</td>
+<td class="calendarCell" style="background-color:aliceblue">
+
+<div style="position:relative">
+    <div class="inOut">
+        <br>Due: Assn #7<br>Final: Mar 19th
+    </div>
+</div>
+
+<p class="subtleHeading">Mar 16th</p>
+Dead Day<br/>No Class
+
+
+</td>
+</tr>
+
+</table>
+</div>
+				</p>
+				<!--<hr/>-->
+			</div>
+		</div>
+
+		<!--<div class="row">
+			<div class="col-sm-12">
+				<h2>
+					Discussion Sections
+				</h2>
+				<p>
+					In addition to lecture, you must sign up for a weekly 50-minute section. In order to take
+CS 106B, you must sign up for a section between 5:00P.M., Thursday, January 7, and the
+close of enrollments at 5:00P.M. on Sunday, January 10. Please use the signup form at
+<a href="http://cs198.stanford.edu/section/">http://cs198.stanford.edu/section/</a>. Important note: Do not use Axess to sign
+up for sections; section enrollments made through Axess are simply ignored.
+				</p>
+				<hr/>
+			</div>
+		</div>
+
+		<div class="row" id="grades">
+			<div class="col-sm-12">
+				<h2>
+					Grades
+				</h2>
+				<p>
+					Your final grade in this course will be calculated using the following weights:
+				</p>
+				<div class="well" style="width:280px">
+					<h4>Weights</h4>
+					<table class="table table-condensed" style="margin-bottom:0px;">
+						<tbody>
+							<tr>
+								<td style="width: 180px">Section Participation</td>
+								<td>10%</td>
+							</tr>
+							<tr>
+								<td style="width: 120px">Programs</td>
+								<td>50%</td>
+							</tr>
+							<tr>
+								<td style="width: 120px">Midterm</td>
+								<td>15%</td>
+							</tr>
+							<tr>
+								<td style="width: 120px">Final</td>
+								<td>25%</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<p>
+					
+					Each of the exams is scaled to take account of the difficulty of the exam, which is nearly
+impossible to assess in advance. The other components and the final grade are not
+curved. If everyone does brilliantly in this class, everyone gets an A.
+				</p>
+				<hr/>
+			</div>
+		</div>
+
+		
+
+		<div class="row">
+			<div class="col-sm-12">
+				<h2>
+					Programming Assignments
+				</h2>
+				<p>
+					CS 106B requires seven programming assignments, which are due on the dates given in
+the syllabus. Except for Assignment #7 (which is due at the very end of the quarter),
+your section leader will grade each of your assignments and then discuss how well you
+have done (and how you can improve on future assignments) in an interactive,
+one-on-one session. Assignments are graded separately for functionality and style.
+				</p>
+				<hr/>
+			</div>
+		</div>
+			
+		<div class="row">
+			<div class="col-sm-8">
+			<h2>
+				Late Policy
+			</h2>
+		</div>
+			<div class="col-sm-9">
+				
+
+				<div class="subsection">
+					
+					<p>
+						Each of the assignments is due at 5:00P.M. on the day specified in the syllabus.
+Assignments are submitted electronically using the procedure described in the first
+assignment. Important note: all assignments are due at 5:00P.M. sharp on the dates
+indicated on the assignment handout. Assignments submitted after 5:00 will be
+considered late.
+					</p>
+					<p>
+						Because each of you will probably come upon some time during the quarter where so
+much work piles up that you need a little extra time, every student begins the quarter with
+three free “late days.” To avoid any ambiguity, a “day” is defined as a class day. Thus, if
+your assignment was due on Friday but turned in the following Monday, that assignment
+would be one day late. Note: You cannot use late days on Assignment #7, which is due at the end of the quarter. After your late days for the quarter are exhausted, programs are assessed a late
+penalty of one category point per late day used (a ✓+ turns into a ✓, and so forth). Late
+days are valuable, and it pays to keep some around for the harder assignments toward the
+end of the quarter. In all cases, assignments must be turned in within a calendar week of
+their published due date.
+					</p>
+
+					<p>
+						In special circumstances (such as extended medical problems or other emergencies),
+extensions may be granted beyond the late days. To request an extension, send e-mail to
+the TA (Megan Faulk <mfaulk@stanford.edu>) no later than 24 hours before the
+program is due. Only the TA is authorized to approve such extensions. In particular, do
+not ask your section leader.
+					</p>
+				</div>
+
+				
+
+				
+
+			</div>
+			<div class="col-sm-3">
+				
+				<div class="faq well">
+					<h4 class="subheading">How Many Late Days?</h4>
+					<p>
+						Three late days. A “day” is defined as a class day.
+					</p>
+
+				</div>
+
+			</div>
+
+		</div>-->
+
+
+	
+
+
+
+<div class="row">
+	<div class="col-md-12">
+		<hr>
+
+		<div class="footer">
+			<p class="pull-left">
+				&#169; Stanford 2017 &#124; Created by Chris Piech.
+				CS106A has been developed over decades by many talented teachers. 
+			</p>
+		</div>
+	</div>
+</div>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-74362126-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+	</div>
+
+	<script type="text/javascript">
+		$( ".moment" ).each(function( i ) {
+			var date = $(this).html()
+
+			var fromStr = moment(date, "YYYYMMDD").fromNow()
+
+			$(this).html(fromStr)
+		  });
+		//alert(moment("20160101", "YYYYMMDD").fromNow())
+	</script>
+
+</body>

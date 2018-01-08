@@ -1,0 +1,122 @@
+<head>
+
+	%include templates/parts/head.html
+	
+	<style type="text/css" media="screen">
+	  	#canvas {
+	    	overflow: hide;
+	    	border: solid 1px black;
+	    	background-color: white;
+	    	width: 360px;
+	    	height: 600px;
+	  	}
+	</style>
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBar.html
+
+	<div class="container">
+			
+		<!-- Header -->
+		<div class="row">
+			<div class="col-sm-12">
+				<div id="pageHeader">
+					<h1>
+						Assignment 3: Breakout
+					</h1>
+					<p class="subtleHeading"><span class="sidebaricon glyphicon glyphicon-calendar" aria-hidden="true"></span>Due: Wednesday, Feb 8th, 10:30A.M.</p>
+
+					<p class="subtleHeading"><span class="sidebaricon glyphicon glyphicon-calendar" aria-hidden="true"></span>YEAH Hours: Tuesday, Jan 31st, 7:30-9P.M. Bishop Auditorium</p>
+
+				</div>
+				<hr/>
+
+				<!--<center>
+				<img style="width:80%" src="{{pathToRoot}}img/overview/overview.png">	
+			</center>-->
+			</div>
+		</div>
+
+
+		
+		
+				
+		<div class="row">
+			<div class="col-sm-12">
+				<p>
+					<center>
+					<img style="max-width:70%" src="{{pathToRoot}}img/assn/breakout.png"></img>
+				</center>
+					<br/><br/>
+				</p>
+
+				<div class="row">
+					<div class="col-sm-12">
+						<center>
+							<p style="text-align:center">
+								<i>In your third assignment you will program a game called Breakout.</i>
+							</p>
+						</center>
+
+					</div>
+				</div>
+
+				
+				<h2>Assignment Files</h2>
+				<p>
+					<div class="row">
+						<div class="col-sm-2"><a href="{{pathToRoot}}handouts/15 - Assignment-3.pdf"><span class="glyphicon glyphicon-file" aria-hidden="true" style="font-size: 5em;margin-left:0px"></span><br><span style="margin-left:0px">Assn Handout</span></a>
+						</div>
+						<div class="col-sm-2"><a href="{{pathToRoot}}handouts/YEAH3.pdf"><span class="glyphicon glyphicon-file" aria-hidden="true" style="font-size: 5em;margin-left:0px"></span><br><span style="margin-left:0px">YEAH Hours Slides</span></a>
+						</div>
+						<div class="col-sm-2">
+							<a href="{{pathToRoot}}assignments/Assignment3.zip"><span class="glyphicon glyphicon-leaf" aria-hidden="true" style="font-size: 5em;margin-left:5px"></span><br>
+					Starter Code</a>
+						</div>
+						
+						
+					</div>
+					<br/>
+				</p>
+
+				
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-12">
+				<h2>Assignment Demo</h2>
+				<div id="canvas"></div>
+				<script data-main="breakout-win17/Breakout.js" src="breakout-win17/js/requirejs/require.js"></script>
+				<p>
+					<b>NOTE: The colors and appearance of the bricks in this demo are slightly <br>
+					different than how you are asked to configure them in the <br>
+					assignment handout.  You should use the colors and positioning specified <br>
+					in the assignment handout and not in this demo.<br>
+					This demo is just to show you how the actual game works.
+					</b>
+				</p>
+			</div>
+		</div>
+
+
+	
+
+		%include templates/parts/footer.html
+
+	</div>
+
+	<script type="text/javascript">
+		$( ".moment" ).each(function( i ) {
+			var date = $(this).html()
+
+			var fromStr = moment(date, "YYYYMMDD").fromNow()
+
+			$(this).html(fromStr)
+		  });
+		//alert(moment("20160101", "YYYYMMDD").fromNow())
+	</script>
+
+</body>

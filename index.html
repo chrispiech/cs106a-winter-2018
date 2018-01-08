@@ -1,0 +1,910 @@
+<head>
+
+<title>CS106A</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF8">
+
+
+<link href="plugins/bootstrap-custom/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<!-- Java Script -->
+<script src="plugins/jquery.min.js"></script>
+<script src="plugins/moment.min.js"></script>
+<script src="plugins/bootstrap-custom/js/bootstrap.min.js"></script>
+<script src="plugins/ace/ace.js" type="text/javascript"></script>
+
+
+<!-- Stanford -->
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600,700' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+<nav class="navbar navbar-inverse">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand brand" href="/">CS106A</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+        <!--<li><a href="#">Lectures</a></li>-->
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Lectures <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a><i>None yet!</i></a></li>
+            <!--<li><a href="lectures/1-Welcome">1-Welcome</a></li>
+            <li><a href="lectures/2-ControlFlow">2-Control Flow</a></li>
+            <li><a href="lectures/3-Decomposition">3-Decomposition</a></li>
+            <li><a href="lectures/4-Variables">4-Variables</a></li>
+            <li><a href="lectures/5-ControlFlowRevisited">5-ControlFlowRevisited</a></li>
+            <li><a href="lectures/6-SimpleJava">6-SimpleJava</a></li>
+            <li><a href="lectures/7-Methods">7-Methods</a></li>
+            <li><a href="lectures/8-Animation">8-Animation</a></li>
+            <li><a href="lectures/9-Events">9-Events</a></li>
+            <li><a href="lectures/10-References">10-References</a></li>
+            <li><a href="lectures/11-Memory">11-Memory</a></li>
+            <li><a href="lectures/12-TextProcessing">12-TextProcessing</a></li>
+            <li><a href="lectures/13-Files">13-FileReading</a></li>
+            <li><a href="lectures/14-Files+ArrayLists">14-FileReading+ArrayLists</a></li>
+            <li><a href="lectures/106AMidtermReviewSession.pdf">Midterm Review Session</a></li>
+            <li><a href="lectures/15-Arrays">15-Arrays</a></li>
+            <li><a href="lectures/16-Matrix">16-Matrix</a></li>
+            <li><a href="lectures/17-HashMaps">17-HashMaps</a></li>
+            <li><a href="lectures/18-Interactors">18-Interactors</a></li>
+            <li><a href="lectures/19-Classes1">19-Classes-1</a></li>
+            <li><a href="lectures/20-Classes2">20-Classes-2</a></li>-->
+          </ul>
+
+        </li>
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Handouts <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="handouts/1 - General Information.pdf">1-General Information</a></li>
+            <li><a href="handouts/2 - Course Placement.pdf">2-Course Placement</a></li>
+            <!--<li><a href="handouts/3 - Course Communication.pdf">3-Course Communication</a></li>
+            <li><a href="handouts/4 - Honor Code.pdf">4-Honor Code</a></li>
+            <li><a href="handouts/5 - Karel In Eclipse.pdf">5-Karel in Eclipse</a></li>
+            <li><a href="handouts/6 - Assignment-1.pdf">6-Assignment-1</a></li>
+            <li><a href="handouts/7 - Submitting Work.pdf">7-Submitting Work</a></li>
+            <li><a href="handouts/8 - Karel Examples.pdf">8-Karel Examples</a></li>
+            <li><a href="handouts/10 - Assignment-2.pdf">10-Assignment-2</a></li>
+            <li><a href="handouts/11 - Control Statements.pdf">11-Control Statements</a></li>
+            <li><a href="handouts/13 - Methods.pdf">13-Methods</a></li>
+            <li><a href="handouts/15 - Assignment-3.pdf">15-Assignment-3</a></li>
+            <li><a href="handouts/16 - Coding Style.pdf">16-Coding Style</a></li>
+            <li><a href="handouts/17 - Variables.pdf">17-Variables</a></li>
+            <li><a href="handouts/18 - Ufo Game.pdf">18-Ufo Game</a></li>
+            <li><a href="handouts/19 - Strings.pdf">19-String Examples</a></li>
+            <li><a href="handouts/20 - Assignment-4.pdf">20-Assignment 4</a></li>
+            <li><a href="handouts/21 - Practice Midterm.pdf">21-Practice Midterm</a></li>
+            <li><a href="handouts/22 - Exam Strategies.pdf">22-Exam Strategies</a></li>
+            <li><a href="handouts/23 - Practice Midterm Solutions.pdf">23-Practice Midterm Solutions</a></li>
+            <li><a href="handouts/25 - ArrayLists.pdf">25-ArrayLists</a></li>
+            <li><a href="handouts/26 - Graphics Contest.pdf">26-Graphics Contest</a></li>
+            <li><a href="handouts/29-assignment-5.pdf">27-Assignment 5</a></li>
+            <li><a href="handouts/28 - Debugging.pdf">28-Debugging</a></li>
+            <li><a href="handouts/29 - Midterm.pdf">29-Midterm</a></li>
+            <li><a href="handouts/30 - Midterm Solutions.pdf">30-Midterm Solutions</a></li>
+            <li><a href="handouts/31 - Assignment-6.pdf">31-Assignment 6</a></li>-->
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Assignments <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+           
+            <li><a href="https://goo.gl/forms/x2HTAbJ8soIMCztg1">0-Who are you</a></li>
+            <!--<li><a href="assn/karel.html">1-Karel</a></li>
+            <li><a href="assn/simpleJava.html">2-Simple Java</a></li>
+            <li><a href="assn/breakout.html">3-Breakout</a></li>
+            <li><a href="assn/hangman.html">4-Hangman</a></li>
+            <li><a href="assn/yahtzee.html">5-Yahtzee</a></li>
+            <li><a href="assn/nameSurfer.html">6-NameSurfer</a></li>-->
+            
+            <!--<li class="divider"></li>
+
+            <li><a href="assignments/GraphicsContest.zip">Graphics Contest Project</a></li>
+            <li><a href="assn/debugger.html">Extra Credit: Debugger</a></li>-->
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sections <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a><i>None yet!</i></a></li>
+            <!--<li><a href="handouts/9 - Section-1.pdf">Section Handout 1</a></li>
+            <li><a href="handouts/9a - Section-1-solutions.pdf">Section 1 Solutions</a></li>
+            <li class="divider"></li>
+            <li><a href="handouts/12-section-2.pdf">Section Handout 2</a></li>
+            <li><a href="handouts/12a-section-2-solutions.pdf">Section 2 Solutions</a></li>
+            <li class="divider"></li>
+            <li><a href="handouts/14-section-3.pdf">Section Handout 3</a></li>
+            <li><a href="handouts/14a-section-3-solutions.pdf">Section 3 Solutions</a></li>
+            <li class="divider"></li>
+            <li><a href="handouts/24-section-4.pdf">Section Handout 4</a></li>
+            <li><a href="handouts/24a-section-4-solutions.pdf">Section 4 Solutions</a></li>
+            <li class="divider"></li>
+            <li><a href="handouts/31-section-5.pdf">Section Handout 5</a></li>
+            <li><a href="handouts/31a-section-5-solutions.pdf">Section 5 Solutions</a></li>
+            <li class="divider"></li>
+            <li><a href="handouts/Section-6.pdf">Section Handout 6</a></li>
+            <li><a href="handouts/Section-6-solutions.pdf">Section 6 Solutions</a></li>
+            <li class="divider"></li>
+            <li><a href="handouts/Section-7.pdf">Section Handout 7</a></li>
+
+
+            <li class="divider"></li>
+
+            <li><a href="https://cs198.stanford.edu/cs106/auth/section/ViewSections.aspx?class=1">List of all section times/locations</a></li>-->
+          </ul>
+        </li>
+
+        <!--<li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tools <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="">Nothing Yet</a></li>
+          </ul>
+        </li>-->
+       
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="schedule.html"><span class="glyphicon glyphicon-th-large" aria-hidden="true"></span> Schedule</a></li>
+      </ul>
+      
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+    <div class="container" id="indexContainer">
+
+        <div class="row" id = "indexHead">
+
+
+            <div class="col-sm-12">
+                <div id="logo">
+                    <img id="logoImg" src="img/logo.gif"/>
+                </div>
+                <div id="headerText" style="padding-bottom:15px;">
+                    <div id="title">
+                        CS106A: Programming Methodologies
+                    </div>
+                    <div>
+                        Winter 2018
+                    </div>
+                    <div>
+                        Monday, Wednesday, Friday ??:?? to ??:??am in <a href="https://www.google.com.my/maps/place/nvidia+auditorium/@37.4280569,-122.1777065,16.31z/data=!4m5!3m4!1s0x808fbb2ac97723cb:0xa6e8fc1a7a5f2c29!8m2!3d37.4277284!4d-122.1741965">NVIDIA Auditorium</a>
+                    </div>
+
+                    <!--
+                        <div class="alert alert-info"><a href="https://b.socrative.com/login/student/">https://b.socrative.com/login/student/</a></div>
+                    -->
+                </div>
+            </div>
+        </div>
+
+        <div class="row" >
+            <div class="col-sm-12" id="infoCol">
+                <hr/>
+            </div>
+        </div>
+
+
+        <div class="row">
+
+            <div class="col-sm-3" id="infoCol">
+                <!-- Links -->
+                <div>
+                    <p class="subtleHeading">RESOURCES</p>
+
+                    <!--<span class="sidebaricon glyphicon glyphicon-user" aria-hidden="true"></span>
+                        <a href="">Staff</a><br/>-->
+
+                        <span class="sidebaricon glyphicon glyphicon-apple" aria-hidden="true"></span>
+                        <a href="/handouts/overview.html">CS106A Info</a> <br/>
+
+                        <span class="sidebaricon glyphicon glyphicon-th-large" aria-hidden="true"></span>
+                        <a href="schedule.html">Course Schedule</a> <br/>
+
+                        <span class="sidebaricon glyphicon glyphicon-send" aria-hidden="true"></span>
+                        <a href="handouts/7 - Submitting Work.pdf">How to Submit</a> <br/>
+
+                        <!--<img src="img/icons/piazza-icon.png" class="sidebaricon" alt="icon">
+                        <a href="https://piazza.com/stanford/fall2016/cs106b/home">Piazza</a> <br/>-->
+
+                        <span class="sidebaricon glyphicon glyphicon-facetime-video" aria-hidden="true"></span>
+                        <a href="https://mvideox.stanford.edu/">Lecture Videos</a> <br/>
+
+
+
+                        <img src="img/icons/eclipse-icon.png" class="sidebaricon" alt="icon">
+                        <a href="/handouts/eclipse.html">Eclipse</a><br/>
+
+
+                        <span class="sidebaricon glyphicon glyphicon-book" aria-hidden="true"></span>
+                        <a href="/resources/karel-the-robot-learns-java.pdf">Karel Book</a><br/>
+
+                        <!--<span class="sidebaricon glyphicon glyphicon-book" aria-hidden="true"></span>
+                            <a href="">Text Book</a> <br/>-->
+
+                        <img src="img/icons/stanford-favicon.png" class="sidebaricon" alt="icon">
+                        <a href="http://cs.stanford.edu/people/eroberts/jtf/javadoc/student/index.html">Stanford Java Lib</a> <br/>
+
+
+
+
+                        <span class="sidebaricon glyphicon glyphicon-edit" aria-hidden="true"></span>
+                        <a href="/resources/BlankJavaProject.zip">Blank Java Project</a> <br/>
+
+                        <span class="sidebaricon glyphicon glyphicon-edit" aria-hidden="true"></span>
+                        <a href="/resources/BlankKarelProject.zip">Blank Karel Project</a> <br/>
+
+                        <span class="sidebaricon glyphicon glyphicon-calendar" aria-hidden="true"></span>
+                        <a href="https://cs198.stanford.edu/cs106/LairHelp/HelperSchedule.aspx">Help Hours</a> <br/>
+
+                        <!--<span class="sidebaricon glyphicon glyphicon-tasks" aria-hidden="true"></span>
+                            <a href="https://b.socrative.com/login/student/">Socrative</a> <br/>-->
+
+                            <!--<span class="sidebaricon glyphicon glyphicon-music" aria-hidden="true"></span>
+                                <a href="https://play.spotify.com/user/1251835474/playlist/3O343f5rIdxCMofp8rCzcs?play=true&utm_source=open.spotify.com&utm_medium=open">Spotify Playlist</a> <br/>-->
+
+
+
+
+
+                                <!--<span class="sidebaricon glyphicon glyphicon-film" aria-hidden="true"></span>
+                                    <a href="">Videos</a> <br/>-->
+                </div>
+
+                <hr/>
+
+                
+<div>
+    <p class="subtleHeading">ASSIGNMENTS</p>
+
+     <!--<div class="well well-sm" style="margin-bottom:10px">
+        <a href="assn/nameSurfer.html">Assn 6: NameSurfer</a> 
+    </div>
+
+    <div class="well well-sm" style="margin-bottom:10px">
+        <a href="assn/yahtzee.html">Assn 5: Yahtzee</a> 
+    </div>
+
+    <div class="well well-sm" style="margin-bottom:10px">
+        <a href="assn/hangman.html">Assn 4: Hangman</a> 
+    </div>
+
+    <div class="well well-sm" style="margin-bottom:10px">
+        <a href="assn/breakout.html">Assn 3: Breakout</a> 
+    </div>
+
+    <div class="well well-sm" style="margin-bottom:10px">
+        <a href="assn/simpleJava.html">Assn 2: Simple Java</a> 
+    </div>-->
+
+    <div class="well well-sm" style="margin-bottom:10px">
+        <a href="assn/karel.html">Assn 1: Karel</a> 
+    </div>
+    
+    <div class="well well-sm" style="margin-bottom:10px">
+        <a href="https://goo.gl/forms/x2HTAbJ8soIMCztg1">Assn 0: Who are you</a>
+    </div>
+
+
+</div>
+<hr/>
+
+<div>
+    <p class="subtleHeading">EXAMS</p>
+    <p>
+    Midterm<br/>
+    <span class="sidebaricon glyphicon glyphicon-calendar" aria-hidden="true"></span> Monday, Feb 13th<br/>
+    <span class="sidebaricon glyphicon glyphicon-time" aria-hidden="true"></span> 7-9pm
+    </p>
+    <p>
+    Final<br/>
+    <span class="sidebaricon glyphicon glyphicon-calendar" aria-hidden="true"></span>
+    Monday, March 20th<br/>
+    <span class="sidebaricon glyphicon glyphicon-time" aria-hidden="true"></span> 8:30-11:30am
+    </p>
+</div>
+                <hr/>
+
+
+                <!-- Handouts 
+                    <div>
+                    <p class="subtleHeading">HANDOUTS</p>
+
+                    <a href="">1. Syllabus</a><br/>
+                    <a href="">2. Class Placement</a><br/>
+                    <a href="">3. Honor Code</a><br/>
+                    </div>-->
+
+
+
+                    <p class="subtleHeading">STAFF</p>
+                    <!--<span class="sidebaricon glyphicon glyphicon-envelope" aria-hidden="true"></span>cs106b-aut1617-staff@lists.stanford.edu-->
+                    
+                    
+                    <p>
+                    <div class="staffBox">
+                        <img src="img/people/chris-teaching.png" style="width:100%"></img>
+                        <!--<img src="img/people/chris.bmp" class="staffImg"></img><br/>-->
+                        Lecturer: 
+                        <a href="http://stanford.edu/~cpiech">Chris Piech</a> <br>
+                        <span class="sidebaricon glyphicon glyphicon-envelope" aria-hidden="true"></span> piech@cs.stanford.edu<br>
+                        <span class="sidebaricon glyphicon glyphicon-home" aria-hidden="true"></span> Gates 193<br>
+                        
+                        <span class="sidebaricon glyphicon glyphicon-time" aria-hidden="true"></span> Wed 1-3pm <br/>
+                        <!--<span class="sidebaricon glyphicon glyphicon-time" aria-hidden="true" style="color:white"></span> and by appointment.-->
+                    </div>
+                    </p>
+                    <p>
+                    <div class="staffBox" >
+                        <img src="img/people/troccoli.png" style="width:100%"></img>
+                        Head TA:  
+                        <a href="https://www.linkedin.com/in/nicktroccoli">Nick Troccoli</a> <br>
+                        <span class="sidebaricon glyphicon glyphicon-envelope" aria-hidden="true"></span> troccoli@stanford.edu<br>
+                        <span class="sidebaricon glyphicon glyphicon-home" aria-hidden="true"></span> Gates B02<br>
+                        <span class="sidebaricon glyphicon glyphicon-time" aria-hidden="true"></span> Th 1-3pm
+                    </div>
+                    </p>
+
+                    
+
+                        <div style="height:10px"></div>
+
+                        <hr/>
+
+            </div>
+            <div class="col-sm-9" >
+                <!-- Newsfeed -->
+                <div>
+
+                    <p class="subtleHeading"> ANNOUNCEMENTS</p>
+                </div>
+
+<!--<div class="well">
+    <div class="newsfeedHeader">
+        <div class="newsfeedTitle">Extra Credit: Debugger</div>
+        <div class="moment">2017022714</div>
+    </div>
+
+    <p>
+          To encourage you to become more familiar with the Eclipse debugger, we have created a short (~30min - 1hr) optional extra credit debugging assignment.  On <a href="assn/debugger.html">the extra credit information page</a>, you will find an Eclipse project
+          that is <i>supposed</i> to animate a ball that bounces off the 4 walls.  However, there
+          are some bugs lurking that are preventing the program from functioning correctly.  If you can find and fix all 4 bugs, the program will give you a secret code that you can send to your Section Leader for extra credit points!  See the <a href="assn/debugger.html">the extra credit information page</a> if you're interested in trying it out.  The answers will be released alongside the section solutions at the end of the week, so if you would like to get extra credit points <strong>you must email your secret code to your Section Leader by 5PM on Friday 3/3.</strong>
+    </p>
+
+    <p>
+        <a href="assn/debugger.html"><img style="width:100%" src="img/assn/debugger.png"></img></a>
+    </p>
+</div>
+
+<div class="well">
+    <div class="newsfeedHeader">
+        <div class="newsfeedTitle">NameSurfer</div>
+        <div class="moment">2017022714</div>
+    </div>
+
+    <p>
+          In your penultimate assignment you will program a data visualizer: NameSurfer. See the <a href="assn/nameSurfer.html">assignment page</a> for the handout and starter code.  <strong>Assignment 6 YEAH hours will be Wednesday March 1st, 7:30-9PM in Bishop Auditorium </strong> (in Lathrop Library).   
+    </p>
+
+    <p>
+        <a href="assn/nameSurfer.html"><img style="width:100%" src="img/assn/nameSurfer.png"></img></a>
+    </p>
+</div>
+
+ <div class="well">
+    <div class="newsfeedHeader">
+        <div class="newsfeedTitle">Contest</div>
+        <div class="moment">2017022714</div>
+    </div>
+
+    <p>
+          One of the joys of programming is the ability to make something totally of your own creation. In CS106A this quarter we are hosting a Graphics Contest where you can program anything you like using the concepts and tools we learn in class. There will be four grand prizes which each are worth a 100% on the final exam. Runners up will be awarded extra credit on assignments. See the <a href="handouts/26 - Graphics Contest.pdf">contest handout</a> for more details.   
+    </p>
+
+    <p>
+        <a href="handouts/26 - Graphics Contest.pdf"><img style="width:100%" src="img/assn/contest.png"></img></a>
+    </p>
+</div>
+
+<div class="well">
+    <div class="newsfeedHeader">
+        <div class="newsfeedTitle">Midterms Returned</div>
+        <div class="moment">2017022311</div>
+    </div>
+
+    <p>
+            Graded CS106A midterms were returned after class on Wednesday, Feb. 22 via <a href="https://gradescope.com">Gradescope</a>, an online assignment grading website; if you did not receive an email inviting you to Gradescope (check your spam folder just in case), please <a href= "mailto:troccoli@stanford.edu">email Nick, the Head TA.</a> See the <a href="handouts/30 - Midterm Solutions.pdf">midterm solutions</a> for reference. If your scanned exam in Gradescope is difficult to read, and you would like to see your (ungraded) paper exam, you can pick it up from the CS106A filing cabinet in the "handout hangout", the lobby down the hall from Chris's office (Gates 193).  Please note that while grading we referenced both the paper and scanned versions to ensure your work was correctly graded.
+
+            <br />
+            <br />
+
+            The median for the CS106A midterm was 41 out of 60 points. Here is the full distribution:
+            <img style="width:100%" src = "img/general/midtermDist.png"></img>
+            
+
+            <br />
+            <br />
+
+            If you believe part of your exam was incorrectly graded, regrade requests will be accepted through <a href="https://gradescope.com">Gradescope</a> until <strong>Wednesday, March 1.</strong>  As part of your request, you will need to provide a short write-up of the problem(s) on your exam that you think were misgraded.  Regrade requests need to point out the aspect of the problem that was correct, but for which points were taken off.  We use a detailed rubric to grade exams, so simply requesting that an incorrect answer <i>"should be worth more points"</i> is not likely to result in additional points.  Also, we reserve the right to re-grade the whole exam to make sure there are no other grading issues present - this may result in a lower total score.
+    </p>
+</div>
+
+<hr/>
+<div>
+    <p class="subtleHeading">OLD ANNOUNCEMENTS</p>
+</div>
+
+<div class="well">
+    <div class="newsfeedHeader">
+        <div class="newsfeedTitle">Assignment 5: Yahtzee</div>
+        <div class="moment">2017021710</div>
+    </div>
+
+    <p>
+          In your fifth assignment you will program the classic game of Yahtzee! See the <a href="assn/yahtzee.html">assignment page</a> for the handout and starter code.  <strong>Assignment 5 YEAH hours will be Tuesday 2/21, 7:30-9PM in Bishop Auditorium </strong> (in Lathrop Library).   As a reminder, YEAH hours, or  “Your Early Assignment Help” hours, are optional sessions meant to provide additional help getting started with each assignment.  We hope to see you there!
+    </p>
+
+    <p>
+        <img style="width:100%" src="img/assn/yahtzee.png"></img>
+    </p>
+</div>
+
+<div class="well">
+    <div class="newsfeedHeader">
+        <div class="newsfeedTitle">Assignment 4 Correction</div>
+        <div class="moment">2017021616</div>
+    </div>
+
+    <p>
+          We found a small bug when running the Hangman starter code on Windows machines.  Specifically, due to the way Windows displays Eclipse programs, the height of the screen is 20 less than when running on a Mac.  For this reason, the constant Y value given for the incorrect guesses label (<code>INCORRECT_GUESSES_Y</code>) is off-screen.
+
+          <br />
+
+          To resolve this issue (for consistency, every student please do this, Mac or PC), <strong>PLEASE CHANGE <code>INCORRECT GUESSES_Y</code> and <code>PARTIALLY_GUESSED_Y</code> to the following:</strong>
+
+          <br />
+          <br />
+
+          <code>  
+          /* The y-location to display the partially guessed string */
+          <br />
+          private static final int PARTIALLY_GUESSED_Y = 430;
+          <br />
+          /* The y-location to display the incorrectly guessed letters */
+          <br />
+          private static final int INCORRECT_GUESSES_Y = 460;
+          </code>
+
+          <br />
+          <br />
+
+          The starter code on the website has also been updated to reflect this change.
+
+          We apologize for the last-minute change; if you do not make the above change, you will not be penalized if your incorrect guesses label is offscreen, as long as you are positioning it correctly.  But the above change may help ensure that your calculations are correct.
+    </p>
+</div>
+
+ 
+
+<div class="well">
+    <div class="newsfeedHeader">
+        <div class="newsfeedTitle">UPDATED [x3]: Midterm Exam</div>
+        <div class="moment">2017021121</div>
+    </div>
+
+    <p>
+            To give you resources to help prepare for the midterm, we have posted <a href="handouts/21%20-%20Practice%20Midterm.pdf">practice midterm</a> and <a href="/handouts/22%20-%20Exam%20Strategies.pdf">exam strategies</a> handouts.  We recommend taking the practice midterm under similar conditions to the regular exam.  Solutions to the practice midterm have also been posted.  As a reminder, the midterm exam is <strong>Monday 2/13 7-9PM and is open book, open notes, closed-electronic-device.</strong>  It will cover everything through lecture on 2/8 except for file-reading.  <strong>UPDATED:</strong> Notably, you will <strong>not be required to write imports</strong> on the exam.
+            <br />
+            <br />
+
+             <strong>UPDATED:</strong> We held a midterm review session <strong> Sat. 2/11 4-6PM</strong> in Bishop Auditorium.  We went over class concepts that may appear on the midterm, and additional practice problems.  The slides are available <a href="lectures/106AMidtermReviewSession.pdf">here</a>.  Due to technical troubles, unfortunately we were only able to capture the audio from the session, which is available on the lecture videos page.
+
+             <br />
+             <br />
+             <strong>UPDATED:</strong> The midterm exam will take place in <strong>Memorial Auditorium:</strong>
+             <div class="mapOverlay" onClick="style.pointerEvents='none'"></div>
+             <div class="google-maps">
+                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3168.342165229091!2d-122.1686374846748!3d37.429020879823916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fbad6282cb75f%3A0x414fc29202fde37f!2sStanford+Memorial+Auditorium!5e0!3m2!1sen!2sus!4v1486712578451" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+             </div>
+    </p>
+</div>
+
+<div class="well">
+    <div class="newsfeedHeader">
+        <div class="newsfeedTitle">Assignment 4 YEAH Hours Materials Posted</div>
+        <div class="moment">2017020922</div>
+    </div>
+
+    <p>
+            Thanks to everyone who came to YEAH hours for Assignment 4!  The slides have been posted to the <a href="assn/hangman.html">Assignment 4 page.</a>  Additionally, a recording of the video is available on the <a href="https://mvideox.stanford.edu/">lecture videos</a> website.
+    </p>
+</div>
+
+<div class="well">
+    <div class="newsfeedHeader">
+        <div class="newsfeedTitle">Assignment 4: Hangman</div>
+        <div class="moment">2017020811</div>
+    </div>
+
+    <p>
+          Assignment 4 (Hangman) has been released, a fun console+graphics game that will give you practice with strings and file-reading - see the <a href="assn/hangman.html">assignment page</a> for the handout and starter code.  This is also the <strong>first assignment that may be done (optionally) in pairs.</strong>.  As a reminder, you may only pair up with students in the same section time and location.  <strong>Assignment 4 YEAH hours will be Thursday 2/9, 7:30-9PM in Bishop Auditorium </strong> (in Lathrop Library).   We hope to see you there!
+    </p>
+
+    <p>
+        <img style="width:100%" src="img/assn/hangman.png"></img>
+    </p>
+</div>
+
+<div class="well">
+    <div class="newsfeedHeader">
+        <div class="newsfeedTitle">Alternate Midterms</div>
+        <div class="moment">2017020312</div>
+    </div>
+
+    <p>
+            The midterm is Monday, Feb 13th, from 7pm to 9pm. If you can't make the scheduled time because of an academic conflict please send Chris and Nick an email over the weekend (before Monday 6th of Feb). We can find an alternate time for you to take the exam.
+    </p>
+</div>
+
+<div class="well">
+    <div class="newsfeedHeader">
+        <div class="newsfeedTitle">Assignment 3 YEAH Hours Materials Posted</div>
+        <div class="moment">2017013123</div>
+    </div>
+
+    <p>
+            Thanks to everyone who came to YEAH hours for Assignment 3!  The slides have been posted to the <a href="assn/breakout.html">Assignment 3 page.</a>  Additionally, a recording of the video is available on the <a href="https://mvideox.stanford.edu/">lecture videos</a> website.
+    </p>
+</div>
+
+<div class="well">
+    <div class="newsfeedHeader">
+        <div class="newsfeedTitle">Assignment 3: Breakout</div>
+        <div class="moment">2017013010</div>
+    </div>
+
+    <p>
+          In your third assignment you will program the classic game of Breakout! See the <a href="assn/breakout.html">assignment page</a> for the handout and starter code.  <strong>Assignment 3 YEAH hours will be Tuesday 1/31, 7:30-9PM in Bishop Auditorium </strong> (in Lathrop Library).   As a reminder, YEAH hours, or  “Your Early Assignment Help” hours, are optional sessions meant to provide additional help getting started with each assignment.  We hope to see you there!
+    </p>
+
+    <p>
+        <img style="width:100%" src="img/assn/breakout.png"></img>
+    </p>
+</div>
+
+<div class="well">
+    <div class="newsfeedHeader">
+        <div class="newsfeedTitle">Assignment 2 YEAH Hours Materials Posted</div>
+        <div class="moment">2017012323</div>
+    </div>
+
+    <p>
+            Thanks to everyone who came to our first YEAH hours for assignment 2!  The slides have been posted on the assignment 2 page.  Additionally, a recording of the session is available on the SCPD/online videos page (link in sidebar).
+    </p>
+</div>
+
+<div class="well">
+    <div class="newsfeedHeader">
+        <div class="newsfeedTitle">Second Assignment: Simple Java</div>
+        <div class="moment">2017012117</div>
+    </div>
+
+    <div class="media">
+              <div class="media-left">
+                <div style="width:80px;">
+                  <img class="media-object" src="img/assn/java.png" style="width:80px">
+                </div>
+              </div>
+              <div class="media-body">
+                <p>
+                 For your <a href="assn/simpleJava.html">second assignment</a>, you'll get practice writing a series of small Java programs.  These programs consist of both console and graphics programs, and will give you practice with concepts like variables, methods, control flow, and more.  Please note that for problems 4+5, we recommend waiting until <strong>after Wednesday's lecture</strong> to get started, as some material we cover that day will help you with those problems.  
+              </div>
+    </div>
+
+    <img src=""></img>
+
+</div>
+
+<div class="well">
+    <div class="newsfeedHeader">
+        <div class="newsfeedTitle">Extra Karel Example: Random Painter</div>
+        <div class="moment">2017011915</div>
+    </div>
+
+    <p>
+            Some of the problems on assigment 1 are difficult! I made a recording of an extra example called "random painter" that solves a problem relevant to checkerboard karel. Check it out if you want some extra review. I also uploaded the <a href="lectures/3-Decomposition/Decomposition/RandomPainter.java">random painter code</a>.
+    </p>
+    
+
+    <p>
+            <iframe width="100%" height="300" src="https://www.youtube.com/embed/Bl4aLsH-9BE" frameborder="0" allowfullscreen></iframe>
+
+        </p>
+
+</div>
+
+
+
+<div class="well">
+    <div class="newsfeedHeader">
+        <div class="newsfeedTitle">Submit Assignment 1</div>
+        <div class="moment">2017011816</div>
+    </div>
+
+    <p>
+        If you haven't tried submitting yet, give it a shot. See the <span class="glyphicon glyphicon-file" aria-hidden="true" title="pdf"></span> <a href="handouts/7 - Submitting Work.pdf">submitting handout</a> for instructions. You can submit assignments as many times as you like, we grade your last submission. Assignment 1 is due Friday at 10:30am.
+    </p>
+
+</div>
+
+<div class="well">
+    <div class="newsfeedHeader">
+        <div class="newsfeedTitle">Section Assignments / Late Signups</div>
+        <div class="moment">2017011718</div>
+    </div>
+
+    <p>
+        For those who submitted section preferences by 5PM on Sunday, we have finished emailing out section assignments; as a reminder, sections start this week!  If you were unable to submit the form by the 5PM Sunday deadline, the late signup form is now open.  Click on the "Sections" tab to get to the form link.  As a reminder, SCPD students should sign up for the "SCPD section", unless you are able to attend a section in person.
+
+        <br />
+        <br />
+       
+        If you would like to permanently switch into another section, there is also a link under "Sections" to request a permanent section swap.  However, because this form only allows you to request a new section by <strong>time</strong> (not location), if you would like to request a swap to a specific section for pair programming reasons, please <a href= "mailto:troccoli@stanford.edu">email Nick</a>, the Head TA.
+
+        <br />
+        <br />
+
+        There is also a link under "Sections" to a list of all section times and locations, and a link to drop your section if you decide to unenroll from the class (this is important, as it allows another student to potentially take your section spot!).
+
+        <br />
+        <br />
+
+        <strong>The deadline for section swaps is Tuesday, 1/24, at 5PM.</strong> 
+    </p>
+
+</div>
+
+<div class="well">
+    <div class="newsfeedHeader">
+        <div class="newsfeedTitle">LaIR Helper Hours Started Monday 1/16</div>
+        <div class="moment">2017011120</div>
+    </div>
+
+    <p>
+        We apologize for any confusion in class today about when LaIR helper hours start.  To clarify, because of the 3-day weekend, the LaIR will be open in the Tresidder food court area starting on <strong>Monday 1/16</strong>.  From then onwards, the LaIR will be open from 6PM-12midnight Sunday - Thursday.  Come by if you need help with your first assignment, or if you have any conceptual questions! 
+    </p>
+
+</div>
+
+
+
+<div class="well">
+    <div class="newsfeedHeader">
+        <div class="newsfeedTitle">Martin Luther King, Jr. Day</div>
+        <div class="moment">2017011520</div>
+    </div>
+
+    <p>
+            Reminder that tomorrow, Jan 16th, is <a href="https://en.wikipedia.org/wiki/Martin_Luther_King,_Jr._Day">MLK day</a> so there will be <b>no classes</b>. <a href="handouts/3 - Course Communication.pdf">LaIR office hours</a> will start the evening of Monday, Jan 16th. 
+    </p>
+    <p>
+        Here is a video of the last public speech MLK gave. The date was April 3, 1968 and he was assasinated the day after. Civil rights for all people, regardless of their ethnicity, is a cause that is still being faught for around the world. 
+        </p>
+
+    <p>
+            <iframe width="100%" height="300" src="https://www.youtube.com/embed/Oehry1JC9Rk" frameborder="0" allowfullscreen=""></iframe>
+        </p>
+
+    <p>
+            Of course if you haven't seen the <a href="https://www.youtube.com/watch?v=3vDWWy4CMhE">I Have a Dream Speech</a>, that is worth watching for its beautiful narrative and its influence on history.
+            
+        </p>
+
+</div>
+
+
+<div class="well">
+    <div class="newsfeedHeader">
+        <div class="newsfeedTitle">Section Signups Open Until 5PM Sunday 1/15</div>
+        <div class="moment">2017011220</div>
+    </div>
+
+    <p>
+        Section signups are now open!  Click on the "Section" tab at the top and select "Sign up for section" to submit your preferences.  As a reminder, signups are <strong>not first come first serve</strong>.  As such, you may modify your preferences any time up until the Sunday 5PM deadline.  We will notify you of your section assignment early next week.
+
+        <br />
+        <br />
+
+        <strong>Note:</strong> Remote SCPD students (if you are an SCPD student but able to attend a section on campus, you may disregard this message) should sign up for the special "SCPD Section" in the section preferences form.  Remote SCPD students will not be assigned a physical section; instead, you will have access to online recordings of one section this quarter, and another assigned Section Leader to grade your assignments.
+    </p>
+
+</div>
+
+
+
+
+
+<div class="well">
+    <div class="newsfeedHeader">
+        <div class="newsfeedTitle">First Assignment: Karel</div>
+        <div class="moment">2017011108</div>
+    </div>
+
+    <div class="media">
+              <div class="media-left">
+                <div style="width:80px;">
+                  <img class="media-object" src="img/assn/karel.png" style="width:80px">
+                </div>
+              </div>
+              <div class="media-body">
+                <p>
+                 For your first assignment you will write a series of Karel the Robot programs. See the <a href="assn/karel.html">assignment page</a> for more details.
+                    The assignment is due Friday, Jan 20th, but make sure to get started early. Though Karel is a fun, simple robot, some of the questions can take a lot of time.
+                 </p>
+              </div>
+            </div>
+
+    <img src=""></img>
+
+</div>
+
+
+
+<div class="well">
+    <div class="newsfeedHeader">
+        <div class="newsfeedTitle">Download Eclipse</div>
+        <div class="moment">2017011013</div>
+    </div>
+
+    <p>
+        In CS106A we use a free, "development environment" called <img src="img/icons/eclipse-icon.png" class="sidebaricon" alt="icon" style="margin-bottom: 2px;"> Eclipse to write our programs. It is the most popular development environment for the Java language. Download eclipse by following <a href="handouts/eclipse.html">these instructions</a>. 
+    </p>
+    <p>
+        There will be an Eclipse installation trouble shooting session <span class=" glyphicon glyphicon-calendar" aria-hidden="true"></span> Friday the 13th of Jan, 3pm to 5pm in  Hewlett 200. Try to install Eclipse before and come if you have any trouble.
+    </p>
+
+</div>
+
+<div class="well">
+    <div class="newsfeedHeader">
+        <div class="newsfeedTitle">Who are you?</div>
+        <div class="moment">2017011013</div>
+    </div>
+
+    <p>
+        We have a very simple <span class="glyphicon glyphicon-file" aria-hidden="true"></span> <a href="https://goo.gl/forms/x2HTAbJ8soIMCztg1">google form</a> for you to fill out so that we have a chance to get to know you a little. It should only take a few minutes. Though we call it "assignment 0" it is not for a grade. 
+    </p>
+
+</div>-->
+
+
+<div class="well">
+    <div class="newsfeedHeader">
+        <div class="newsfeedTitle">What is CS106A?</div>
+        <div class="moment">2018010600</div>
+    </div>
+
+    <p>
+        We put together some handouts to help you understand where we are going to go in CS106A and how we plan to get there. See the <span class="glyphicon glyphicon-apple" aria-hidden="true"></span> <a href="handouts/1 - General Information.pdf">General Information</a> handout for details on logistics and the <span class="glyphicon glyphicon-file" aria-hidden="true" title="pdf"></span> <a href="handouts/2 - Course Placement">Course Placement</a> handout to help you decide if CS106A is the right place for you.
+    </p>
+
+    <p>
+     The <span class="glyphicon glyphicon-th-large" aria-hidden="true" title="pdf"></span> <a href="schedule.html">Course Schedule</a> page shows you the topics that we are going to cover in CS106A and the corresponding readings. We will also post lecture slides and lecture code on the schedule page.
+    
+    </p>
+
+</div>
+
+
+
+<div class="well">
+    <div class="newsfeedHeader">
+        <div class="newsfeedTitle">Welcome</div>
+        <div class="moment">2018010600</div>
+    </div>
+
+    <p>
+    Welcome to CS106A! We are looking forward to a fun quarter. Class starts Monday Jan 9th at 10:30am in NVIDIA Auditorium.
+    <div class="mapOverlay" onClick="style.pointerEvents='none'"></div>
+    <div class="google-maps">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6336.765926432077!2d-122.1777065!3d37.4280569!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fbb2ac97723cb%3A0xa6e8fc1a7a5f2c29!2snvidia+auditorium!5e0!3m2!1sen!2smy!4v1482377431627" width="567" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+    </div>
+    </p>
+</div>
+
+
+
+
+                <!--  End of hidden part  -->
+                <!--</div>-->
+
+
+        </div>
+    </div>
+
+
+
+<div class="row">
+	<div class="col-md-12">
+		<hr>
+
+		<div class="footer">
+			<p class="pull-left">
+				&#169; Stanford 2017 &#124; Created by Chris Piech.
+				CS106A has been developed over decades by many talented teachers. 
+			</p>
+		</div>
+	</div>
+</div>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-74362126-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+    </div>
+
+    <!--<script>
+var BOTTOM_POS = 0;
+var INFO_COL = null;
+
+window.onload = function() {
+    // inforCol_absBottomY - screen_height
+    //var infoTop = document.getElementById("infoCol").getBoundingClientRect().top;
+    //var infoHeight = $("#infoCol").height()
+    //BOTTOM_POS = infoTop + infoHeight - screen.height;
+    INFO_COL = $('#infoCol')
+}
+
+window.onscroll = function () {
+    // point at which I want to start scrolling is about 866
+    // offset from the scroll top is about 875
+    var topPos = $(document.body).scrollTop() - 875;
+    //console.log($(document.body).scrollTop())
+    INFO_COL.css({"position" : "relative", "top" : topPos});
+};
+    </script>-->
+
+    <script type="text/javascript">
+$( ".moment" ).each(function( i ) {
+    var date = $(this).html()
+
+        var fromStr = moment(date, "YYYYMMDDHH").fromNow()
+
+        $(this).html(fromStr)
+});
+//alert(moment("20160101", "YYYYMMDD").fromNow())
+    </script>
+
+
+</body>

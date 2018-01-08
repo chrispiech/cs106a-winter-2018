@@ -1,0 +1,221 @@
+<head>
+
+    %include templates/parts/head.html
+
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    %include templates/parts/navBar.html
+
+    <div class="container" id="indexContainer">
+
+        <div class="row" id = "indexHead">
+
+
+            <div class="col-sm-12">
+                <div id="logo">
+                    <img id="logoImg" src="img/logo.gif"/>
+                </div>
+                <div id="headerText" style="padding-bottom:15px;">
+                    <div id="title">
+                        CS106A: Programming Methodologies
+                    </div>
+                    <div>
+                        Winter 2018
+                    </div>
+                    <div>
+                        Monday, Wednesday, Friday 1:30pm to 2:20pm in <a href="https://www.google.com.my/maps/place/nvidia+auditorium/@37.4280569,-122.1777065,16.31z/data=!4m5!3m4!1s0x808fbb2ac97723cb:0xa6e8fc1a7a5f2c29!8m2!3d37.4277284!4d-122.1741965">NVIDIA Auditorium</a>
+                    </div>
+
+                    <!--
+                        <div class="alert alert-info"><a href="https://b.socrative.com/login/student/">https://b.socrative.com/login/student/</a></div>
+                    -->
+                </div>
+            </div>
+        </div>
+
+        <div class="row" >
+            <div class="col-sm-12" id="infoCol">
+                <hr/>
+            </div>
+        </div>
+
+
+        <div class="row">
+
+            <div class="col-sm-3" id="infoCol">
+                <!-- Links -->
+                <div>
+                    <p class="subtleHeading">RESOURCES</p>
+
+                    <!--<span class="sidebaricon glyphicon glyphicon-user" aria-hidden="true"></span>
+                        <a href="">Staff</a><br/>-->
+
+                        <span class="sidebaricon glyphicon glyphicon-apple" aria-hidden="true"></span>
+                        <a href="{{pathToRoot}}/handouts/overview.html">CS106A Info</a> <br/>
+
+                        <span class="sidebaricon glyphicon glyphicon-th-large" aria-hidden="true"></span>
+                        <a href="{{pathToRoot}}schedule.html">Course Schedule</a> <br/>
+
+                        <span class="sidebaricon glyphicon glyphicon-send" aria-hidden="true"></span>
+                        <a href="{{pathToRoot}}handouts/7 - Submitting Work.pdf">How to Submit</a> <br/>
+
+                        <!--<img src="img/icons/piazza-icon.png" class="sidebaricon" alt="icon">
+                        <a href="https://piazza.com/stanford/fall2016/cs106b/home">Piazza</a> <br/>-->
+
+                        <span class="sidebaricon glyphicon glyphicon-facetime-video" aria-hidden="true"></span>
+                        <a href="https://mvideox.stanford.edu/">Lecture Videos</a> <br/>
+
+
+
+                        <img src="img/icons/eclipse-icon.png" class="sidebaricon" alt="icon">
+                        <a href="{{pathToRoot}}/handouts/eclipse.html">Eclipse</a><br/>
+
+
+                        <span class="sidebaricon glyphicon glyphicon-book" aria-hidden="true"></span>
+                        <a href="{{pathToRoot}}/resources/karel-the-robot-learns-java.pdf">Karel Book</a><br/>
+
+                        <!--<span class="sidebaricon glyphicon glyphicon-book" aria-hidden="true"></span>
+                            <a href="">Text Book</a> <br/>-->
+
+                        <img src="img/icons/stanford-favicon.png" class="sidebaricon" alt="icon">
+                        <a href="http://cs.stanford.edu/people/eroberts/jtf/javadoc/student/index.html">Stanford Java Lib</a> <br/>
+
+
+
+
+                        <span class="sidebaricon glyphicon glyphicon-edit" aria-hidden="true"></span>
+                        <a href="{{pathToRoot}}/resources/BlankJavaProject.zip">Blank Java Project</a> <br/>
+
+                        <span class="sidebaricon glyphicon glyphicon-edit" aria-hidden="true"></span>
+                        <a href="{{pathToRoot}}/resources/BlankKarelProject.zip">Blank Karel Project</a> <br/>
+
+                        <span class="sidebaricon glyphicon glyphicon-calendar" aria-hidden="true"></span>
+                        <a href="https://cs198.stanford.edu/cs106/LairHelp/HelperSchedule.aspx">Help Hours</a> <br/>
+
+                        <!--<span class="sidebaricon glyphicon glyphicon-tasks" aria-hidden="true"></span>
+                            <a href="https://b.socrative.com/login/student/">Socrative</a> <br/>-->
+
+                            <!--<span class="sidebaricon glyphicon glyphicon-music" aria-hidden="true"></span>
+                                <a href="https://play.spotify.com/user/1251835474/playlist/3O343f5rIdxCMofp8rCzcs?play=true&utm_source=open.spotify.com&utm_medium=open">Spotify Playlist</a> <br/>-->
+
+
+
+
+
+                                <!--<span class="sidebaricon glyphicon glyphicon-film" aria-hidden="true"></span>
+                                    <a href="">Videos</a> <br/>-->
+                </div>
+
+                <hr/>
+
+                
+                %include templates/parts/indexInfo.html
+
+                <hr/>
+
+
+                <!-- Handouts 
+                    <div>
+                    <p class="subtleHeading">HANDOUTS</p>
+
+                    <a href="">1. Syllabus</a><br/>
+                    <a href="">2. Class Placement</a><br/>
+                    <a href="">3. Honor Code</a><br/>
+                    </div>-->
+
+
+
+                    <p class="subtleHeading">STAFF</p>
+                    <!--<span class="sidebaricon glyphicon glyphicon-envelope" aria-hidden="true"></span>cs106b-aut1617-staff@lists.stanford.edu-->
+                    
+                    
+                    <p>
+                    <div class="staffBox">
+                        <img src="img/people/chris-teaching.png" style="width:100%"></img>
+                        <!--<img src="img/people/chris.bmp" class="staffImg"></img><br/>-->
+                        Lecturer: 
+                        <a href="http://stanford.edu/~cpiech">Chris Piech</a> <br>
+                        <span class="sidebaricon glyphicon glyphicon-envelope" aria-hidden="true"></span> piech@cs.stanford.edu<br>
+                        <span class="sidebaricon glyphicon glyphicon-home" aria-hidden="true"></span> Gates 193<br>
+                        
+                        <span class="sidebaricon glyphicon glyphicon-time" aria-hidden="true"></span> Wed 1-3pm <br/>
+                        <!--<span class="sidebaricon glyphicon glyphicon-time" aria-hidden="true" style="color:white"></span> and by appointment.-->
+                    </div>
+                    </p>
+                    <p>
+                    <div class="staffBox" >
+                        <img src="img/people/troccoli.png" style="width:100%"></img>
+                        Head TA:  
+                        <a href="https://www.linkedin.com/in/nicktroccoli">Nick Troccoli</a> <br>
+                        <span class="sidebaricon glyphicon glyphicon-envelope" aria-hidden="true"></span> troccoli@stanford.edu<br>
+                        <span class="sidebaricon glyphicon glyphicon-home" aria-hidden="true"></span> Gates B02<br>
+                        <span class="sidebaricon glyphicon glyphicon-time" aria-hidden="true"></span> Th 1-3pm
+                    </div>
+                    </p>
+
+                    
+
+                        <div style="height:10px"></div>
+
+                        <hr/>
+
+            </div>
+            <div class="col-sm-9" >
+                <!-- Newsfeed -->
+                <div>
+
+                    <p class="subtleHeading"> ANNOUNCEMENTS</p>
+                </div>
+
+                %include templates/parts/announcements.html
+
+
+
+                <!--  End of hidden part  -->
+                <!--</div>-->
+
+
+        </div>
+    </div>
+
+    %include templates/parts/footer.html
+
+
+    </div>
+
+    <!--<script>
+var BOTTOM_POS = 0;
+var INFO_COL = null;
+
+window.onload = function() {
+    // inforCol_absBottomY - screen_height
+    //var infoTop = document.getElementById("infoCol").getBoundingClientRect().top;
+    //var infoHeight = $("#infoCol").height()
+    //BOTTOM_POS = infoTop + infoHeight - screen.height;
+    INFO_COL = $('#infoCol')
+}
+
+window.onscroll = function () {
+    // point at which I want to start scrolling is about 866
+    // offset from the scroll top is about 875
+    var topPos = $(document.body).scrollTop() - 875;
+    //console.log($(document.body).scrollTop())
+    INFO_COL.css({"position" : "relative", "top" : topPos});
+};
+    </script>-->
+
+    <script type="text/javascript">
+$( ".moment" ).each(function( i ) {
+    var date = $(this).html()
+
+        var fromStr = moment(date, "YYYYMMDDHH").fromNow()
+
+        $(this).html(fromStr)
+});
+//alert(moment("20160101", "YYYYMMDD").fromNow())
+    </script>
+
+
+</body>

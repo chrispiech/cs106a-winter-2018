@@ -1,0 +1,260 @@
+<head>
+
+	%include templates/parts/head.html
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBar.html
+
+	<div class="container">
+			
+		<!-- Header -->
+		<div class="row">
+			<div class="col-sm-12">
+				<div id="pageHeader">
+					<h1>
+						Assignment 1: Karel
+					</h1>
+					<p class="subtleHeading"><span class="sidebaricon glyphicon glyphicon-calendar" aria-hidden="true"></span>Due: Friday, Jan 20th, 10:30A.M.
+				</p>
+
+				</div>
+				<hr/>
+
+				<!--<center>
+				<img style="width:80%" src="{{pathToRoot}}img/overview/overview.png">	
+			</center>-->
+			</div>
+		</div>
+
+
+		
+		
+				
+		<div class="row">
+			<div class="col-sm-12">
+				<p>
+					<center>
+					<img src="{{pathToRoot}}img/assn/karel.jpg"></img>
+				</center>
+					<br/><br/>
+				</p>
+
+				<div class="row">
+					<div class="col-sm-12">
+						<center><p style="text-align:center">
+							<i>Your first assignment consists of four Karel programs.</i>
+
+						</p>
+					</center>
+
+						<h2>Getting Started</h2>
+						<p>
+							 There is a starter project including all of these problems that you can access using a link bellow. Since this is the first assignment we will ask you a few questions about the honor code before you can download the starter project. Once you have the starter code set up, edit the program files so that the assignment actually does what it’s
+supposed to do (see the assignment handout), which will involve a cycle of coding, testing, and debugging until
+everything works. The final step is to submit your assignment.
+</p>
+<p>
+	You should write the code for your solution on your own. This assignment is <b>not</b> a pair assignment.
+	</p>
+<p>
+
+<strong>Note:</strong> If Eclipse gives you a warning (a yellow "caution" symbol in the sidebar of your assignment files) about "serializable classes," just ignore it.
+</p>
+
+<strong>Note:</strong> You may only use <strong>concepts covered in the Karel coursereader</strong> to solve these problems.  In particular, you may not use Java concepts you may have learned previously such as variables, parameters, <strong>return</strong>, <strong>break</strong>, etc.  If you have any questions about what is ok/not ok to use, please feel free to ask.
+</p>
+
+
+						</p>
+
+					</div>
+				</div>
+
+				
+				<h2>Assignment Files</h2>
+				<p>
+					<div class="row">
+						<div class="col-sm-2"><a href="{{pathToRoot}}handouts/6 - Assignment-1.pdf"><span class="glyphicon glyphicon-file" aria-hidden="true" style="font-size: 5em;margin-left:0px"></span><br><span style="margin-left:0px">Assn Handout</span></a>
+						</div>
+						<div class="col-sm-2">
+							<a href="https://goo.gl/forms/qpEkO7IBC54oYTtb2"><span class="glyphicon glyphicon-leaf" aria-hidden="true" style="font-size: 5em;margin-left:5px"></span><br>
+					Starter Code</a>
+						</div>
+						
+						
+					</div>
+					<br/>
+				</p>
+
+				<h2>Resources</h2>
+				<div class="row">
+					<div class="col-sm-2 "><a href="{{pathToRoot}}handouts/eclipse.html"><span class="glyphicon glyphicon-save-file" aria-hidden="true" style="font-size: 5em;margin-left:0px"></span><br><span style="margin-left:0px">Get Eclipse</span></a>
+						</div>
+						<div class="col-sm-2 "><a href="{{pathToRoot}}handouts/5 - Karel In Eclipse.pdf"><span class="glyphicon glyphicon-file" aria-hidden="true" style="font-size: 5em;margin-left:0px"></span><br><span style="margin-left:-10px">Karel in Eclipse</span></a>
+						</div>
+
+						<div class="col-sm-2 "><a href="{{pathToRoot}}handouts/7 - Submitting Work.pdf"><span class="glyphicon glyphicon-file" aria-hidden="true" style="font-size: 5em;margin-left:0px"></span><br><span style="margin-left:-10px">Submitting Work</span></a>
+						</div>
+
+						<div class="col-sm-2 "><a href="{{pathToRoot}}handouts/4 - Honor Code.pdf"><span class="glyphicon glyphicon-file" aria-hidden="true" style="font-size: 5em;margin-left:0px"></span><br><span style="margin-left:-5px">Honor Code</span></a>
+						</div>
+
+						<div class="col-sm-2 "><a href="{{pathToRoot}}resources/karel-the-robot-learns-java.pdf"><span class="glyphicon glyphicon-file" aria-hidden="true" style="font-size: 5em;margin-left:0px"></span><br><span style="margin-left:-10px">Karel Reader</span></a>
+						</div>
+
+				</div>
+
+				
+				<!--<div class="row">
+					<div class="col-sm-12">
+				
+						<h2>F.A.Q.</h2>
+						<dl>
+	
+	<dt id="eclipsebroken">
+		Q: I'm having trouble getting Eclipse to work!  Help!
+	</dt>
+	<dd>
+		A: Please make sure you followed the instructions in our <a href="eclipse.shtml">Eclipse</a> page.
+		If you are still having trouble, please come to instructor or head TA office hours.
+	</dd>
+
+	<dt id="eclipserefresh">
+		Q: Eclipse is giving me a strange message about a file being "out of sync" with the file system.
+		It says I can press F5 to refresh the file.  What does this mean?
+	</dt>
+	<dd>
+		A: This happens if you edit/change your file outside of Eclipse.
+		Just press F5 and Eclipse will show you the newest version of the file.
+	</dd>
+
+	<dt id="renamefiles">
+		Q: I didn't like the program name, such as <code>CollectNewspaper</code>, so I renamed it to my own name such as <code>DaveIsGreat</code>.
+		That is okay, right?
+	</dt>
+	<dd>
+		A: No.  For grading purposes, we need you to leave the program names the way we named them.
+	</dd>
+
+	<dt id="turnin">
+		Q: How do I turn in the assignment?
+		How do I know if my turnin was successful?
+	</dt>
+	<dd>
+		A: The submission is built into Eclipse.
+		See the "Submitting Homework" handout in the <a href="handouts.shtml">Handouts page</a> for more details.
+		Check that your submission was successful by viewing it in our <a class="popup" href="http://paperless.stanford.edu/" target="_blank">Paperless</a> submission system's web page.
+	</dd>
+
+	<dt id="checkerboardhard">
+		Q: The checkerboard problem is hard.  Help!
+	</dt>
+	<dd>
+		A: Try simplifying the problem.  Can you checker a single row or column?
+		Make it work for different row widths or column heights?
+		Okay, now can you make it do two rows?  Three?  All rows?  Etc.
+		Incrementally developing your program in stages by making it solve a smaller simpler problem is a wise strategy for attacking hard programming problems.
+	</dd>
+
+	<dt id="midpointhard">
+		Q: The midpoint finder problem is hard.  Help!
+	</dt>
+	<dd>
+		A: You'll need to be creative.
+		Karel can't directly "count" anything, so he doesn't know the world's size.
+		What geometric tricks can he use to get to the middle without counting?
+		Remember that Karel has an infinite bag of beepers that he can use if so desired, so if you want to drop beepers in certain places to help you make your way around the world, that is totally fine.
+	</dd>
+
+	<dt id="midpointvariable">
+		Q: The midpoint finder problem was really easy for me.
+		I just used an <code>int</code> variable like we learned about in class in Week 2.
+		I counted the size of the world and then walked Karel half of that distance.
+		That's okay, right?
+	</dt>
+	<dd>
+		A: No.
+		The whole reason the midpoint finder problem is challenging is that Karel cannot count.
+		If you can count using variables, the problem becomes much too easy and avoids the kinds of algorithmic strategies we want you to practice on HW1.
+		Please restructure your code not to use a variable in this way.
+		Code that does use variables or other untaught Java features will receive a substantial deduction.
+	</dd>
+
+	<dt id="infiniteloop">
+		Q: Why does my Karel crash immediately when loading a new world, after loading it on a different one where it works fine (without closing the window)?
+	</dt>
+	<dd>
+		A: This is often because your program ends with an infinite loop.
+		The code appears to work, but it's still stuck in that loop at the end of the <code>run</code> method.
+		For example, the following loop walks Karel from (1,1) all the way to the right edge, but when he gets there, the loop doesn't stop:
+
+<pre>while (leftIsClear()) {
+    if (frontIsClear()) {
+        move();
+    }
+}
+</pre>
+	</dd>
+
+	<dt id="createworld">
+		Q: How do I create my own world for testing, and/or for Problem 5 "AnythingGoes"?
+	</dt>
+	<dd>
+		A: You can either edit the existing .w files directly in Eclipse, saving your own world with a new name, or you can use the graphical world editor built into Karel.
+		Just click the "New World" button.
+		See the "Using Eclipse and Karel" handout in the <a href="handouts.shtml">Handouts page</a> for more details.
+	</dd>
+
+	<dt id="overridewarning">
+		Q: Why does my Eclipse have a yellow warning about "overriding run from Stanford.karel.Karel" on my <code>run</code> method?
+	</dt>
+	<dd>
+		A: You can ignore this.
+		It's suggesting that you use an advanced Java feature called "annotations", but you don't want/need to do that on this assignment.
+	</dd>
+
+	<dt id="serialversionuidwarning">
+		Q: Why does my Eclipse have a yellow warning about a "serialVersionUID"?
+	</dt>
+	<dd>
+		A: You can ignore this.
+		It's suggesting that you use an advanced Java feature that we don't want/need on this assignment.
+	</dd>
+
+	<dt id="pregrade">
+		Q: Will my solution get full credit?
+		Is it written in the style you want?
+		Will I get marked off for this code?
+	</dt>
+	<dd>
+		A: In general we cannot answer these kinds of questions.
+		We call this "pre-grading."
+		The section leader/TA/instructor can't look over your entire program for mistakes or tell you exactly what things you will get marked off for; we don't have the resources to provide such a service, and even if we did, we want you to learn how to gain these intuitions on your own.
+		We'll grade you on the guidelines in the homework document, and we can help you with specific issues and questions about your code, but we cannot pre-evaluate your entire program for you or give you advance warning about every possible mistake or violation.
+	</dd>-->
+				<!--<hr/>-->
+			</div>
+		</div>
+
+
+	
+
+		%include templates/parts/footer.html
+
+	</div>
+
+	<script type="text/javascript">
+		$( ".moment" ).each(function( i ) {
+			var date = $(this).html()
+
+			var fromStr = moment(date, "YYYYMMDD").fromNow()
+
+			$(this).html(fromStr)
+		  });
+		//alert(moment("20160101", "YYYYMMDD").fromNow())
+	</script>
+
+</body>
