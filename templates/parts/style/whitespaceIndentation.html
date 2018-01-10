@@ -1,0 +1,103 @@
+<dl>
+	<!-- Indentation -->
+	<dt>
+		Indenting
+	</dt>
+	<dd>
+		<p>Increase your indentation by one tab on each brace <code>{</code>, and decrease it once on each closing brace <code>}</code>.</p>
+	</dd>
+
+	<!-- Braces w/ Control Statements -->
+	<dt>
+		Control Statements and Braces
+	</dt>
+	<dd>
+		<p><i>Always use {} on control statements.</i> With Java's control statements such as <code>if</code> and <code>for</code>, the <code>{}</code> braces are technically optional if the body of the control statement contains only a single line.  Regardless of this, <em>always</em> use the <code>{}</code> braces.  Always :) The reason is that if you come back later to add additional statements to the bodies, you may forget to add braces, and your code will not work as you expect.</p>
+
+		<div class="row">
+			<div class="col-xs-12 col-sm-6">
+				<pre class="code-bad">
+<span class="code-comment">// bad</span>
+if (beepersPresent())
+    pickBeeper();</pre>
+			</div>
+			<div class="col-xs-12 col-sm-6">
+				<pre class="code-good">
+<span class="code-comment">// good</span>
+if (beepersPresent()) <em>{</em>
+    pickBeeper();
+<em>}</em></pre>	
+			</div>
+		</div>
+	</dd>
+
+	<!-- Line Breaks -->
+	<dt>
+		Line Breaks
+	</dt>
+	<dd>
+		<p>Place a line break after every <code>{</code> .</p>
+		<div class="row">
+			<div class="col-xs-12 col-sm-6">
+				<pre class="code-bad">
+<span class="code-comment">// bad</span>
+if (beepersPresent()) <em>{ pickBeeper(); }</em></pre>
+			</div>
+			<div class="col-xs-12 col-sm-6">
+				<pre class="code-good">
+<span class="code-comment">// good</span>
+if (beepersPresent()) {
+    pickBeeper();
+}</pre>
+			</div>
+		</div>
+	</dd>
+
+	<!-- One statement per line -->
+	<dt>
+		One Statement Per Line
+	</dt>
+	<dd>
+		<p>Do not place more than one statement on the same line.</p>		
+		<div class="row">
+			<div class="col-xs-12 col-sm-6">
+				<pre class="code-bad">
+<span class="code-comment">// bad</span>
+move();  move();  pickBeeper();</pre>
+			</div>
+
+			<div class="col-xs-12 col-sm-6">
+				<pre class="code-good">
+<span class="code-comment">// good</span>
+move();
+move();
+pickBeeper();	</pre>
+			</div>
+		</div>
+	</dd>
+
+	<!-- Long lines -->
+	<dt>
+		Avoid Long Lines
+	</dt>
+	<dd>
+		<p>Avoid lines longer than 100 characters.  When you have a long line, break it into two shorter lines.</p>
+	</dd>
+
+	<!-- Spacing -->
+	<dt>
+		Spacing
+	</dt>
+	<dd>
+		<p>Place a blank line between methods and between groups of statements.</p>		
+		
+		<pre>
+private void foo() {
+	...
+}
+								<span class="code-comment">// this blank line here</span>
+private void bar() {
+	...
+}		</pre>
+	</dd>
+</dl>

@@ -1,0 +1,128 @@
+<dl>
+	<!-- Names -->
+	<dt>
+		Naming
+	</dt>
+	<dd>
+		<p>Give methods descriptive names, such as <code>walkToEdge</code> or <code>grabAllBeepers</code>.  Avoid one-letter names or non-descriptive names, like <code>x</code> or <code>go</code> or <code>method1</code>.</p>
+	</dd>
+
+	<!-- private -->
+	<dt>
+		Methods Should Be Private
+	</dt>
+	<dd>
+		<p>Unless explicitly specified, all methods you write should be <code>private</code>, not <code>public</code>.</p>
+	</dd>
+
+	<!-- Capitalization -->
+	<dt>
+		Capitalization
+	</dt>
+	<dd>
+		<p>Name methods with camel-casing <code>likeThis</code>.</p>
+	</dd>
+	
+	<!-- Concise run -->
+	<dt>
+		<code>run</code> As a Concise Summary
+	</dt>
+	<dd>
+		<p>As much as possible, avoid having much of your program's functionality directly in <code>run</code>.  Instead, have <code>run</code> call other methods that perform the functionality.  For example, run should not directly call <code>move</code>.  In this way, <code>run</code> is easy to read and forms a concise summary of the overall behavior of the program.</p>
+	</dd>
+
+	<!-- Redundancy -->
+	<dt>
+		Minimize Redundant Code
+	</dt>
+	<dd>
+		<p>If you repeat the same code block two or more times, find a way to remove the redundant code so that it appears only once.  For example, you can place it into a method that is called from both places.</p>
+	</dd>
+
+	<!-- Length -->
+	<dt>
+		Long Methods
+	</dt>
+	<dd>
+		<p>Each method should perform a single, clear, coherent task.  No one method should do too large a share of the overall work.  If you have a single method that is very long, break it apart into smaller sub-methods. If you try to describe the method's purpose and find yourself using the word "and" a lot, that probably means the method does too many things and should be split into sub-methods.</p>
+	</dd>
+
+	<!-- Short methods -->
+	<dt>
+		Short Methods
+	</dt>
+	<dd>
+		<p>It is not useful to make a method that simply calls one other existing method.  But it can be useful to have a short method if it wraps another method with some additional control flow.</p>
+
+		<div class="row">
+			<div class="col-xs-12 col-sm-6">
+				<pre class="code-bad">
+<span class="code-comment">// bad</span>
+private void makeLeftTurn() {
+	turnLeft();
+}</pre>
+			</div>
+			<div class="col-xs-12 col-sm-6">
+				<pre class="code-good">
+<span class="code-comment">// good</span>
+private void safePickup() {
+	if (beepersPresent()) {
+		pickBeeper();
+	}
+}</pre>
+			</div>
+		</div>
+	</dd>
+
+	<!-- Recursion -->
+	<dt>
+		Recursion
+	</dt>
+	<dd>
+		<p>Recursion (which you'll learn about in CS 106B/X) is when methods call themselves.  Mutual recursion is where you have two methods that each call the other to form a cycle of calls.  In CS 106A assignments, we discourage recursion or mutual recursion, as it is sometimes tricky to understand and debug, even though it can allow for elegant solutions.  In many cases, recursion can be replaced with a <code>for</code> or <code>while</code> loop instead.</p>
+
+		<!-- recursion -->
+		<div class="row">
+			<div class="col-xs-12 col-sm-6">
+				<pre class="code-bad">
+<span class="code-comment">// discouraged (recursion)</span>
+public void methodOne() {
+	if (frontIsClear()) {
+		move();
+		<em>methodOne();</em>
+	}
+}</pre>
+			</div>
+			<div class="col-xs-12 col-sm-6">
+				<pre class="code-good">
+<span class="code-comment">// encouraged</span>
+private void moveToWall() {
+	<em>while (frontIsClear()) {</em>
+		move();
+	}
+}</pre>
+			</div>
+		</div>
+
+		<!-- Mutual recursion -->
+		<div class="row">
+			<div class="col-xs-12 col-sm-6">
+				<pre class="code-bad">
+<span class="code-comment">// discouraged (mutual recursion)</span>
+private void methodOne() {
+	if (frontIsClear()) {
+		move();
+		<em>methodTwo();</em>
+	}
+}
+
+private void methodTwo() {
+	if (frontIsClear()) {
+		move();
+		<em>methodOne();</em>
+	}
+}</pre>
+			</div>
+		</div>
+	</dd>
+</dl>

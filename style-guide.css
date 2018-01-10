@@ -1,0 +1,48 @@
+/* Code formatting */
+.code-comment {
+  color: #008800;
+}
+
+pre {
+  background-color: #f8f8ff;
+  border: 1px dashed #ccccff;
+  border-radius: 4px;
+}
+pre.code-bad {
+  background-color: #fff8f8;
+  background-color: #ffcccc;
+}
+pre.code-good {
+  background-color: #f8fff8;
+  background-color: #ccffcc;
+}
+pre.code-bad strong, pre.code-good strong {
+  color: #000099;
+}
+
+pre strong, pre em {
+  color: #000099;
+  font-weight: bold;
+  font-style: normal;
+}
+pre.code-bad strong, pre.code-bad em {
+  color: #660000;
+}
+
+.style-accordion {
+  padding-top: 20pt;
+}dd {
+    margin-bottom: 2.5em;
+}
+
+code {
+    color:black;
+    padding:0px;
+    border:0px;
+    background-color:transparent;
+    font-weight: bold;
+}
+
+pre {-moz-tab-size: 3;} /* Code for Firefox */
+pre {-o-tab-size: 3;} /* Code for Opera 10.6-12.1 */
+pre {tab-size: 3;}
