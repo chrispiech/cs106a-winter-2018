@@ -1,0 +1,76 @@
+<dl>
+	<!-- File comments -->
+	<dt>
+		File Comments
+	</dt>
+	<dd>
+		<p>Place a descriptive comment heading on the top of every .java file in your project with your name, section leader, a description of that file's purpose, and a <strong>citation of all sources</strong> you used to help write your program. Assume that the reader of your comments is an intelligent programmer but not someone who has seen this program or assignment before. It should describe behavior, but not go into great detail about how each piece is implemented.</p>
+	</dd>
+
+	<!-- Method comments -->
+	<dt>
+		Method Comments
+	</dt>
+	<dd>
+		<p>
+			Place a comment heading on each method of your file. The heading should describe the method's behavior.  If your method makes any assumptions (preconditions), mention this in your comments. If it leaves the program in a certain state when it is done (postcondition), mention this as well.  Describe the method's behavior, but don't include great detail about how it is implemented.  Don't mention language-specific details like it uses an <code>if/else</code> statement, etc.  Here is an example of a good method header comment:
+		</p>
+		<pre>
+<span class="code-comment">/*
+ * Jumps Karel over one hurdle of arbitrary height by walking north over it,
+ * and then back down to his original row.
+ * Pre:  Karel is next to a jumpable hurdle, facing east.
+ * Post: Karel will be over the hurdle, one column to the right, facing east.
+ */</span>
+public void jumpHurdle() {
+	...
+}</pre>
+	</dd>
+
+	<!-- Inline comments -->
+	<dt>
+		Inline Comments
+	</dt>
+	<dd>
+		<p>Inside various methods, if you have sections of code that are lengthy, complex or non-trivial, place small inline comments near these code blocks describing what they are doing.</p>
+	</dd>
+
+	<!-- Trivial comments -->
+	<dt>
+		Trivial Comments
+	</dt>
+	<dd>
+		<p>
+			Do not include obvious or redundant comments about the meaning of statements.
+		</p>
+
+		<pre class="code-bad">
+<span class="code-comment">// bad</span>
+turnLeft(); 		<span class="code-comment">// turns Karel counter-clockwise</span>
+move();				<span class="code-comment">// tells Karel to move forward</span></pre>
+	</dd>
+
+	<!-- Wording -->
+	<dt>
+		Wording
+	</dt>
+	<dd>
+		<p>Your comment headers should be written in <strong>complete sentences</strong>, and should be written in <strong>your own words</strong>, not copied from other sources (such as copied verbatim from the homework spec document).</p>
+	</dd>
+
+	<!-- TODOs -->
+	<dt>
+		TODOs
+	</dt>
+	<dd>
+		<p>You should remove any <span class="code-comment"><code>// TODO:</code></span> comments from your programs before turning them in.</p>
+	</dd>
+
+	<!-- Commented code -->
+	<dt>
+		Commented-Out Code
+	</dt>
+	<dd>
+		<p> It is considered bad style to turn in a program with chunks of code "commented out". It's fine to comment out code as you are working on a program, but if the program is done and such code is not needed, just remove it.</p>
+	</dd>
+</dl>

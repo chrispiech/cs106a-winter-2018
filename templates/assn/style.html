@@ -1,0 +1,78 @@
+<head>
+
+	%include templates/parts/head.html
+
+	<link rel="stylesheet" type="text/css" href="{{pathToRoot}}style-guide.css">
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBar.html
+
+	<div class="container">
+		<!-- Header -->
+		<div class="row">
+		    <div class="col-xs-12">
+		        <div id="pageHeader">
+		            <h1>Style Guide</h1>
+		        </div>
+		        <hr/>
+		    </div>
+		</div>
+
+		<!-- Text body -->
+		<div class="row">
+		    <div class="col-xs-12">
+		        <p>
+		            These are the general Java style qualities that we expect your programs to have in order to receive full credit.
+		            Certainly it is possible to write good code that violates these guidelines, and you may feel free to contact us if you are unclear about or disagree with some of them.
+		            But we do expect you to follow these rules (unless there is an error in this document).
+		            In most professional work environments you are expected to follow that company's style standards.
+		            Learning to carefully obey a style guide, and writing code with a group of other developers where the style is consistent among them, are valuable job skills.
+		        </p>
+
+		        <p>
+		            Oracle/Sun's <a class="popup" href="http://www.oracle.com/technetwork/java/codeconvtoc-136057.html">Official Java Coding Conventions</a> are a more comprehensive guide to proper Java programming.
+		            The practices outlined on their web site are encouraged for use in CS 106A.
+		        </p>
+
+		        <p style="margin-bottom: 2em">
+		            Work in progress.<br/>
+		        </p>
+		    </div>
+		</div>
+
+		<!-- Nav tabs -->
+		<ul class="nav nav-tabs" role="tablist">
+		    <li role="presentation" class="active"><a href="#assn1" aria-controls="assn1" role="tab" data-toggle="tab">Assignment 1</a></li>
+		</ul>
+
+		<!-- Tab panes -->
+		<div class="tab-content">
+		    <div role="tabpanel" class="tab-pane fade in active" id="assn1">
+		        <%
+		            categories = [
+		                ("Whitespace and Indentation", "whitespaceIndentation"),
+		                ("Methods", "methods"),
+		                ("Control Statements", "controlStatements"),
+		                ("Comments", "comments"),
+		                ("Forbidden Java Features", "forbiddenJavaFeatures")
+		            ]
+		        
+		        	include('templates/parts/style/accordion.html', categories=categories, index=0)
+		        %>
+		    </div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		$(document).ready(function(){    
+			// Adds an arrow-up / arrow-down icon to open/close collapse panels
+			$('.collapse').on('show.bs.collapse', function(){
+				$(this).parent().find(".glyphicon-chevron-up").removeClass("glyphicon-chevron-up").addClass("glyphicon-chevron-down");
+			}).on('hide.bs.collapse', function(){
+				$(this).parent().find(".glyphicon-chevron-down").removeClass("glyphicon-chevron-down").addClass("glyphicon-chevron-up");
+			});
+		});
+	</script>
+</body>

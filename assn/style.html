@@ -1,0 +1,806 @@
+<head>
+
+<title>CS106A</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF8">
+
+
+<link href="//web.stanford.edu/class/archive/cs/cs106a/cs106a.1184/plugins/bootstrap-custom/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="//web.stanford.edu/class/archive/cs/cs106a/cs106a.1184/style.css">
+
+<!-- Java Script -->
+<script src="//web.stanford.edu/class/archive/cs/cs106a/cs106a.1184/plugins/jquery.min.js"></script>
+<script src="//web.stanford.edu/class/archive/cs/cs106a/cs106a.1184/plugins/moment.min.js"></script>
+<script src="//web.stanford.edu/class/archive/cs/cs106a/cs106a.1184/plugins/bootstrap-custom/js/bootstrap.min.js"></script>
+<script src="//web.stanford.edu/class/archive/cs/cs106a/cs106a.1184/plugins/ace/ace.js" type="text/javascript"></script>
+
+
+<!-- Stanford -->
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" type="text/css" href="//web.stanford.edu/class/archive/cs/cs106a/cs106a.1184/style-guide.css">
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+<nav class="navbar navbar-inverse">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand brand" href="//web.stanford.edu/class/archive/cs/cs106a/cs106a.1184//">CS106A</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+        <!--<li><a href="#">Lectures</a></li>-->
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Lectures <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a><i>None yet!</i></a></li>
+            <!--<li><a href="//web.stanford.edu/class/archive/cs/cs106a/cs106a.1184/lectures/1-Welcome">1-Welcome</a></li>
+            <li><a href="//web.stanford.edu/class/archive/cs/cs106a/cs106a.1184/lectures/2-ControlFlow">2-Control Flow</a></li>
+            <li><a href="//web.stanford.edu/class/archive/cs/cs106a/cs106a.1184/lectures/3-Decomposition">3-Decomposition</a></li>
+            <li><a href="//web.stanford.edu/class/archive/cs/cs106a/cs106a.1184/lectures/4-Variables">4-Variables</a></li>
+            <li><a href="//web.stanford.edu/class/archive/cs/cs106a/cs106a.1184/lectures/5-ControlFlowRevisited">5-ControlFlowRevisited</a></li>
+            <li><a href="//web.stanford.edu/class/archive/cs/cs106a/cs106a.1184/lectures/6-SimpleJava">6-SimpleJava</a></li>
+            <li><a href="//web.stanford.edu/class/archive/cs/cs106a/cs106a.1184/lectures/7-Methods">7-Methods</a></li>
+            <li><a href="//web.stanford.edu/class/archive/cs/cs106a/cs106a.1184/lectures/8-Animation">8-Animation</a></li>
+            <li><a href="//web.stanford.edu/class/archive/cs/cs106a/cs106a.1184/lectures/9-Events">9-Events</a></li>
+            <li><a href="//web.stanford.edu/class/archive/cs/cs106a/cs106a.1184/lectures/10-References">10-References</a></li>
+            <li><a href="//web.stanford.edu/class/archive/cs/cs106a/cs106a.1184/lectures/11-Memory">11-Memory</a></li>
+            <li><a href="//web.stanford.edu/class/archive/cs/cs106a/cs106a.1184/lectures/12-TextProcessing">12-TextProcessing</a></li>
+            <li><a href="//web.stanford.edu/class/archive/cs/cs106a/cs106a.1184/lectures/13-Files">13-FileReading</a></li>
+            <li><a href="//web.stanford.edu/class/archive/cs/cs106a/cs106a.1184/lectures/14-Files+ArrayLists">14-FileReading+ArrayLists</a></li>
+            <li><a href="//web.stanford.edu/class/archive/cs/cs106a/cs106a.1184/lectures/106AMidtermReviewSession.pdf">Midterm Review Session</a></li>
+            <li><a href="//web.stanford.edu/class/archive/cs/cs106a/cs106a.1184/lectures/15-Arrays">15-Arrays</a></li>
+            <li><a href="//web.stanford.edu/class/archive/cs/cs106a/cs106a.1184/lectures/16-Matrix">16-Matrix</a></li>
+            <li><a href="//web.stanford.edu/class/archive/cs/cs106a/cs106a.1184/lectures/17-HashMaps">17-HashMaps</a></li>
+            <li><a href="//web.stanford.edu/class/archive/cs/cs106a/cs106a.1184/lectures/18-Interactors">18-Interactors</a></li>
+            <li><a href="//web.stanford.edu/class/archive/cs/cs106a/cs106a.1184/lectures/19-Classes1">19-Classes-1</a></li>
+            <li><a href="//web.stanford.edu/class/archive/cs/cs106a/cs106a.1184/lectures/20-Classes2">20-Classes-2</a></li>-->
+          </ul>
+
+        </li>
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Handouts <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="//web.stanford.edu/class/archive/cs/cs106a/cs106a.1184/handouts/1 - General Information.pdf">1 General Information</a></li>
+            <li><a href="//web.stanford.edu/class/archive/cs/cs106a/cs106a.1184/handouts/2 - Course Placement.pdf">2 Course Placement</a></li>
+            <!--<li><a href="//web.stanford.edu/class/archive/cs/cs106a/cs106a.1184/handouts/3 - Course Communication.pdf">3-Course Communication</a></li>
+            <li><a href="//web.stanford.edu/class/archive/cs/cs106a/cs106a.1184/handouts/4 - Honor Code.pdf">4-Honor Code</a></li>
+            <li><a href="//web.stanford.edu/class/archive/cs/cs106a/cs106a.1184/handouts/5 - Karel In Eclipse.pdf">5-Karel in Eclipse</a></li>
+            <li><a href="//web.stanford.edu/class/archive/cs/cs106a/cs106a.1184/handouts/6 - Assignment-1.pdf">6-Assignment-1</a></li>
+            <li><a href="//web.stanford.edu/class/archive/cs/cs106a/cs106a.1184/handouts/7 - Submitting Work.pdf">7-Submitting Work</a></li>
+            <li><a href="//web.stanford.edu/class/archive/cs/cs106a/cs106a.1184/handouts/8 - Karel Examples.pdf">8-Karel Examples</a></li>
+            <li><a href="//web.stanford.edu/class/archive/cs/cs106a/cs106a.1184/handouts/10 - Assignment-2.pdf">10-Assignment-2</a></li>
+            <li><a href="//web.stanford.edu/class/archive/cs/cs106a/cs106a.1184/handouts/11 - Control Statements.pdf">11-Control Statements</a></li>
+            <li><a href="//web.stanford.edu/class/archive/cs/cs106a/cs106a.1184/handouts/13 - Methods.pdf">13-Methods</a></li>
+            <li><a href="//web.stanford.edu/class/archive/cs/cs106a/cs106a.1184/handouts/15 - Assignment-3.pdf">15-Assignment-3</a></li>
+            <li><a href="//web.stanford.edu/class/archive/cs/cs106a/cs106a.1184/handouts/16 - Coding Style.pdf">16-Coding Style</a></li>
+            <li><a href="//web.stanford.edu/class/archive/cs/cs106a/cs106a.1184/handouts/17 - Variables.pdf">17-Variables</a></li>
+            <li><a href="//web.stanford.edu/class/archive/cs/cs106a/cs106a.1184/handouts/18 - Ufo Game.pdf">18-Ufo Game</a></li>
+            <li><a href="//web.stanford.edu/class/archive/cs/cs106a/cs106a.1184/handouts/19 - Strings.pdf">19-String Examples</a></li>
+            <li><a href="//web.stanford.edu/class/archive/cs/cs106a/cs106a.1184/handouts/20 - Assignment-4.pdf">20-Assignment 4</a></li>
+            <li><a href="//web.stanford.edu/class/archive/cs/cs106a/cs106a.1184/handouts/21 - Practice Midterm.pdf">21-Practice Midterm</a></li>
+            <li><a href="//web.stanford.edu/class/archive/cs/cs106a/cs106a.1184/handouts/22 - Exam Strategies.pdf">22-Exam Strategies</a></li>
+            <li><a href="//web.stanford.edu/class/archive/cs/cs106a/cs106a.1184/handouts/23 - Practice Midterm Solutions.pdf">23-Practice Midterm Solutions</a></li>
+            <li><a href="//web.stanford.edu/class/archive/cs/cs106a/cs106a.1184/handouts/25 - ArrayLists.pdf">25-ArrayLists</a></li>
+            <li><a href="//web.stanford.edu/class/archive/cs/cs106a/cs106a.1184/handouts/26 - Graphics Contest.pdf">26-Graphics Contest</a></li>
+            <li><a href="//web.stanford.edu/class/archive/cs/cs106a/cs106a.1184/handouts/29-assignment-5.pdf">27-Assignment 5</a></li>
+            <li><a href="//web.stanford.edu/class/archive/cs/cs106a/cs106a.1184/handouts/28 - Debugging.pdf">28-Debugging</a></li>
+            <li><a href="//web.stanford.edu/class/archive/cs/cs106a/cs106a.1184/handouts/29 - Midterm.pdf">29-Midterm</a></li>
+            <li><a href="//web.stanford.edu/class/archive/cs/cs106a/cs106a.1184/handouts/30 - Midterm Solutions.pdf">30-Midterm Solutions</a></li>
+            <li><a href="//web.stanford.edu/class/archive/cs/cs106a/cs106a.1184/handouts/31 - Assignment-6.pdf">31-Assignment 6</a></li>-->
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Assignments <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+           
+            <li><a href="https://goo.gl/forms/RjR4u0kIKY1uBQfq2">0 Who are you</a></li>
+            <!--<li><a href="//web.stanford.edu/class/archive/cs/cs106a/cs106a.1184/assn/karel.html">1-Karel</a></li>
+            <li><a href="//web.stanford.edu/class/archive/cs/cs106a/cs106a.1184/assn/simpleJava.html">2-Simple Java</a></li>
+            <li><a href="//web.stanford.edu/class/archive/cs/cs106a/cs106a.1184/assn/breakout.html">3-Breakout</a></li>
+            <li><a href="//web.stanford.edu/class/archive/cs/cs106a/cs106a.1184/assn/hangman.html">4-Hangman</a></li>
+            <li><a href="//web.stanford.edu/class/archive/cs/cs106a/cs106a.1184/assn/yahtzee.html">5-Yahtzee</a></li>
+            <li><a href="//web.stanford.edu/class/archive/cs/cs106a/cs106a.1184/assn/nameSurfer.html">6-NameSurfer</a></li>-->
+            
+            <li class="divider"></li>
+            <li><a style="text-align: center;" href="//web.stanford.edu/class/archive/cs/cs106a/cs106a.1184/assn/style.html">Style Guide</a></li>
+            <!--
+
+            <li><a href="//web.stanford.edu/class/archive/cs/cs106a/cs106a.1184/assignments/GraphicsContest.zip">Graphics Contest Project</a></li>
+            <li><a href="//web.stanford.edu/class/archive/cs/cs106a/cs106a.1184/assn/debugger.html">Extra Credit: Debugger</a></li>-->
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sections <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a><i>None yet!</i></a></li>
+            <!--<li><a href="//web.stanford.edu/class/archive/cs/cs106a/cs106a.1184/handouts/9 - Section-1.pdf">Section Handout 1</a></li>
+            <li><a href="//web.stanford.edu/class/archive/cs/cs106a/cs106a.1184/handouts/9a - Section-1-solutions.pdf">Section 1 Solutions</a></li>
+            <li class="divider"></li>
+            <li><a href="//web.stanford.edu/class/archive/cs/cs106a/cs106a.1184/handouts/12-section-2.pdf">Section Handout 2</a></li>
+            <li><a href="//web.stanford.edu/class/archive/cs/cs106a/cs106a.1184/handouts/12a-section-2-solutions.pdf">Section 2 Solutions</a></li>
+            <li class="divider"></li>
+            <li><a href="//web.stanford.edu/class/archive/cs/cs106a/cs106a.1184/handouts/14-section-3.pdf">Section Handout 3</a></li>
+            <li><a href="//web.stanford.edu/class/archive/cs/cs106a/cs106a.1184/handouts/14a-section-3-solutions.pdf">Section 3 Solutions</a></li>
+            <li class="divider"></li>
+            <li><a href="//web.stanford.edu/class/archive/cs/cs106a/cs106a.1184/handouts/24-section-4.pdf">Section Handout 4</a></li>
+            <li><a href="//web.stanford.edu/class/archive/cs/cs106a/cs106a.1184/handouts/24a-section-4-solutions.pdf">Section 4 Solutions</a></li>
+            <li class="divider"></li>
+            <li><a href="//web.stanford.edu/class/archive/cs/cs106a/cs106a.1184/handouts/31-section-5.pdf">Section Handout 5</a></li>
+            <li><a href="//web.stanford.edu/class/archive/cs/cs106a/cs106a.1184/handouts/31a-section-5-solutions.pdf">Section 5 Solutions</a></li>
+            <li class="divider"></li>
+            <li><a href="//web.stanford.edu/class/archive/cs/cs106a/cs106a.1184/handouts/Section-6.pdf">Section Handout 6</a></li>
+            <li><a href="//web.stanford.edu/class/archive/cs/cs106a/cs106a.1184/handouts/Section-6-solutions.pdf">Section 6 Solutions</a></li>
+            <li class="divider"></li>
+            <li><a href="//web.stanford.edu/class/archive/cs/cs106a/cs106a.1184/handouts/Section-7.pdf">Section Handout 7</a></li>
+
+
+            <li class="divider"></li>
+
+            <li><a href="https://cs198.stanford.edu/cs106/auth/section/ViewSections.aspx?class=1">List of all section times/locations</a></li>-->
+          </ul>
+        </li>
+
+        <!--<li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tools <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="">Nothing Yet</a></li>
+          </ul>
+        </li>-->
+       
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="//web.stanford.edu/class/archive/cs/cs106a/cs106a.1184/schedule.html"><span class="glyphicon glyphicon-th-large" aria-hidden="true"></span> Schedule</a></li>
+      </ul>
+      
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+	<div class="container">
+		<!-- Header -->
+		<div class="row">
+		    <div class="col-xs-12">
+		        <div id="pageHeader">
+		            <h1>Style Guide</h1>
+		        </div>
+		        <hr/>
+		    </div>
+		</div>
+
+		<!-- Text body -->
+		<div class="row">
+		    <div class="col-xs-12">
+		        <p>
+		            These are the general Java style qualities that we expect your programs to have in order to receive full credit.
+		            Certainly it is possible to write good code that violates these guidelines, and you may feel free to contact us if you are unclear about or disagree with some of them.
+		            But we do expect you to follow these rules (unless there is an error in this document).
+		            In most professional work environments you are expected to follow that company's style standards.
+		            Learning to carefully obey a style guide, and writing code with a group of other developers where the style is consistent among them, are valuable job skills.
+		        </p>
+
+		        <p>
+		            Oracle/Sun's <a class="popup" href="http://www.oracle.com/technetwork/java/codeconvtoc-136057.html">Official Java Coding Conventions</a> are a more comprehensive guide to proper Java programming.
+		            The practices outlined on their web site are encouraged for use in CS 106A.
+		        </p>
+
+		        <p style="margin-bottom: 2em">
+		            Work in progress.<br/>
+		        </p>
+		    </div>
+		</div>
+
+		<!-- Nav tabs -->
+		<ul class="nav nav-tabs" role="tablist">
+		    <li role="presentation" class="active"><a href="#assn1" aria-controls="assn1" role="tab" data-toggle="tab">Assignment 1</a></li>
+		</ul>
+
+		<!-- Tab panes -->
+		<div class="tab-content">
+		    <div role="tabpanel" class="tab-pane fade in active" id="assn1">
+<!-- Accordion of style categories that expand to show content.
+
+Assumes a list of tuples in 'category', with each tuple representing a collapsible
+section to display.  tuple[0] is the section name, tuple[1] is the name of the
+file prefix (no filetype extension) containing that section's content.
+
+Also assumes a unique index for this accordion in 'index'.
+-->
+<div class="panel-group style-accordion" id="style-accordion-0" role="tablist" aria-multiselectable="true">
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="whitespaceIndentationHeading-0">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#style-accordion-0" href="#collapsewhitespaceIndentation-0" aria-expanded="false" aria-controls="collapsewhitespaceIndentation-0">
+                    <h4 class="panel-title">
+                        <span class="glyphicon glyphicon-chevron-up"></span>
+                        Whitespace and Indentation
+                    </h4>
+                </a>
+            </div>
+            <div id="collapsewhitespaceIndentation-0" class="panel-collapse collapse" role="tabpanel" aria-labelledby="whitespaceIndentationHeading-0">
+                <div class="panel-body">
+<dl>
+	<!-- Indentation -->
+	<dt>
+		Indenting
+	</dt>
+	<dd>
+		<p>Increase your indentation by one tab on each brace <code>{</code>, and decrease it once on each closing brace <code>}</code>.</p>
+	</dd>
+
+	<!-- Braces w/ Control Statements -->
+	<dt>
+		Control Statements and Braces
+	</dt>
+	<dd>
+		<p><i>Always use {} on control statements.</i> With Java's control statements such as <code>if</code> and <code>for</code>, the <code>{}</code> braces are technically optional if the body of the control statement contains only a single line.  Regardless of this, <em>always</em> use the <code>{}</code> braces.  Always :) The reason is that if you come back later to add additional statements to the bodies, you may forget to add braces, and your code will not work as you expect.</p>
+
+		<div class="row">
+			<div class="col-xs-12 col-sm-6">
+				<pre class="code-bad">
+<span class="code-comment">// bad</span>
+if (beepersPresent())
+    pickBeeper();</pre>
+			</div>
+			<div class="col-xs-12 col-sm-6">
+				<pre class="code-good">
+<span class="code-comment">// good</span>
+if (beepersPresent()) <em>{</em>
+    pickBeeper();
+<em>}</em></pre>	
+			</div>
+		</div>
+	</dd>
+
+	<!-- Line Breaks -->
+	<dt>
+		Line Breaks
+	</dt>
+	<dd>
+		<p>Place a line break after every <code>{</code> .</p>
+		<div class="row">
+			<div class="col-xs-12 col-sm-6">
+				<pre class="code-bad">
+<span class="code-comment">// bad</span>
+if (beepersPresent()) <em>{ pickBeeper(); }</em></pre>
+			</div>
+			<div class="col-xs-12 col-sm-6">
+				<pre class="code-good">
+<span class="code-comment">// good</span>
+if (beepersPresent()) {
+    pickBeeper();
+}</pre>
+			</div>
+		</div>
+	</dd>
+
+	<!-- One statement per line -->
+	<dt>
+		One Statement Per Line
+	</dt>
+	<dd>
+		<p>Do not place more than one statement on the same line.</p>		
+		<div class="row">
+			<div class="col-xs-12 col-sm-6">
+				<pre class="code-bad">
+<span class="code-comment">// bad</span>
+move();  move();  pickBeeper();</pre>
+			</div>
+
+			<div class="col-xs-12 col-sm-6">
+				<pre class="code-good">
+<span class="code-comment">// good</span>
+move();
+move();
+pickBeeper();	</pre>
+			</div>
+		</div>
+	</dd>
+
+	<!-- Long lines -->
+	<dt>
+		Avoid Long Lines
+	</dt>
+	<dd>
+		<p>Avoid lines longer than 100 characters.  When you have a long line, break it into two shorter lines.</p>
+	</dd>
+
+	<!-- Spacing -->
+	<dt>
+		Spacing
+	</dt>
+	<dd>
+		<p>Place a blank line between methods and between groups of statements.</p>		
+		
+		<pre>
+private void foo() {
+	...
+}
+								<span class="code-comment">// this blank line here</span>
+private void bar() {
+	...
+}		</pre>
+	</dd>
+</dl>                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="methodsHeading-0">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#style-accordion-0" href="#collapsemethods-0" aria-expanded="false" aria-controls="collapsemethods-0">
+                    <h4 class="panel-title">
+                        <span class="glyphicon glyphicon-chevron-up"></span>
+                        Methods
+                    </h4>
+                </a>
+            </div>
+            <div id="collapsemethods-0" class="panel-collapse collapse" role="tabpanel" aria-labelledby="methodsHeading-0">
+                <div class="panel-body">
+<dl>
+	<!-- Names -->
+	<dt>
+		Naming
+	</dt>
+	<dd>
+		<p>Give methods descriptive names, such as <code>walkToEdge</code> or <code>grabAllBeepers</code>.  Avoid one-letter names or non-descriptive names, like <code>x</code> or <code>go</code> or <code>method1</code>.</p>
+	</dd>
+
+	<!-- private -->
+	<dt>
+		Methods Should Be Private
+	</dt>
+	<dd>
+		<p>Unless explicitly specified, all methods you write should be <code>private</code>, not <code>public</code>.</p>
+	</dd>
+
+	<!-- Capitalization -->
+	<dt>
+		Capitalization
+	</dt>
+	<dd>
+		<p>Name methods with camel-casing <code>likeThis</code>.</p>
+	</dd>
+	
+	<!-- Concise run -->
+	<dt>
+		<code>run</code> As a Concise Summary
+	</dt>
+	<dd>
+		<p>As much as possible, avoid having much of your program's functionality directly in <code>run</code>.  Instead, have <code>run</code> call other methods that perform the functionality.  For example, run should not directly call <code>move</code>.  In this way, <code>run</code> is easy to read and forms a concise summary of the overall behavior of the program.</p>
+	</dd>
+
+	<!-- Redundancy -->
+	<dt>
+		Minimize Redundant Code
+	</dt>
+	<dd>
+		<p>If you repeat the same code block two or more times, find a way to remove the redundant code so that it appears only once.  For example, you can place it into a method that is called from both places.</p>
+	</dd>
+
+	<!-- Length -->
+	<dt>
+		Long Methods
+	</dt>
+	<dd>
+		<p>Each method should perform a single, clear, coherent task.  No one method should do too large a share of the overall work.  If you have a single method that is very long, break it apart into smaller sub-methods. If you try to describe the method's purpose and find yourself using the word "and" a lot, that probably means the method does too many things and should be split into sub-methods.</p>
+	</dd>
+
+	<!-- Short methods -->
+	<dt>
+		Short Methods
+	</dt>
+	<dd>
+		<p>It is not useful to make a method that simply calls one other existing method.  But it can be useful to have a short method if it wraps another method with some additional control flow.</p>
+
+		<div class="row">
+			<div class="col-xs-12 col-sm-6">
+				<pre class="code-bad">
+<span class="code-comment">// bad</span>
+private void makeLeftTurn() {
+	turnLeft();
+}</pre>
+			</div>
+			<div class="col-xs-12 col-sm-6">
+				<pre class="code-good">
+<span class="code-comment">// good</span>
+private void safePickup() {
+	if (beepersPresent()) {
+		pickBeeper();
+	}
+}</pre>
+			</div>
+		</div>
+	</dd>
+
+	<!-- Recursion -->
+	<dt>
+		Recursion
+	</dt>
+	<dd>
+		<p>Recursion (which you'll learn about in CS 106B/X) is when methods call themselves.  Mutual recursion is where you have two methods that each call the other to form a cycle of calls.  In CS 106A assignments, we discourage recursion or mutual recursion, as it is sometimes tricky to understand and debug, even though it can allow for elegant solutions.  In many cases, recursion can be replaced with a <code>for</code> or <code>while</code> loop instead.</p>
+
+		<!-- recursion -->
+		<div class="row">
+			<div class="col-xs-12 col-sm-6">
+				<pre class="code-bad">
+<span class="code-comment">// discouraged (recursion)</span>
+public void methodOne() {
+	if (frontIsClear()) {
+		move();
+		<em>methodOne();</em>
+	}
+}</pre>
+			</div>
+			<div class="col-xs-12 col-sm-6">
+				<pre class="code-good">
+<span class="code-comment">// encouraged</span>
+private void moveToWall() {
+	<em>while (frontIsClear()) {</em>
+		move();
+	}
+}</pre>
+			</div>
+		</div>
+
+		<!-- Mutual recursion -->
+		<div class="row">
+			<div class="col-xs-12 col-sm-6">
+				<pre class="code-bad">
+<span class="code-comment">// discouraged (mutual recursion)</span>
+private void methodOne() {
+	if (frontIsClear()) {
+		move();
+		<em>methodTwo();</em>
+	}
+}
+
+private void methodTwo() {
+	if (frontIsClear()) {
+		move();
+		<em>methodOne();</em>
+	}
+}</pre>
+			</div>
+		</div>
+	</dd>
+</dl>                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="controlStatementsHeading-0">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#style-accordion-0" href="#collapsecontrolStatements-0" aria-expanded="false" aria-controls="collapsecontrolStatements-0">
+                    <h4 class="panel-title">
+                        <span class="glyphicon glyphicon-chevron-up"></span>
+                        Control Statements
+                    </h4>
+                </a>
+            </div>
+            <div id="collapsecontrolStatements-0" class="panel-collapse collapse" role="tabpanel" aria-labelledby="controlStatementsHeading-0">
+                <div class="panel-body">
+<dl>
+	<!-- Empty if/else -->
+	<dt>
+		Avoid Empty <code>if</code> or <code>else</code>.
+	</dt>
+	<dd>
+		<p>When using <code>if/else</code> statements, you shouldn't have an if or else branch that is blank.  Rephrase your condition to avoid this.</p>
+
+		<div class="row">
+			<div class="col-xs-12 col-sm-6">
+				<pre class="code-bad">
+<span class="code-comment">// bad</span>
+if (frontIsBlocked()) {
+    <span class="code-comment">// do nothing</span>
+} else {
+    move();
+}</pre>
+			</div>
+			<div class="col-xs-12 col-sm-6">
+				<pre class="code-good">
+<span class="code-comment">// good</span>
+if (<em>frontIsClear()</em>) {
+    move();
+}</pre>
+			</div>
+		</div>
+	</dd>
+
+	<!-- for vs. while -->
+	<dt>
+		<code>for</code> vs. <code>while</code>
+	</dt>
+	<dd>
+		<p>
+			Use a <code>for</code> loop when the number of repetitions is known; use a <code>while</code> loop when the number of repetitions is unknown.
+		</p>
+
+		<div class="row">
+			<div class="col-xs-12 col-sm-6">
+				<pre>
+<span class="code-comment">// for: picks up 5 beepers</span>
+for (int i = 0; i &lt; 5; i++) {
+    pickBeeper();
+}</pre>
+			</div>
+			<div class="col-xs-12 col-sm-6">
+				<pre>
+<span class="code-comment">// while: picks up all beepers present</span>
+while (beepersPresent()) {
+	pickBeeper();
+}</pre>
+			</div>
+		</div>
+	</dd>
+
+	<!-- if/else factoring -->
+	<dt>
+		<code>if/else</code> Factoring
+	</dt>
+	<dd>
+		<p>Move common code out of <code>if/else</code> statements to reduce repetition.</p>
+
+		<div class="row">
+			<div class="col-xs-12 col-sm-6">
+				<pre class="code-bad">
+<span class="code-comment">// bad</span>
+if (beepersPresent()) {
+    <em>move();</em>
+    pickBeeper();
+    <em>move();
+    turnLeft();
+    turnLeft();
+    move();</em>
+} else {
+    <em>move();
+    move();
+    turnLeft();
+    turnLeft();
+    move();</em>
+}</pre>
+			</div>
+			<div class="col-xs-12 col-sm-6">
+				<pre class="code-good">
+<span class="code-comment">// good</span>
+<em>move();</em>
+if (beepersPresent()) {
+    pickBeeper();
+}
+<em>move();
+turnLeft();
+turnLeft();
+move();</em></pre>
+			</div>
+		</div>
+	</dd>
+
+	<!-- infinite loops -->
+	<dt>
+		Infinite Loops
+	</dt>
+	<dd>
+		<p>Except for infinite animation, avoid writing loops that never stop, such as the example below.  An infinite loop will cause your program to never stop executing.  Replace an infinite loop with a loop that does terminate.</p>
+
+		<div class="row">
+			<div class="col-xs-12 col-sm-6">
+				<pre class="code-bad">
+<span class="code-comment">// bad if front is blocked<br />// but left is clear!</span>
+while (<em>leftIsClear()</em>) {
+    if (frontIsClear()) {
+        move();
+    }
+}</pre>
+			</div>
+			<div class="col-xs-12 col-sm-6">
+				<pre class="code-good">
+<span class="code-comment">// good</span>
+while (<em>frontIsClear()</em>) {
+    move();
+}</pre>
+			</div>
+		</div>
+	</dd>
+</dl>                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="commentsHeading-0">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#style-accordion-0" href="#collapsecomments-0" aria-expanded="false" aria-controls="collapsecomments-0">
+                    <h4 class="panel-title">
+                        <span class="glyphicon glyphicon-chevron-up"></span>
+                        Comments
+                    </h4>
+                </a>
+            </div>
+            <div id="collapsecomments-0" class="panel-collapse collapse" role="tabpanel" aria-labelledby="commentsHeading-0">
+                <div class="panel-body">
+<dl>
+	<!-- File comments -->
+	<dt>
+		File Comments
+	</dt>
+	<dd>
+		<p>Place a descriptive comment heading on the top of every .java file in your project with your name, section leader, a description of that file's purpose, and a <strong>citation of all sources</strong> you used to help write your program. Assume that the reader of your comments is an intelligent programmer but not someone who has seen this program or assignment before. It should describe behavior, but not go into great detail about how each piece is implemented.</p>
+	</dd>
+
+	<!-- Method comments -->
+	<dt>
+		Method Comments
+	</dt>
+	<dd>
+		<p>
+			Place a comment heading on each method of your file. The heading should describe the method's behavior.  If your method makes any assumptions (preconditions), mention this in your comments. If it leaves the program in a certain state when it is done (postcondition), mention this as well.  Describe the method's behavior, but don't include great detail about how it is implemented.  Don't mention language-specific details like it uses an <code>if/else</code> statement, etc.  Here is an example of a good method header comment:
+		</p>
+		<pre>
+<span class="code-comment">/*
+ * Jumps Karel over one hurdle of arbitrary height by walking north over it,
+ * and then back down to his original row.
+ * Pre:  Karel is next to a jumpable hurdle, facing east.
+ * Post: Karel will be over the hurdle, one column to the right, facing east.
+ */</span>
+public void jumpHurdle() {
+	...
+}</pre>
+	</dd>
+
+	<!-- Inline comments -->
+	<dt>
+		Inline Comments
+	</dt>
+	<dd>
+		<p>Inside various methods, if you have sections of code that are lengthy, complex or non-trivial, place small inline comments near these code blocks describing what they are doing.</p>
+	</dd>
+
+	<!-- Trivial comments -->
+	<dt>
+		Trivial Comments
+	</dt>
+	<dd>
+		<p>
+			Do not include obvious or redundant comments about the meaning of statements.
+		</p>
+
+		<pre class="code-bad">
+<span class="code-comment">// bad</span>
+turnLeft(); 		<span class="code-comment">// turns Karel counter-clockwise</span>
+move();				<span class="code-comment">// tells Karel to move forward</span></pre>
+	</dd>
+
+	<!-- Wording -->
+	<dt>
+		Wording
+	</dt>
+	<dd>
+		<p>Your comment headers should be written in <strong>complete sentences</strong>, and should be written in <strong>your own words</strong>, not copied from other sources (such as copied verbatim from the homework spec document).</p>
+	</dd>
+
+	<!-- TODOs -->
+	<dt>
+		TODOs
+	</dt>
+	<dd>
+		<p>You should remove any <span class="code-comment"><code>// TODO:</code></span> comments from your programs before turning them in.</p>
+	</dd>
+
+	<!-- Commented code -->
+	<dt>
+		Commented-Out Code
+	</dt>
+	<dd>
+		<p> It is considered bad style to turn in a program with chunks of code "commented out". It's fine to comment out code as you are working on a program, but if the program is done and such code is not needed, just remove it.</p>
+	</dd>
+</dl>                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="forbiddenJavaFeaturesHeading-0">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#style-accordion-0" href="#collapseforbiddenJavaFeatures-0" aria-expanded="false" aria-controls="collapseforbiddenJavaFeatures-0">
+                    <h4 class="panel-title">
+                        <span class="glyphicon glyphicon-chevron-up"></span>
+                        Forbidden Java Features
+                    </h4>
+                </a>
+            </div>
+            <div id="collapseforbiddenJavaFeatures-0" class="panel-collapse collapse" role="tabpanel" aria-labelledby="forbiddenJavaFeaturesHeading-0">
+                <div class="panel-body">
+<p>
+	On Assignment 1, <strong>you must limit yourself to the Java features shown in the Karel coursereader.</strong>  There are too many features to list them all, but in general you should match the Java features used in the sample programs in class and in the Karel coursereader and not use any Java features outside of those.  In particular, you should not use the following:
+</p>
+
+<dl>
+	<!-- Variables -->
+	<dt>
+		Variables
+	</dt>
+	<dd>
+		<p>You are not allowed to use any variables, such as:</p>
+		<pre class="code-bad">
+<span class="code-comment">// bad</span>
+<em>int steps = 42;</em>
+while (steps > 0) {
+	move();
+	turnLeft();
+	steps = steps - 1;
+}</pre>
+	</dd>
+
+	<!-- Instance variables -->
+	<dt>
+		Instance Variables
+	</dt>
+	<dd>
+		<p>These are the 'private' variables that are declared outside of methods.  These are just another form of variables and should not be used on Assignment 1.</p>
+
+		<pre class="code-bad">
+<span class="code-comment">// bad</span>
+public class MyKarel extends Karel {
+	<em>private int count;</em>
+
+	public void run() {
+		<em>count = 5;</em>
+		...
+	}
+}</pre>
+	</dd>
+
+	<!-- special keywords -->
+	<dt>
+		<code>break</code>, <code>return</code> and <code>continue</code>
+	</dt>
+	<dd>
+		<p>You should not use any of these keywords on Assignment 1, as they are not included in the Karel coursereader.</p>
+	</dd>
+
+	<!-- Parameters -->
+	<dt>
+		Parameters
+	</dt>
+	<dd>
+		<p>Java methods are able to accept parameters that affect their behavior. This is not included in the Karel coursereader and is not permitted on Assignment 1.</p>
+
+		<pre class="code-bad">
+<span class="code-comment">// bad</span>
+public void walk(<em>int numSteps</em>) {
+	for (int i = 0; i &lt; numSteps; i++) {
+		move();
+	}
+}</pre>
+	</dd>
+</dl>                </div>
+            </div>
+        </div>
+</div>		    </div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		$(document).ready(function(){    
+			// Adds an arrow-up / arrow-down icon to open/close collapse panels
+			$('.collapse').on('show.bs.collapse', function(){
+				$(this).parent().find(".glyphicon-chevron-up").removeClass("glyphicon-chevron-up").addClass("glyphicon-chevron-down");
+			}).on('hide.bs.collapse', function(){
+				$(this).parent().find(".glyphicon-chevron-down").removeClass("glyphicon-chevron-down").addClass("glyphicon-chevron-up");
+			});
+		});
+	</script>
+</body>

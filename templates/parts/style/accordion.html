@@ -1,0 +1,29 @@
+<!-- Accordion of style categories that expand to show content.
+
+Assumes a list of tuples in 'category', with each tuple representing a collapsible
+section to display.  tuple[0] is the section name, tuple[1] is the name of the
+file prefix (no filetype extension) containing that section's content.
+
+Also assumes a unique index for this accordion in 'index'.
+-->
+<div class="panel-group style-accordion" id="style-accordion-{{index}}" role="tablist" aria-multiselectable="true">
+    % for category in categories:
+        % categoryPrefix = category[1]
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="{{categoryPrefix}}Heading-{{index}}">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#style-accordion-{{index}}" href="#collapse{{categoryPrefix}}-{{index}}" aria-expanded="false" aria-controls="collapse{{categoryPrefix}}-{{index}}">
+                    <h4 class="panel-title">
+                        <span class="glyphicon glyphicon-chevron-up"></span>
+                        {{category[0]}}
+                    </h4>
+                </a>
+            </div>
+            <div id="collapse{{categoryPrefix}}-{{index}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="{{categoryPrefix}}Heading-{{index}}">
+                <div class="panel-body">
+                    %include('templates/parts/style/' + categoryPrefix + '.html')
+                </div>
+            </div>
+        </div>
+    % end
+</div>
