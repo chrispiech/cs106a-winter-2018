@@ -11,7 +11,47 @@ import stanford.karel.SuperKarel;
 public class DoubleBeepers extends SuperKarel {
 
 	public void run() {
-		
+		moveToPile();
+		makeDoublePile();
+		returnNeighborPile();
+	}
+	
+	private void returnNeighborPile() {
+		move();
+		while(beepersPresent()) {
+			pickBeeper();
+			putBeeperBehind();
+		}
+	}
+
+	private void putBeeperBehind() {
+		moveBackwards();
+		putBeeper();
+		move();
+	}
+
+	private void makeDoublePile() {
+		while(beepersPresent()) {
+			pickBeeper();
+			putTwoNextDoor();
+			moveBackwards();
+		}
+	}
+
+	private void moveBackwards() {
+		turnAround();
+		move();
+		turnAround();
+	}
+
+	private void putTwoNextDoor() {
+		move();
+		putBeeper();
+		putBeeper();
+	}
+
+	private void moveToPile() {
+		move();
 	}
 	
 

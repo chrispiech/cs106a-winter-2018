@@ -13,24 +13,24 @@ public class DoYourThing extends SuperKarel {
 	public void run() {
 		move();
 		while (beepersPresent()) {
-		pickBeeper();
-		move();
-		putBeeper();
-		putBeeper();
-		turnAround();
-		move();
-		turnAround();
+			pickBeeper();
+			move();
+			putBeeper();
+			putBeeper();
+			turnAround();
+			move();
+			turnAround();
 		}
 		move();
 		while (beepersPresent()) {
-		pickBeeper();
-		turnAround();
-		move();
-	turnAround();
-		putBeeper();
-		move();
-			}
+			pickBeeper();
 			turnAround();
+			move();
+			turnAround();
+			putBeeper();
+			move();
+		}
+		turnAround();
 		move();
 		turnAround();
 		turnAround();
