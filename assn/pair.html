@@ -1,0 +1,364 @@
+<head>
+
+<title>CS106A</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF8">
+
+
+<link href="//web.stanford.edu/class/cs106a/plugins/bootstrap-custom/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="//web.stanford.edu/class/cs106a/style.css">
+
+<!-- Java Script -->
+<script src="//web.stanford.edu/class/cs106a/plugins/jquery.min.js"></script>
+<script src="//web.stanford.edu/class/cs106a/plugins/moment.min.js"></script>
+<script src="//web.stanford.edu/class/cs106a/plugins/bootstrap-custom/js/bootstrap.min.js"></script>
+<script src="//web.stanford.edu/class/cs106a/plugins/ace/ace.js" type="text/javascript"></script>
+
+
+<!-- Stanford -->
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600,700' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+<nav class="navbar navbar-inverse">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand brand" href="//web.stanford.edu/class/cs106a//">CS106A</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+        <!--<li><a href="#">Lectures</a></li>-->
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Lectures <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="//web.stanford.edu/class/cs106a/lectures/1-Welcome">1 Welcome</a></li>
+            <li><a href="//web.stanford.edu/class/cs106a/lectures/2-ControlFlow">2 Control Flow</a></li>
+            <li><a href="//web.stanford.edu/class/cs106a/lectures/3-Decomposition">3 Decomposition</a></li>
+            <!--<li><a href="//web.stanford.edu/class/cs106a/lectures/4-Variables">4-Variables</a></li>
+            <li><a href="//web.stanford.edu/class/cs106a/lectures/5-ControlFlowRevisited">5-ControlFlowRevisited</a></li>
+            <li><a href="//web.stanford.edu/class/cs106a/lectures/6-SimpleJava">6-SimpleJava</a></li>
+            <li><a href="//web.stanford.edu/class/cs106a/lectures/7-Methods">7-Methods</a></li>
+            <li><a href="//web.stanford.edu/class/cs106a/lectures/8-Animation">8-Animation</a></li>
+            <li><a href="//web.stanford.edu/class/cs106a/lectures/9-Events">9-Events</a></li>
+            <li><a href="//web.stanford.edu/class/cs106a/lectures/10-References">10-References</a></li>
+            <li><a href="//web.stanford.edu/class/cs106a/lectures/11-Memory">11-Memory</a></li>
+            <li><a href="//web.stanford.edu/class/cs106a/lectures/12-TextProcessing">12-TextProcessing</a></li>
+            <li><a href="//web.stanford.edu/class/cs106a/lectures/13-Files">13-FileReading</a></li>
+            <li><a href="//web.stanford.edu/class/cs106a/lectures/14-Files+ArrayLists">14-FileReading+ArrayLists</a></li>
+            <li><a href="//web.stanford.edu/class/cs106a/lectures/106AMidtermReviewSession.pdf">Midterm Review Session</a></li>
+            <li><a href="//web.stanford.edu/class/cs106a/lectures/15-Arrays">15-Arrays</a></li>
+            <li><a href="//web.stanford.edu/class/cs106a/lectures/16-Matrix">16-Matrix</a></li>
+            <li><a href="//web.stanford.edu/class/cs106a/lectures/17-HashMaps">17-HashMaps</a></li>
+            <li><a href="//web.stanford.edu/class/cs106a/lectures/18-Interactors">18-Interactors</a></li>
+            <li><a href="//web.stanford.edu/class/cs106a/lectures/19-Classes1">19-Classes-1</a></li>
+            <li><a href="//web.stanford.edu/class/cs106a/lectures/20-Classes2">20-Classes-2</a></li>-->
+          </ul>
+
+        </li>
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Handouts <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="//web.stanford.edu/class/cs106a/handouts/1 - General Information.pdf">1 General Information</a></li>
+            <li><a href="//web.stanford.edu/class/cs106a/handouts/2 - Course Placement.pdf">2 Course Placement</a></li>
+            <li><a href="//web.stanford.edu/class/cs106a/handouts/3 - Using Karel with Eclipse.pdf">3 Using Karel with Eclipse</a></li>
+            <li><a href="//web.stanford.edu/class/cs106a/handouts/4 - Honor Code.pdf">4 Honor Code</a></li>
+            <li><a href="//web.stanford.edu/class/cs106a/handouts/5 - Assignment1.pdf">5 Assignment 1</a></li>
+            <li><a href="//web.stanford.edu/class/cs106a/handouts/6 - Submitting Work.pdf">6 Submitting Work</a></li>
+            <li><a href="//web.stanford.edu/class/cs106a/handouts/7 - Course Communication.pdf">7 Course Communication</a></li>
+            <!--<li><a href="//web.stanford.edu/class/cs106a/handouts/8 - Karel Examples.pdf">8-Karel Examples</a></li>
+            <li><a href="//web.stanford.edu/class/cs106a/handouts/10 - Assignment-2.pdf">10-Assignment-2</a></li>
+            <li><a href="//web.stanford.edu/class/cs106a/handouts/11 - Control Statements.pdf">11-Control Statements</a></li>
+            <li><a href="//web.stanford.edu/class/cs106a/handouts/13 - Methods.pdf">13-Methods</a></li>
+            <li><a href="//web.stanford.edu/class/cs106a/handouts/15 - Assignment-3.pdf">15-Assignment-3</a></li>
+            <li><a href="//web.stanford.edu/class/cs106a/handouts/16 - Coding Style.pdf">16-Coding Style</a></li>
+            <li><a href="//web.stanford.edu/class/cs106a/handouts/17 - Variables.pdf">17-Variables</a></li>
+            <li><a href="//web.stanford.edu/class/cs106a/handouts/18 - Ufo Game.pdf">18-Ufo Game</a></li>
+            <li><a href="//web.stanford.edu/class/cs106a/handouts/19 - Strings.pdf">19-String Examples</a></li>
+            <li><a href="//web.stanford.edu/class/cs106a/handouts/20 - Assignment-4.pdf">20-Assignment 4</a></li>
+            <li><a href="//web.stanford.edu/class/cs106a/handouts/21 - Practice Midterm.pdf">21-Practice Midterm</a></li>
+            <li><a href="//web.stanford.edu/class/cs106a/handouts/22 - Exam Strategies.pdf">22-Exam Strategies</a></li>
+            <li><a href="//web.stanford.edu/class/cs106a/handouts/23 - Practice Midterm Solutions.pdf">23-Practice Midterm Solutions</a></li>
+            <li><a href="//web.stanford.edu/class/cs106a/handouts/25 - ArrayLists.pdf">25-ArrayLists</a></li>
+            <li><a href="//web.stanford.edu/class/cs106a/handouts/26 - Graphics Contest.pdf">26-Graphics Contest</a></li>
+            <li><a href="//web.stanford.edu/class/cs106a/handouts/29-assignment-5.pdf">27-Assignment 5</a></li>
+            <li><a href="//web.stanford.edu/class/cs106a/handouts/28 - Debugging.pdf">28-Debugging</a></li>
+            <li><a href="//web.stanford.edu/class/cs106a/handouts/29 - Midterm.pdf">29-Midterm</a></li>
+            <li><a href="//web.stanford.edu/class/cs106a/handouts/30 - Midterm Solutions.pdf">30-Midterm Solutions</a></li>
+            <li><a href="//web.stanford.edu/class/cs106a/handouts/31 - Assignment-6.pdf">31-Assignment 6</a></li>-->
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Assignments <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+           
+            <li><a href="https://goo.gl/forms/RjR4u0kIKY1uBQfq2">0 Who are you</a></li>
+            <li><a href="//web.stanford.edu/class/cs106a/assn/karel.html">1 Karel</a></li>
+            <!--<li><a href="//web.stanford.edu/class/cs106a/assn/simpleJava.html">2-Simple Java</a></li>
+            <li><a href="//web.stanford.edu/class/cs106a/assn/breakout.html">3-Breakout</a></li>
+            <li><a href="//web.stanford.edu/class/cs106a/assn/hangman.html">4-Hangman</a></li>
+            <li><a href="//web.stanford.edu/class/cs106a/assn/yahtzee.html">5-Yahtzee</a></li>
+            <li><a href="//web.stanford.edu/class/cs106a/assn/nameSurfer.html">6-NameSurfer</a></li>-->
+            
+            <li class="divider"></li>
+            <li><a href="//web.stanford.edu/class/cs106a/assn/style.html">Style Guide</a></li>
+            <!--
+
+            <li><a href="//web.stanford.edu/class/cs106a/assignments/GraphicsContest.zip">Graphics Contest Project</a></li>
+            <li><a href="//web.stanford.edu/class/cs106a/assn/debugger.html">Extra Credit: Debugger</a></li>-->
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Examples <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="//web.stanford.edu/class/cs106a/examples/stepUp.html">Step Up</a></li>
+            <li><a href="//web.stanford.edu/class/cs106a/examples/place100.html">Place 100</a></li>
+            <li><a href="//web.stanford.edu/class/cs106a/examples/beeperLine.html">Beeper Line</a></li>
+            <li><a href="//web.stanford.edu/class/cs106a/examples/invert.html">Invert</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sections <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+<!--
+Generates a list of section links based on the saved section materials.  Expects
+a 'sections' parameter of urls where sections[i] is the url to section i+1's
+materials.
+-->
+<li class="dropdown-header">Section 1</li>
+<li><a href="//web.stanford.edu/class/cs106a/section/1/Section1.pdf">Handout</a></li>
+<li class="section-solutions" data-solutions-release=2018011917><a href="//web.stanford.edu/class/cs106a/section/1/Section1-Solutions.pdf">Solutions</a></li>
+<li class="section-solutions" data-solutions-release=2018011917><a href="//web.stanford.edu/class/cs106a/section/1/Section1.zip">Code</a></li>
+
+
+<script type="text/javascript">
+	// only show section solutions if they should be released
+	$(document).ready(function() {
+		$(".section-solutions").each(function(i) {
+	    	var dateStr = $(this).attr("data-solutions-release");
+	    	var releaseDate = moment(dateStr, "YYYYMMDDHH");
+	    	if (!releaseDate.isSameOrBefore(moment())) {
+	    		// remove the link and disable it
+	    		$(this).children().first().attr("href", "");
+	    		$(this).addClass("disabled");
+	    	}
+		});
+	});
+</script>              <li class="divider"></li>
+              <li><a href="https://cs198.stanford.edu/cs198/auth/section/SwitchSection.aspx">Late Section Signup</a></li>
+              <li><a href="https://cs198.stanford.edu/cs198/auth/section/RemoteSignup.aspx">Remote SCPD Signup</a></li>
+              <li><a href="https://cs198.stanford.edu/cs198/auth/section/DropClass.aspx">Drop Section</a></li>
+              <li><a href="https://cs198.stanford.edu/cs198/auth/default.aspx">View My Section</a></li>
+              <li><a href="https://cs198.stanford.edu/cs198/auth/section/ViewSections.aspx">View All Sections</a></li>
+          </ul>
+          </ul>
+        </li>
+
+        <!--<li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tools <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="">Nothing Yet</a></li>
+          </ul>
+        </li>-->
+       
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="//web.stanford.edu/class/cs106a/schedule.html"><span class="glyphicon glyphicon-th-large" aria-hidden="true"></span> Schedule</a></li>
+      </ul>
+      
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+    <div class="container">
+
+        <!-- FAQ and policies for pair programming -->
+
+        <!-- Header -->
+        <div class="row">
+            <div class="col-xs-12">
+                <div id="pageHeader">
+                    <h1>Pair Programming</h1>
+                </div>
+                <hr/>
+            </div>
+        </div>
+
+        <em>Based on a handout by Marty Stepp, Cynthia Lee, and others.</em>
+
+        <!-- Text body -->
+        <div style="margin-top: 20px"; class="row">
+            <div class="col-xs-12">
+                <p>
+                    As the course information handout mentions, several of the assignments in this course allow you to <i>optionally</i> work in a pair with a partner.  Each assignment will explicitly specify whether this is an option.  Some common questions and tips on working on assignments with a partner are listed below.  
+                    <br />
+                    <br />
+                    Additionally, some helpful tools for sharing code privately online with your partner (if needed) are <a href="http://collabedit.com/">CollabEdit</a> and <a href="http://docs.google.com/">Google Docs</a>.  Please <strong>Do NOT</strong> post shared partner code publicly on places like Pastebin or public GitHub repositories.
+                </p>
+
+                <hr/>
+
+                <dl>
+                    <dt id="why">
+                        Q: Why are we doing pair programming in CS106A this quarter?
+                    </dt>
+                    <dd>
+                        A: Pair programming serves two purposes.  The first is that pair programming has potential benefits to students.  Working with a partner can give you someone to talk to when you're stuck, or help you learn different ways of approaching the same problem.
+                        <br />
+                        <br />
+                        The second is to ensure a high quality of service from our course staff.  Pair programming helps reduce the heavy grading workload on our section leaders, so they can support you and best help you be successful in CS106A.
+                    </dd>
+
+                    <dt id="strategies">
+                         Q: What is the best strategy for working with a partner?
+                    </dt>
+                    <dd>
+                        A: The exact work style you use with your partner is up to you.  There are several ways that pairs can work together.  Here are some possible strategies, along with our opinion about the effectiveness of each:
+
+                        <ul>
+                            <li>
+                                <strong>Sit together and write the code together:</strong> <i>(Strongly recommended.)</i> In this work style, you would sit next to each other at the same computer and collaborate to write the code. One person would type for a while, then the other, and back again. You can decide the interval for switching who controls the computer (the "driver"). Some people recommend switching roughly every 15-20 minutes, to make sure that each person gets to drive. Even if one of you is a faster typer, letting both people drive for equal time is good to avoid having one person dominate the work.
+                            </li>
+                            <li>
+                                <strong>Work together using online tools:</strong> <i>(Recommended.)</i> In this work style, the two of you would be physically apart but would collaborate by sharing code using online tools. For example, you would put your code into CollabEdit or Google Docs (see links above) and talk to each other using a chat program like Google Hangouts, Skype, FaceTime, etc. This style can be effective for students who have different schedules or live far apart.
+                            </li>
+                            <li>
+                                <strong>Do the assignment individually, and then compare/merge solutions:</strong> <i>(Somewhat recommended, but we suggest one of the others above instead.)</i> In this work style, each of you would complete the assignment on your own, then the two of you would have a meeting and compare solutions. You would then merge the solution into a best combined solution that you would submit together. This work style doesn't have as many benefits as working on the solution together, but it is still good to see how another student solved the problem and learn from each others' programs' strengths and weaknesses.
+                            </li>
+                        </ul>
+
+                        There are some work styles that we do NOT recommend because we do not think they follow the spirit of working in pairs, and do not allow both students to effectively learn the material.  For example:
+                        <br />
+                        <br />
+
+                        <ul>
+                            <li>
+                                <strong>Splitting up the parts of the assignment:</strong> In this work style, each of you would complete parts of the assignment individually, then submit them together. For example, if the assignment has a "Part A" and a "Part B", one of you would do Part A and the other would do Part B. We <strong>do not recommend</strong> doing this because each of you will only learn part of the material for that assignment. This will leave you less prepared on exams and future assignments.
+                            </li>
+                            <li>
+                                <strong>Taking turns on assignments:</strong> In this work style, in a pair of students named A and B, student A would do Homework X, then B would do Homework X+1, A would do Homework X+2, and so on. You <strong>should not</strong> do this, since each partner is expected to make a <strong>significant contribution</strong> toward solving the assignment.  You should not claim to be part of a pair submission if you did not contribute significantly to help solve that problem.  Moreover, your section leader may ask you to explain aspects of the submission during IGs.  By doing this each of you will only learn half of the course material in detail. The assignments are by far the best vehicle for you to learn how to program effectively and truly come to understand the course material. Only completing half of them will leave you much less prepared to do well on exams and future assignments.
+                            </li>
+                            <li>
+                                <strong>One person does all of the work:</strong> You <strong>should not</strong> do this, since each partner is expected to make a <strong>significant contribution</strong> toward solving the assignment.  You should not claim to be part of a pair submission if you did not contribute significantly to help solve that problem.  Moreover, your section leader may ask you to explain aspects of the submission during IGs.  By doing this the other person will not learn the material well and will be grossly underprepared to do well on exams and future assignments.  The assignments are by far the best vehicle for you to learn how to program effectively and truly come to understand the course material.
+                            </li>
+                        </ul>
+                    </dd>
+                    <dt id="pair-assignments">
+                         Q: Is every assignment going to be a pair assignment?
+                    </dt>
+                    <dd>
+                        A: No; some assignments will be individual. Each assignment will clearly label whether it is an individual or pair assignment. Please follow each assignment's instructions properly, and if a given assignment is an individual assignment, please submit your own work and do not share code with a partner.
+                    </dd>
+
+                    <dt id="who-can-i-pair-with">
+                         Q: Are there any constraints on whom I can work with?
+                    </dt>
+                    <dd>
+                        A: You <strong>must</strong> work with another student in your section who is taking the course for the same <strong>grading basis</strong> (e.g. letter grade, CR/NC). If you would like to pair with someone not in your section, and it's still early in the quarter, you can request a section swap to put you both in the same section.  See the link in the "Section" dropdown in the navigation bar.
+                    </dd>
+                    <dt id="finding-partner">
+                         Q: How can I find a partner to work with?
+                    </dt>
+                    <dd>
+                        A: Your section leader may provide time in section for you to find a partner if needed.  You may also contact your section leader if you need help finding someone else in your section to partner with.
+                    </dd>
+                    <dt id="same-partner">
+                         Q: Do I have to have the same partner for the whole quarter?
+                    </dt>
+                    <dd>
+                        A: No; if you want to change partners, you may do so. However, in general, due to the overhead of changing partners along the way, we encourage you to use the same partner unless there is a serious problem or reason not to.
+                    </dd>
+                    <dt id="submitting-and-grades">
+                         Q: How do we submit/get grades as a pair?
+                    </dt>
+                    <dd>
+                        A: <strong>Only ONE</strong> of you should submit your project via Eclipse; please clearly mark at the top of the files in the project that you are both working in a pair.  Your section leader will grade the assignment for both of you and schedule a joint IG to go over the assignment.
+                    </dd>
+                    <dt id="late-days">
+                         Q: How do late days work with teams?  What if I switch partners?
+                    </dt>
+                    <dd>
+                       A: Each student has an individual personal counter of late days remaining. If your team turns in an assignment late, each individual student's penalty is based on that student's number of late days remaining.
+                    </dd>
+                    <dt id="bad-partner">
+                         Q: My partner was a bad partner. They didn't do any work, or didn't do their share of the work, or didn't communicate or meet with me, etc. What can I do?
+                    </dt>
+                    <dd>
+                        A: Have you tried speaking to your partner to let them know that you expect them to do more? Remind your partner what the course info handout says about expectations of each member of a pair. Many group issues can be resolved by better communication and setting expectations.
+                        <br />
+                        <br />
+                        If talking to your partner does not resolve the situation, speak to your section leader and explain the details of what has happened. We will try to help you resolve the issue. If it is an ongoing problem, the section leader can help you find you a partner, or you can dissolve your partnership and submit individually. Please feel free to bring to our attention any complaints you may have about your partner.
+                        <br />
+                        <br />
+                        <strong>NOTE:</strong> If you agree verbally (or via email) to work with a given partner on a given assignment, you are expected to work through that assignment with that partner to completion. You can't abandon your partner in the middle of an assignment unless the decision to unpair is mutual for both of you. Please be considerate for your partner and don't leave them hanging without an easy way to find a new partner mid-assignment. If you are planning to end your partnership and do the next assignment alone, please tell your partner this as soon as possible when the assignment is given out, so that they can make other arrangements.
+                    </dd>
+                    <dt id="bad-partner-2">
+                         Q: My partner was a bad partner, but not because they didn't do enough work. They did too much! They hogged the keyboard, or they did the whole assignment without waiting for me, or they didn't communicate with me, etc. I feel that I didn't get a real chance to help in writing the code and solving the assignment. What can I do?
+                    </dt>
+                    <dd>
+                        A: The answer is similar to the previous question. Have you tried speaking to your partner to let them know that you expect them to let you contribute? Remind your partner what the course info handout says about expectations of each member of a pair. Many group issues can be resolved by better communication and setting expectations.
+                        <br />
+                        <br />
+                        If talking to your partner does not resolve the situation, speak to your section leader and explain the details of what has happened. We will try to help you resolve the issue. If it is an ongoing problem, the section leader can help you find you a partner, or you can dissolve your partnership and submit individually. Please feel free to bring to our attention any complaints you may have about your partner.
+                    </dd>
+                    <dt id="help">
+                         Q: How do we get help if our pair is stuck on an assignment?
+                    </dt>
+                    <dd>
+                        A: You can go ask for help from the section leaders in the LaIR.  Keeping in mind that a big reason for implementing pairs is to help reduce staff workload, we request that if both of you are in the LaIR, that <strong>only one of you</strong> will enqueue for LaIR help at a time. That is, please don't try to "double up" by enqueuing both of your names in the line. If we find that a group is doing this, we will remove both of their names and move one of them to the very back of the queue. Thank you for your cooperation.
+                        <br />
+                        <br />
+                        Also feel free to come ask the instructor or Head TA for help during office hours.
+                        <br />
+                        <br />
+                        Don't forget to talk to each other plenty during the assignment along the way. One benefit of working in pairs is that each member of the pair can help the other improve his/her understanding of the material and help figure out how to solve the assignment.
+                    </dd>
+                </dl>
+            </div>
+        </div>
+
+
+<div class="row">
+	<div class="col-md-12">
+		<hr>
+
+		<div class="footer">
+			<p class="pull-left">
+				&#169; Stanford 2017 &#124; Created by Chris Piech.
+				CS106A has been developed over decades by many talented teachers. 
+			</p>
+		</div>
+	</div>
+</div>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-74362126-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+    </div>
+</body>
