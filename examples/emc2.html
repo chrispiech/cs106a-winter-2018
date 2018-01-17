@@ -51,8 +51,8 @@
             <li><a href="//web.stanford.edu/class/cs106a/lectures/1-Welcome">1 Welcome</a></li>
             <li><a href="//web.stanford.edu/class/cs106a/lectures/2-ControlFlow">2 Control Flow</a></li>
             <li><a href="//web.stanford.edu/class/cs106a/lectures/3-Decomposition">3 Decomposition</a></li>
-            <!--<li><a href="//web.stanford.edu/class/cs106a/lectures/4-Variables">4-Variables</a></li>
-            <li><a href="//web.stanford.edu/class/cs106a/lectures/5-ControlFlowRevisited">5-ControlFlowRevisited</a></li>
+            <li><a href="//web.stanford.edu/class/cs106a/lectures/4-Variables">4-Variables</a></li>
+            <!--<li><a href="//web.stanford.edu/class/cs106a/lectures/5-ControlFlowRevisited">5-ControlFlowRevisited</a></li>
             <li><a href="//web.stanford.edu/class/cs106a/lectures/6-SimpleJava">6-SimpleJava</a></li>
             <li><a href="//web.stanford.edu/class/cs106a/lectures/7-Methods">7-Methods</a></li>
             <li><a href="//web.stanford.edu/class/cs106a/lectures/8-Animation">8-Animation</a></li>
@@ -133,6 +133,9 @@
             <li><a href="//web.stanford.edu/class/cs106a/examples/place100.html">Place 100</a></li>
             <li><a href="//web.stanford.edu/class/cs106a/examples/beeperLine.html">Beeper Line</a></li>
             <li><a href="//web.stanford.edu/class/cs106a/examples/invert.html">Invert</a></li>
+            <li><a href="//web.stanford.edu/class/cs106a/examples/restaurant.html">Restaurant</a></li>
+            <li><a href="//web.stanford.edu/class/cs106a/examples/carbonDating.html">Carbon Dating</a></li>
+             <li><a href="//web.stanford.edu/class/cs106a/examples/emc2.html">E=MC2</a></li>
           </ul>
         </li>
 
@@ -196,7 +199,7 @@ materials.
 		<!-- Header -->
 		<div id="pageHeader">
 			<h1>
-				E=MC2 (with solution)
+				E=MC2
 			</h1>
 			<p>
 				Problem written by Chris, discovered by Einstein
@@ -245,6 +248,7 @@ public class EMC2 extends ConsoleProgram {
 	private static final double C = 299792458;
 	
 	public void run() {
+	    // Repeats forever
 		while(true) {
 			// Read the mass in from the user.
 			double massInKg = readDouble("Enter kilos of mass: ");

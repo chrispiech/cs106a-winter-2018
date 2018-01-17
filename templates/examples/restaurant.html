@@ -1,0 +1,90 @@
+<head>
+
+	%include templates/parts/head.html
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBar.html
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				Restaurant
+			</h1>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>
+					Write a ConsoleProgram that calculates the tax, tip and total bill for us at a restaurant. The program should ask the user for the subtotal, and then calculate and print out the tax, tip and total.
+
+				</p>
+
+				<p>
+					Assume that tip is 20% and tax is 8% and that tip is on the original amount, not on the taxed amount.
+
+				</p>
+				<p>
+					<center>
+						<img style="width:400px" src="{{pathToRoot}}img/projects/restaurant/demo.png">	
+					</center>
+				</p>
+				
+			</div>
+
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Solution</h2>
+
+
+<pre id="editor" style="height:480px">/**
+ * Program: Restaurant
+ * -------------
+ * This program helps restaurants calculate the bill 
+ * taking into account tax and tip!
+ */
+public class Restaurant extends ConsoleProgram {
+	
+	// This declares a constant... it can never change value.
+	private static final double TAX = 0.08; // Tax is 8%
+	private static final double TIP = 0.20; // Tip is 20%
+	
+	public void run() {
+	    // store the raw cost of the meal.
+		double cost = readDouble("What was the meal cost? $");
+		
+		double tax = cost * TAX;
+		double tip = cost * TIP;
+		
+		double total = cost + tax + tip;
+
+		println("Tax: $" + tax);
+		println("Tip: $" + tip);
+		println("Total: $" + total);
+	}
+}</pre>
+    
+<script src="{{pathToRoot}}plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+   editor.setTheme('ace/theme/eclipse');
+   editor.getSession().setMode("ace/mode/java");
+   editor.setReadOnly(true);
+   editor.renderer.setShowGutter(false); 
+    /*editor.setTheme("ace/theme/eclipse");
+    editor.getSession().setMode("ace/mode/java");*/
+</script>
+		
+		%include templates/parts/footer.html
+
+	</div>
+</body>

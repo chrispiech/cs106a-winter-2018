@@ -243,7 +243,7 @@ public class WordSearchKarel extends SuperKarel {
 	 * the "home" position.
 	 */
 	private void checkForKarel(){
-		for(int j=0;j<7;j++){
+		for(int j = 0;j < 7;j++){
 			checkRowForKarel();
 			moveUpToNextRow();
 		}

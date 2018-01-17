@@ -51,8 +51,8 @@
             <li><a href="//web.stanford.edu/class/cs106a/lectures/1-Welcome">1 Welcome</a></li>
             <li><a href="//web.stanford.edu/class/cs106a/lectures/2-ControlFlow">2 Control Flow</a></li>
             <li><a href="//web.stanford.edu/class/cs106a/lectures/3-Decomposition">3 Decomposition</a></li>
-            <!--<li><a href="//web.stanford.edu/class/cs106a/lectures/4-Variables">4-Variables</a></li>
-            <li><a href="//web.stanford.edu/class/cs106a/lectures/5-ControlFlowRevisited">5-ControlFlowRevisited</a></li>
+            <li><a href="//web.stanford.edu/class/cs106a/lectures/4-Variables">4-Variables</a></li>
+            <!--<li><a href="//web.stanford.edu/class/cs106a/lectures/5-ControlFlowRevisited">5-ControlFlowRevisited</a></li>
             <li><a href="//web.stanford.edu/class/cs106a/lectures/6-SimpleJava">6-SimpleJava</a></li>
             <li><a href="//web.stanford.edu/class/cs106a/lectures/7-Methods">7-Methods</a></li>
             <li><a href="//web.stanford.edu/class/cs106a/lectures/8-Animation">8-Animation</a></li>
@@ -133,6 +133,9 @@
             <li><a href="//web.stanford.edu/class/cs106a/examples/place100.html">Place 100</a></li>
             <li><a href="//web.stanford.edu/class/cs106a/examples/beeperLine.html">Beeper Line</a></li>
             <li><a href="//web.stanford.edu/class/cs106a/examples/invert.html">Invert</a></li>
+            <li><a href="//web.stanford.edu/class/cs106a/examples/restaurant.html">Restaurant</a></li>
+            <li><a href="//web.stanford.edu/class/cs106a/examples/carbonDating.html">Carbon Dating</a></li>
+             <li><a href="//web.stanford.edu/class/cs106a/examples/emc2.html">E=MC2</a></li>
           </ul>
         </li>
 
@@ -201,11 +204,7 @@ materials.
 			<p>
 				Problem written by Chris Piech
 			</p>
-			<p>
-				Worked Examples: 
-				<a href="//web.stanford.edu/class/cs106a/projects/emc2.html">E=MC2</a>,
-				<a href="//web.stanford.edu/class/cs106a/projects/fibb.html">Fibbonacci</a>
-			</p>
+			
 
 		</div>
 		<hr/>
@@ -237,106 +236,57 @@ materials.
 				
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-md-12">
-				<h2>Lookup Table</h2>
-				<p>To get started, lets make a lookup table that maps the percent of c14 remaining to the number of years the sample has been dead for. Print out the percent c14 remaining, and the number of years passed for the first 20 half lives. Your table should look like the following:</p>
-				<p>
-					<center>
-						<img style="width:300px" src="//web.stanford.edu/class/cs106a/img/projects/carbonDating/lookupTable.png">	
-					</center>
-				</p>
-				<p>Think about the variable type that you use to keep track of the amount of carbon left. What happens if you use an integer for percent?</p>
-			</div>
-		</div>
+		
 
-		<div class="row">
-			<div class="col-md-12">
-				<h2>Extension</h2>
-				<p>If you finish early, and have extra time, try this extension.</p>
-				<p>For scientists it will be much more useful for them to input the percent of natural c14 that they measured, and have the program tell them the age. Repeatedly ask the user to enter a percent of natural c14 remaining and then output the age of their sample.  </p>
-				<p>
-					<center>
-						<img style="width:490px" src="//web.stanford.edu/class/cs106a/img/projects/carbonDating/enter.png">	
-					</center>
-				</p>
-				<p>The formula for the age in years of a sample, given the percent of natural c14 remaining is:</p>
-				<p>
-					<br/>
-					<center>
-						<img style="width:300px" src="//web.stanford.edu/class/cs106a/img/projects/carbonDating/formula.png">	
-					</center>
-					<br/>
-				</p>
-
-				<p>To take the natural log of a number (the ln function) use the method:
-					<div class="well"><code>Math.log(<i>value</i>)</code></div>
-				</p>	
-
-				<p>Overall, your program should look like the following</p>
-				<p>
-					<center>
-						<img style="width:700px" src="//web.stanford.edu/class/cs106a/img/projects/carbonDating/program.png">	
-					</center>
-				</p>
-				<p>All the best, and ask questions if you don't understand something (or want to know more about the archaeology)</p>
-			</div>
-		</div>
-		<!--<div class="row">
+			<div class="row">
 			<div class="col-md-12">
 				<h2>Solution</h2>
 
 
-<pre id="editor" style="height:580px">/**
- * Carbon Dating
- * -------------
- * This program shows how to translate between percent of natural carbon-14 found
- * in a sample. First, it prints out a carbon-14 (c14) lookup table, then it has users
- * enter a percent of c14 and returns the expected age. 
- */
-public class CarbonDating extends ConsoleProgram {
-	
-	private static final int HALF_LIFE = 5700;
-	
+<pre id="editor" style="height:620px">
+public class CarbonDatingSolnConst extends ConsoleProgram {
+
+	private static final double LIVING_C14 = 13.6;
+	private static final int HALF_LIFE = 5730;
+
 	public void run() {
-		// 1. Show the c-14 lookup table
-		double percent = 100.0;
-		int elapsed = 0;
-		println("Carbon dating lookup table");
-		println("fraction C-14 remaining:  years passed");
-		println("--------------------------");
-		for(int i = 0; i &lt; 10; i++) {
-			println(percent + "%:  " + elapsed + " years");
-			elapsed += HALF_LIFE;
-			percent /= 2;
-		}
-		println("");
-		
-		// 2. Look up the age of a sample
+		// print some introduction information
+		println("Radioactive molecule = C14");
+		println("Halflife = " + HALF_LIFE + " years");
+		println("C14 in living organisms = " + LIVING_C14 + " dpm");
+		println("-----");
+		println(""); // adds an extra new-line
+
+		// repeats forever
 		while(true) {
-			double percentLeft = readDouble("What percent of natural carbon-14 does your sample have? ");
-			double years = HALF_LIFE * Math.log(percentLeft / 100.0) / Math.log(0.5);
-			println(percentLeft + "% carbon-14 left...");
-			println("The sample is " + years + " years old");
+			// read the amount of C14 from the user
+			double amount = readDouble("Amount of C14 in your sample: ");
+
+			// Half life formula to calculate the age:
+			// age = log(fractionLeft) / log(0.5) * 5730
+			// fractionLeft = amountCO2Left / livingCO2Amount
+			
+			double fractionLeft = amount / LIVING_C14;
+			double age = Math.log(fractionLeft) / Math.log(0.5) * HALF_LIFE;
+			age = Math.round(age);
+			println("Your sample is " + age + " years old.");
+			
 			println("");
 		}
+
 	}
-}
-</pre>
-    
+}</pre>
+
 <script src="//web.stanford.edu/class/cs106a/plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
 <script>
     var editor = ace.edit("editor");
    editor.setTheme('ace/theme/eclipse');
    editor.getSession().setMode("ace/mode/java");
    editor.setReadOnly(true);
-   editor.setShowPrintMargin(false);
    editor.renderer.setShowGutter(false); 
     /*editor.setTheme("ace/theme/eclipse");
     editor.getSession().setMode("ace/mode/java");*/
 </script>
-	</div>
-	</div>-->
 		
 
 
