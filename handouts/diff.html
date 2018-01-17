@@ -141,31 +141,34 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sections <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a><i>None yet!</i></a></li>
-            <!--<li><a href="//web.stanford.edu/class/cs106a/handouts/9 - Section-1.pdf">Section Handout 1</a></li>
-            <li><a href="//web.stanford.edu/class/cs106a/handouts/9a - Section-1-solutions.pdf">Section 1 Solutions</a></li>
-            <li class="divider"></li>
-            <li><a href="//web.stanford.edu/class/cs106a/handouts/12-section-2.pdf">Section Handout 2</a></li>
-            <li><a href="//web.stanford.edu/class/cs106a/handouts/12a-section-2-solutions.pdf">Section 2 Solutions</a></li>
-            <li class="divider"></li>
-            <li><a href="//web.stanford.edu/class/cs106a/handouts/14-section-3.pdf">Section Handout 3</a></li>
-            <li><a href="//web.stanford.edu/class/cs106a/handouts/14a-section-3-solutions.pdf">Section 3 Solutions</a></li>
-            <li class="divider"></li>
-            <li><a href="//web.stanford.edu/class/cs106a/handouts/24-section-4.pdf">Section Handout 4</a></li>
-            <li><a href="//web.stanford.edu/class/cs106a/handouts/24a-section-4-solutions.pdf">Section 4 Solutions</a></li>
-            <li class="divider"></li>
-            <li><a href="//web.stanford.edu/class/cs106a/handouts/31-section-5.pdf">Section Handout 5</a></li>
-            <li><a href="//web.stanford.edu/class/cs106a/handouts/31a-section-5-solutions.pdf">Section 5 Solutions</a></li>
-            <li class="divider"></li>
-            <li><a href="//web.stanford.edu/class/cs106a/handouts/Section-6.pdf">Section Handout 6</a></li>
-            <li><a href="//web.stanford.edu/class/cs106a/handouts/Section-6-solutions.pdf">Section 6 Solutions</a></li>
-            <li class="divider"></li>
-            <li><a href="//web.stanford.edu/class/cs106a/handouts/Section-7.pdf">Section Handout 7</a></li>
-            -->            
+<!--
+Generates a list of section links based on the saved section materials.  Expects
+a 'sections' parameter of urls where sections[i] is the url to section i+1's
+materials.
+-->
+<li class="dropdown-header">Section 1</li>
+<li><a href="//web.stanford.edu/class/cs106a/section/1/Section1.pdf">Handout</a></li>
+<li class="section-solutions" data-solutions-release=2018011917><a href="//web.stanford.edu/class/cs106a/section/1/Section1-Solutions.pdf">Solutions</a></li>
+<li class="section-solutions" data-solutions-release=2018011917><a href="//web.stanford.edu/class/cs106a/section/1/Section1.zip">Code</a></li>
 
-            <li class="divider"></li>
-            <li><a href="https://cs198.stanford.edu/cs198/auth/section/SectionSignup.aspx">Section Signup</a></li>
-            <li><a href="https://cs198.stanford.edu/cs198/auth/section/RemoteSignup.aspx">Remote SCPD Signup</a></li>
+
+<script type="text/javascript">
+	// only show section solutions if they should be released
+	$(document).ready(function() {
+		$(".section-solutions").each(function(i) {
+	    	var dateStr = $(this).attr("data-solutions-release");
+	    	var releaseDate = moment(dateStr, "YYYYMMDDHH");
+	    	if (!releaseDate.isSameOrBefore(moment())) {
+	    		// remove the link and disable it
+	    		$(this).children().first().attr("href", "");
+	    		$(this).addClass("disabled");
+	    	}
+		});
+	});
+</script>              <li class="divider"></li>
+              <li><a href="https://cs198.stanford.edu/cs198/auth/section/SectionSignup.aspx">Section Signup</a></li>
+              <li><a href="https://cs198.stanford.edu/cs198/auth/section/RemoteSignup.aspx">Remote SCPD Signup</a></li>
+          </ul>
           </ul>
         </li>
 
