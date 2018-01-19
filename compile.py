@@ -2,6 +2,7 @@
 
 '''
 FILE: compile.py
+Author: Chris Piech with additions from Nick Troccoli
 ----------------
 Template compiler that compiles all .html template files in the TEMPLATE_DIR
 directory below (excluding .ptl files, which are partial templates), and outputs
@@ -21,6 +22,7 @@ Compiles all template files using ROOT path, and outputs the compiled files to
 the *current* directory.  The compiled files in the current directory have the
 same directory structure as in the TEMPLATE_DIR directory.
 ----------------
+
 '''
 
 import os.path

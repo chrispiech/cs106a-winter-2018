@@ -1,4 +1,4 @@
-# CS106A Winter 2017 Website
+# CS106A Winter 2018 Website
 
 ## Making New Announcements
 To add announcements to the main page, modify `templates/index.html` to add your
