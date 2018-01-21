@@ -45,6 +45,7 @@
 		<!-- Nav tabs -->
 		<ul class="nav nav-tabs" role="tablist">
 		    <li role="presentation" class="active"><a href="#assn1" aria-controls="assn1" role="tab" data-toggle="tab">Assignment 1</a></li>
+		    <li role="presentation"><a href="#assn2" aria-controls="assn2" role="tab" data-toggle="tab">Assignment 2</a></li>
 		</ul>
 
 		<!-- Tab panes -->
@@ -60,6 +61,19 @@
 		            ]
 		        
 		        	include('templates/parts/style/accordion.html', categories=categories, index=0)
+		        %>
+		    </div>
+		    <div role="tabpanel" class="tab-pane fade" id="assn2">
+		        <%
+		            categories = [
+		                ("Whitespace and Indentation", "whitespaceIndentation2"),
+		                ("Methods", "methods2"),
+		                ("Control Statements", "controlStatements2"),
+		                ("Comments", "comments2"),
+		                ("Variables", "variables"),
+		                ("Forbidden Java Features", "forbiddenJavaFeatures2")
+		            ]
+		            include('templates/parts/style/accordion.html', categories=categories, index=1)
 		        %>
 		    </div>
 		</div>

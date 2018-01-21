@@ -229,6 +229,7 @@ materials.
 		<!-- Nav tabs -->
 		<ul class="nav nav-tabs" role="tablist">
 		    <li role="presentation" class="active"><a href="#assn1" aria-controls="assn1" role="tab" data-toggle="tab">Assignment 1</a></li>
+		    <li role="presentation"><a href="#assn2" aria-controls="assn2" role="tab" data-toggle="tab">Assignment 2</a></li>
 		</ul>
 
 		<!-- Tab panes -->
@@ -803,6 +804,253 @@ public void walk(<em>int numSteps</em>) {
 		move();
 	}
 }</pre>
+	</dd>
+</dl>                </div>
+            </div>
+        </div>
+</div>		    </div>
+		    <div role="tabpanel" class="tab-pane fade" id="assn2">
+<!-- Accordion of style categories that expand to show content.
+
+Assumes a list of tuples in 'category', with each tuple representing a collapsible
+section to display.  tuple[0] is the section name, tuple[1] is the name of the
+file prefix (no filetype extension) containing that section's content.
+
+Also assumes a unique index for this accordion in 'index'.
+-->
+<div class="panel-group style-accordion" id="style-accordion-1" role="tablist" aria-multiselectable="true">
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="whitespaceIndentation2Heading-1">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#style-accordion-1" href="#collapsewhitespaceIndentation2-1" aria-expanded="false" aria-controls="collapsewhitespaceIndentation2-1">
+                    <h4 class="panel-title">
+                        <span class="glyphicon glyphicon-chevron-up"></span>
+                        Whitespace and Indentation
+                    </h4>
+                </a>
+            </div>
+            <div id="collapsewhitespaceIndentation2-1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="whitespaceIndentation2Heading-1">
+                <div class="panel-body">
+Same as for the previous assignment.                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="methods2Heading-1">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#style-accordion-1" href="#collapsemethods2-1" aria-expanded="false" aria-controls="collapsemethods2-1">
+                    <h4 class="panel-title">
+                        <span class="glyphicon glyphicon-chevron-up"></span>
+                        Methods
+                    </h4>
+                </a>
+            </div>
+            <div id="collapsemethods2-1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="methods2Heading-1">
+                <div class="panel-body">
+Same as for the previous assignment.                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="controlStatements2Heading-1">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#style-accordion-1" href="#collapsecontrolStatements2-1" aria-expanded="false" aria-controls="collapsecontrolStatements2-1">
+                    <h4 class="panel-title">
+                        <span class="glyphicon glyphicon-chevron-up"></span>
+                        Control Statements
+                    </h4>
+                </a>
+            </div>
+            <div id="collapsecontrolStatements2-1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="controlStatements2Heading-1">
+                <div class="panel-body">
+Everything from the previous assignment, plus:
+<br />
+<br />
+
+<dl>
+	<!-- break/continue -->
+	<dt>
+		break and continue
+	</dt>
+	<dd>
+		 In general, you should avoid using the <code>break</code> or <code>continue</code> statements in loops unless absolutely necessary. A <code>break</code> can often be avoided by rewriting the loop test or reordering the statements in/near the loop.
+	</dd>
+
+	<!-- if/else patterns -->
+	<dt>
+		if/else patterns
+	</dt>
+	<dd>
+		<p>When using <code>if/else</code> statements, properly choose between various <code>if</code> and <code>else</code> patterns depending on whether the conditions are related to each other. Avoid redundant or unnecessary <code>if</code> tests.</p>
+
+		<div class="row">
+			<div class="col-xs-12 col-sm-6">
+				<pre class="code-bad">
+<span class="code-comment">// bad</span>
+if (points >= 90) {
+    println("You got Gold!");
+}
+if (points >= 70 &amp;&amp; points &lt; 90) {
+    println("You got Silver!");
+}
+if (points >= 50 &amp;&amp; points &lt; 70) {
+    println("You got Bronze!");
+}
+...
+</pre>
+			</div>
+			<div class="col-xs-12 col-sm-6">
+				<pre class="code-good">
+<span class="code-comment">// good</span>
+if (points >= 90) {
+    println("You got Gold!");
+} <em>else if</em> (points >= 70) {
+    println("You got Silver!");
+} <em>else if</em> (points >= 50) {
+    println("You got Bronze!");
+}
+...
+</pre>
+			</div>
+		</div>
+	</dd>
+
+	<!-- Testing booleans -->
+	<dt>
+		Testing booleans
+	</dt>
+	<dd>
+		<p>Don't test whether a <code>boolean</code> value is <code>==</code> or <code>!=</code> to <code>true</code> or <code>false</code>.  It's not necessary!  Remember that all booleans (expressions and variables) evaluate to <code>true</code> or <code>false</code> on their own.</p>
+		<div class="row">
+			<div class="col-xs-12 col-sm-6">
+				<pre class="code-bad">
+<span class="code-comment">// bad</span>
+if (x == true) {
+    ...
+} else if (x != true) {
+    ...
+}
+</pre>
+			</div>
+			<div class="col-xs-12 col-sm-6">
+				<pre class="code-good">
+<span class="code-comment">// good</span>
+if (x) {
+    ...
+} else {
+    ...
+}
+</pre>
+			</div>
+		</div>
+	</dd>
+</dl>                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="comments2Heading-1">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#style-accordion-1" href="#collapsecomments2-1" aria-expanded="false" aria-controls="collapsecomments2-1">
+                    <h4 class="panel-title">
+                        <span class="glyphicon glyphicon-chevron-up"></span>
+                        Comments
+                    </h4>
+                </a>
+            </div>
+            <div id="collapsecomments2-1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="comments2Heading-1">
+                <div class="panel-body">
+Same as for the previous assignment.                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="variablesHeading-1">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#style-accordion-1" href="#collapsevariables-1" aria-expanded="false" aria-controls="collapsevariables-1">
+                    <h4 class="panel-title">
+                        <span class="glyphicon glyphicon-chevron-up"></span>
+                        Variables
+                    </h4>
+                </a>
+            </div>
+            <div id="collapsevariables-1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="variablesHeading-1">
+                <div class="panel-body">
+<dl>
+	<!-- Types -->
+	<dt>
+		Types
+	</dt>
+	<dd>
+		<p>Choose appropriate data types for your variables. If a given variable can store only integers, give it type <code>int</code> rather than <code>double</code>.</p>
+	</dd>
+
+	<!-- Scope -->
+	<dt>
+		Scope
+	</dt>
+	<dd>
+		<p>Declare variables in the narrowest possible scope. For example, if a variable is used only inside a specific <code>if</code> statement, declare it inside that <code>if</code> statement rather than at the top of the method or at the top of the file.</p>
+	</dd>
+
+	<!-- Declaration/initialization -->
+	<dt>
+		Declaration/Initialization
+	</dt>
+	<dd>
+		<p>Never declare or initialize more than one variable in a single statement.</p>
+
+		<div class="row">
+			<div class="col-xs-12 col-sm-6">
+				<pre class="code-bad">
+<span class="code-comment">// bad</span>
+int a = 7, b = -43, c = 19;
+</pre>
+			</div>
+			<div class="col-xs-12 col-sm-6">
+				<pre class="code-good">
+<span class="code-comment">// good</span>
+int a = 7;
+int b = -43;
+int c = 19;
+</pre>
+			</div>
+		</div>
+	</dd>
+
+	<!-- Constants -->
+	<dt>
+		Constants
+	</dt>
+	<dd>
+		<p>If a particular constant value is used frequently in your code, declare it as a constant, and always refer to the constant in the rest of your code rather than referring to the corresponding value. Name constants in uppercase with underscores between words <code>LIKE_THIS</code>.</p>
+
+		<pre>
+private static final int DAYS_IN_WEEK = 7;
+</pre>
+	</dd>
+</dl>                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="forbiddenJavaFeatures2Heading-1">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#style-accordion-1" href="#collapseforbiddenJavaFeatures2-1" aria-expanded="false" aria-controls="collapseforbiddenJavaFeatures2-1">
+                    <h4 class="panel-title">
+                        <span class="glyphicon glyphicon-chevron-up"></span>
+                        Forbidden Java Features
+                    </h4>
+                </a>
+            </div>
+            <div id="collapseforbiddenJavaFeatures2-1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="forbiddenJavaFeatures2Heading-1">
+                <div class="panel-body">
+You may now use Java features.  However, you may not use the following:
+<br />
+<br />
+
+<dl>
+	<!-- System.exit() -->
+	<dt>
+		System.exit()
+	</dt>
+	<dd>
+		<p>Java contains a <code>System.exit</code> method that immediately exits your entire program. You should never call this method in our assignments for any reason. Your program should always exit naturally by reaching the end of your <code>run</code> function and returning.</p>
 	</dd>
 </dl>                </div>
             </div>
