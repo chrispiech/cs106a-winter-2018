@@ -1,0 +1,80 @@
+Everything from the previous assignment, plus:
+
+<dl>
+	<!-- break/continue -->
+	<dt>
+		break and continue
+	</dt>
+	<dd>
+		 In general, you should avoid using the <code>break</code> or <code>continue</code> statements in loops unless absolutely necessary. A <code>break</code> can often be avoided by rewriting the loop test or reordering the statements in/near the loop.
+	</dd>
+
+	<!-- if/else patterns -->
+	<dt>
+		if/else patterns
+	</dt>
+	<dd>
+		<p>When using <code>if/else</code> statements, properly choose between various <code>if</code> and <code>else</code> patterns depending on whether the conditions are related to each other. Avoid redundant or unnecessary <code>if</code> tests.</p>
+
+		<div class="row">
+			<div class="col-xs-12 col-sm-6">
+				<pre class="code-bad">
+<span class="code-comment">// bad</span>
+if (points >= 90) {
+    println("You got Gold!");
+}
+if (points >= 70 &amp;&amp; points &lt; 90) {
+    println("You got Silver!");
+}
+if (points >= 50 &amp;&amp; points &lt; 70) {
+    println("You got Bronze!");
+}
+...
+</pre>
+			</div>
+			<div class="col-xs-12 col-sm-6">
+				<pre class="code-good">
+<span class="code-comment">// good</span>
+if (points >= 90) {
+    println("You got Gold!");
+} <em>else if</em> (points >= 70) {
+    println("You got Silver!");
+} <em>else if</em> (points >= 50) {
+    println("You got Bronze!");
+}
+...
+</pre>
+			</div>
+		</div>
+	</dd>
+
+	<!-- Testing booleans -->
+	<dt>
+		Testing booleans
+	</dt>
+	<dd>
+		<p>Don't test whether a <code>boolean</code> value is <code>==</code> or <code>!=</code> to <code>true</code> or <code>false</code>.  It's not necessary!  Remember that all booleans (expressions and variables) evaluate to <code>true</code> or <code>false</code> on their own.</p>
+		<div class="row">
+			<div class="col-xs-12 col-sm-6">
+				<pre class="code-bad">
+<span class="code-comment">// bad</span>
+if (x == true) {
+    ...
+} else if (x != true) {
+    ...
+}
+</pre>
+			</div>
+			<div class="col-xs-12 col-sm-6">
+				<pre class="code-good">
+<span class="code-comment">// good</span>
+if (x) {
+    ...
+} else {
+    ...
+}
+</pre>
+			</div>
+		</div>
+	</dd>
+</dl>

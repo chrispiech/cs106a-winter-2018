@@ -1,0 +1,54 @@
+<dl>
+	<!-- Types -->
+	<dt>
+		Types
+	</dt>
+	<dd>
+		<p>Choose appropriate data types for your variables. If a given variable can store only integers, give it type <code>int</code> rather than <code>double</code>.</p>
+	</dd>
+
+	<!-- Scope -->
+	<dt>
+		Scope
+	</dt>
+	<dd>
+		<p>Declare variables in the narrowest possible scope. For example, if a variable is used only inside a specific <code>if</code> statement, declare it inside that <code>if</code> statement rather than at the top of the method or at the top of the file.</p>
+	</dd>
+
+	<!-- Declaration/initialization -->
+	<dt>
+		Declaration/Initialization
+	</dt>
+	<dd>
+		<p>Never declare or initialize more than one variable in a single statement.</p>
+
+		<div class="row">
+			<div class="col-xs-12 col-sm-6">
+				<pre class="code-bad">
+<span class="code-comment">// bad</span>
+int a = 7, b = -43, c = 19;
+</pre>
+			</div>
+			<div class="col-xs-12 col-sm-6">
+				<pre class="code-good">
+<span class="code-comment">// good</span>
+int a = 7;
+int b = -43;
+int c = 19;
+</pre>
+			</div>
+		</div>
+	</dd>
+
+	<!-- Constants -->
+	<dt>
+		Constants
+	</dt>
+	<dd>
+		<p>If a particular constant value is used frequently in your code, declare it as a constant, and always refer to the constant in the rest of your code rather than referring to the corresponding value. Name constants in uppercase with underscores between words <code>LIKE_THIS</code>.</p>
+
+		<pre>
+private static final int DAYS_IN_WEEK = 7;
+</pre>
+	</dd>
+</dl>
