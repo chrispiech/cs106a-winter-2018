@@ -59,4 +59,30 @@ int c = 19;
 private static final int DAYS_IN_WEEK = 7;
 </pre>
 	</dd>
+
+	<!-- Save expressions -->
+	<dt>
+		Save method call results in a variable
+	</dt>
+	<dd>
+		<p>If you are calling a method and using its result multiple times, save that result in a variable rather than having to call the method multiple times.</p>
+		<div class="row">
+			<div class="col-xs-12 col-sm-6">
+				<pre class="code-bad">
+<span class="code-comment">// bad</span>
+if (getElementAt(x, y) != null) {
+	remove(getElementAt(x, y));
+}</pre>
+			</div>
+			<div class="col-xs-12 col-sm-6">
+				<pre class="code-good">
+<span class="code-comment">// good</span>
+GObject obj = getElementAt(x, y);
+if (obj != null) {
+	remove(obj);
+}
+</pre>
+			</div>
+		</div>
+	</dd>
 </dl>

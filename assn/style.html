@@ -846,7 +846,75 @@ Same as for the previous assignment.                </div>
             </div>
             <div id="collapsemethods2-1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="methods2Heading-1">
                 <div class="panel-body">
-Same as for the previous assignment.                </div>
+Everything from the previous assignment, plus:
+<br />
+<br />
+
+<dl>
+	<!-- returning boolean values -->
+	<dt>
+		Returning booleans
+	</dt>
+	<dd>
+		<p>If you have an <code>if/else</code> statement that returns a boolean value based on a test, just directly return the test's result instead.</p>
+		<div class="row">
+			<div class="col-xs-12 col-sm-6">
+				<pre class="code-bad">
+<span class="code-comment">// bad</span>
+if (score1 == score2) {
+    return true;
+} else {
+    return false;
+}
+</pre>
+			</div>
+			<div class="col-xs-12 col-sm-6">
+				<pre class="code-good">
+<span class="code-comment">// good</span>
+<em>return score1 == score2;</em>
+</pre>
+			</div>
+		</div>
+	</dd>
+
+	<!-- redundancy-->
+	<dt>
+		Redundancy + Parameters
+	</dt>
+	<dd>
+		<p>If you repeat the same code two or more times that is nearly but not entirely the same, try making a helper function that accepts a parameter to represent the differing part.</p>
+
+		<div class="row">
+			<div class="col-xs-12 col-sm-6">
+				<pre class="code-bad">
+<span class="code-comment">// bad</span>
+foo();
+x = 10;
+y++;
+...
+
+foo();
+x = 15;
+y++;
+</pre>
+			</div>
+			<div class="col-xs-12 col-sm-6">
+				<pre class="code-good">
+<span class="code-comment">// good</span>
+helper(10);
+helper(15);
+...
+
+private void helper(int newX) {
+    foo();
+    x = newX;
+    y++;
+}
+</pre>
+			</div>
+		</div>
+	</dd>
+</dl>                </div>
             </div>
         </div>
 
@@ -1032,6 +1100,32 @@ int c = 19;
 		<pre>
 private static final int DAYS_IN_WEEK = 7;
 </pre>
+	</dd>
+
+	<!-- Save expressions -->
+	<dt>
+		Save method call results in a variable
+	</dt>
+	<dd>
+		<p>If you are calling a method and using its result multiple times, save that result in a variable rather than having to call the method multiple times.</p>
+		<div class="row">
+			<div class="col-xs-12 col-sm-6">
+				<pre class="code-bad">
+<span class="code-comment">// bad</span>
+if (getElementAt(x, y) != null) {
+	remove(getElementAt(x, y));
+}</pre>
+			</div>
+			<div class="col-xs-12 col-sm-6">
+				<pre class="code-good">
+<span class="code-comment">// good</span>
+GObject obj = getElementAt(x, y);
+if (obj != null) {
+	remove(obj);
+}
+</pre>
+			</div>
+		</div>
 	</dd>
 </dl>                </div>
             </div>

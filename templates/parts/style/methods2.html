@@ -1,1 +1,69 @@
-Same as for the previous assignment.
+Everything from the previous assignment, plus:
+<br />
+<br />
+
+<dl>
+	<!-- returning boolean values -->
+	<dt>
+		Returning booleans
+	</dt>
+	<dd>
+		<p>If you have an <code>if/else</code> statement that returns a boolean value based on a test, just directly return the test's result instead.</p>
+		<div class="row">
+			<div class="col-xs-12 col-sm-6">
+				<pre class="code-bad">
+<span class="code-comment">// bad</span>
+if (score1 == score2) {
+    return true;
+} else {
+    return false;
+}
+</pre>
+			</div>
+			<div class="col-xs-12 col-sm-6">
+				<pre class="code-good">
+<span class="code-comment">// good</span>
+<em>return score1 == score2;</em>
+</pre>
+			</div>
+		</div>
+	</dd>
+
+	<!-- redundancy-->
+	<dt>
+		Redundancy + Parameters
+	</dt>
+	<dd>
+		<p>If you repeat the same code two or more times that is nearly but not entirely the same, try making a helper function that accepts a parameter to represent the differing part.</p>
+
+		<div class="row">
+			<div class="col-xs-12 col-sm-6">
+				<pre class="code-bad">
+<span class="code-comment">// bad</span>
+foo();
+x = 10;
+y++;
+...
+
+foo();
+x = 15;
+y++;
+</pre>
+			</div>
+			<div class="col-xs-12 col-sm-6">
+				<pre class="code-good">
+<span class="code-comment">// good</span>
+helper(10);
+helper(15);
+...
+
+private void helper(int newX) {
+    foo();
+    x = newX;
+    y++;
+}
+</pre>
+			</div>
+		</div>
+	</dd>
+</dl>
