@@ -1,0 +1,127 @@
+<head>
+
+	%include templates/parts/head.html
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBar.html
+
+	<div class="container">
+			
+		<!-- Header -->
+		<div class="row">
+			<div class="col-sm-12">
+				<div id="pageHeader">
+					<h1>
+						Debugging
+					</h1>
+					<p class="subtleHeading"><span class="sidebaricon glyphicon glyphicon-download" aria-hidden="true"></span>Handout and project code
+				</p>
+
+				</div>
+				<hr/>
+
+				<!--<center>
+				<img style="width:80%" src="{{pathToRoot}}img/overview/overview.png">	
+			</center>-->
+			</div>
+		</div>
+
+
+		
+		
+				
+		<div class="row">
+			<div class="col-sm-12">
+				<p>
+					<center>
+					<p style="text-align: center;"><img style="max-width:70%" src="{{pathToRoot}}img/handouts/debugging/demo.png"></img></p>
+					<p style="text-align: center;">
+						<i>The debugger allows you to step through the execution of a program, one line at a time.</i>
+					</p>
+				</center>
+				</p>
+
+				<div class="row">
+					<hr/>
+					<h2>Why it Matters</h2>
+						
+				Debugging is an essential programming skill.  Sure, you can often find bugs by re-reading
+				your code looking for mistakes.  But for large, complex programs (and sometimes even small ones)
+				it helps tremendously to see what the computer is actually doing behind the scenes.
+
+				<br />
+				<br />
+
+				Eclipse, like most modern programming environments, comes equipped with a debugger.  A debugger is
+				a handy interface for monitoring programs as they run.  With the Eclipse debugger, for example, you
+				can follow along with your program line by line.
+
+				<!--<br />
+				<br />
+
+				For this extra credit problem, we've provided a program that is <i>supposed</i> to animate
+				a ball that bounces off the four walls.  The ball should change color whenever it hits a wall.
+				The program is supposed to display a horizontally-centered label "Bouncing Bouncing Ball!".
+				Finally, the label color should always match the color of the ball, and both should initially
+				be colored red.  <strong>Your mission, if you choose to accept it, is to use the Eclipse
+				debugger to figure out why the program fails, and fix the 4 errors by Fri. 3/3 @ 5PM.</strong>  Once you have done
+				this, the program will print out a secret code to the Eclipse console - send this code to your Section Leader for extra section participation points this week!
+
+				<br />
+				<br />
+				<strong>You will need to fix all 4 bugs to get the correct secret code.</strong>
+
+				<br />
+				<br />
+
+				<strong>HINT:</strong> your secret code should look like (with some characters omitted) <strong>G-Y-B--1-3</strong>.
+				<br />
+				<br />
+
+				(The answers will be posted at the end of the week along with this week's section solutions.)
+
+				<br />
+				<br />-->
+
+
+				<hr/>
+				
+				<h2>Files</h2>
+				<p>
+					<div class="row">
+						<div class="col-sm-2 "><a href="{{pathToRoot}}/handouts/9 - Debugging.pdf"><span class="glyphicon glyphicon-file" aria-hidden="true" style="font-size: 5em;margin-left:0px"></span><br><span style="margin-left:0px">Debugging Handout</span></a>
+						</div>
+						<div class="col-sm-2">
+							<a href="{{pathToRoot}}starterCode/Debugging.zip""><span class="glyphicon glyphicon-leaf" aria-hidden="true" style="font-size: 5em;margin-left:5px"></span><br>
+					Debugging Project</a>
+						</div>	
+					</div>
+					<br/>
+				</p>
+
+				
+			</div>
+		</div>
+
+
+	
+
+		%include templates/parts/footer.html
+
+	</div>
+
+	<script type="text/javascript">
+		$( ".moment" ).each(function( i ) {
+			var date = $(this).html()
+
+			var fromStr = moment(date, "YYYYMMDD").fromNow()
+
+			$(this).html(fromStr)
+		  });
+		//alert(moment("20160101", "YYYYMMDD").fromNow())
+	</script>
+
+</body>
