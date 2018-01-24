@@ -9,6 +9,8 @@ import acm.program.*;
 
 public class WeightOnMoon extends ConsoleProgram {
 
+	private static final double EARTH_TO_MOON_FRACTION = 0.165;
+
 	public void run() {
 		// used to make the font visible in lecture...
 		setFont("Courier-24");
@@ -21,6 +23,10 @@ public class WeightOnMoon extends ConsoleProgram {
 		
 		// print the result on the screen.
 		println("Weight on moon " + weightOnMoon);
+	}
+	
+	private double getMoonWeight(double weightOnEarth) {
+		return weightOnEarth * EARTH_TO_MOON_FRACTION;
 	}
 
 	
