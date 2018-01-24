@@ -1,0 +1,573 @@
+<head>
+
+	%include templates/parts/head.html
+
+	<link rel="stylesheet" type="text/css" href="{{pathToRoot}}css/bootstrap-5-columns.css">
+
+<style>
+.photoTitle {
+	position: absolute;
+	width:95%;
+	text-align: center; 
+	color:white; 
+	margin-top:70%;
+}
+
+.strokeme {
+    color: white;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;  
+}
+
+.nopadding {
+	padding-left:2px;
+	padding-right:2px;
+}
+
+.caption {
+	text-align:center;
+}
+
+.staffEmail{
+	position: absolute;
+	margin-left:5px;
+	margin-top:8px;
+	display:none;
+}
+</style>
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBar.html
+
+	<div class="container">
+
+		
+			
+		<!-- Header -->
+		<div class="row">
+			<div class="col-12">
+				<!--<div class="alert alert-success"><b>New materials!</b> On Wed (Nov 9th) we posted the midterm, the midterm solution and the grade distribution.
+				</div>-->
+				<div id="pageHeader">
+					<h1>
+						CS106A Teaching Team
+					</h1>
+					<p class="subtleHeading">
+						January, 2018
+					</p>
+
+				</div>
+				
+				<hr>
+			</div>
+		</div>
+
+		
+
+		<div class="row no-gutters">
+			
+			
+
+			<!-- Col 1 -->
+			<div class="col-xs-6 col-sm-2 nopadding">
+
+				<div class="thumbnail">
+					
+					<a href=""><span class="glyphicon glyphicon-envelope staffEmail" aria-hidden="true"></span></a>
+					<div>
+						<p class=" photoTitle strokeme">
+						Lecturer
+						</p>
+				      <img class="thumbnailImg" style="width:100%" src="//web.stanford.edu/class/cs109/img/people/chris.jpg" alt="Generic placeholder thumbnail">
+				      </div>
+			      <div class="caption">
+			        <b>Chris <br/>Piech</b> 
+			      </div>
+			    </div>
+			</div>
+
+			<!-- Col 2 -->
+			<div class="col-xs-6 col-sm-2 nopadding">
+
+				<div class="thumbnail">
+					<p class=" photoTitle strokeme">
+						Head TA
+					</p>
+					<a href=""><span class="glyphicon glyphicon-envelope staffEmail" aria-hidden="true"></span></a>
+			      <img class="thumbnailImg" style="width:100%" src="{{pathToRoot}}img/people/troccoli.jpg" alt="Generic placeholder thumbnail">
+			      <div class="caption">
+			        <b>Nick <br/>Troccoli</b> 
+			      </div>
+			    </div>
+			</div>
+
+
+			<!-- Col 3 -->
+			<div class="col-xs-6 col-sm-2 nopadding">
+
+				<div class="thumbnail">
+					<p class=" photoTitle strokeme">
+						Lecture TA
+					</p>
+					<a href=""><span class="glyphicon glyphicon-envelope staffEmail" aria-hidden="true"></span></a>
+			      <img class="thumbnailImg" style="width:100%" src="{{pathToRoot}}img/people/capoor.jpg" alt="Generic placeholder thumbnail">
+			      <div class="caption">
+			        <b>Brahm<br/>Capoor</b> 
+			      </div>
+			      
+			    </div>
+			</div>
+
+
+			<!-- Col 4 -->
+			<div class="col-xs-6 col-sm-2 nopadding">
+
+				<div class="thumbnail">
+					<a href=""><span class="glyphicon glyphicon-envelope staffEmail" aria-hidden="true"></span></a>
+			      <img class="thumbnailImg" style="width:100%" src="{{pathToRoot}}img/people/mosharrafa.jpeg" alt="Generic placeholder thumbnail">
+			      <div class="caption">
+			        <b>Adam<br/>Mosharrafa</b> 
+			      </div>
+			    </div>
+			</div>
+
+
+
+			<!-- Col 5 -->
+			<div class="col-xs-6 col-sm-2 nopadding">
+
+				<div class="thumbnail">
+					<a href=""><span class="glyphicon glyphicon-envelope staffEmail" aria-hidden="true"></span></a>
+			      <img class="thumbnailImg" style="width:100%" src="{{pathToRoot}}img/people/mcleod.jpeg" alt="Generic placeholder thumbnail">
+			      <div class="caption">
+			        <b>Akua<br/>McLeod</b>
+			      </div>
+			    </div>
+			</div>
+
+			
+
+			
+			<!-- Col 6 -->
+			<div class="col-xs-6 col-sm-2 nopadding">
+				<div class="thumbnail">
+					<a href=""><span class="glyphicon glyphicon-envelope staffEmail" aria-hidden="true"></span></a>
+			      <img class="thumbnailImg" style="width:100%" src="{{pathToRoot}}img/people/andrewDavis.jpeg" alt="Generic placeholder thumbnail">
+			      <div class="caption">
+			        <b>Andrew<br/>Davis</b>
+			      </div>
+			    </div>
+			</div>
+
+		</div>
+
+		<div class="row">
+			<!-- Col 1 -->
+			<div class="col-xs-6 col-sm-2 nopadding">
+				<div class="thumbnail">
+					<a href=""><span class="glyphicon glyphicon-envelope staffEmail" aria-hidden="true"></span></a>
+			      <img class="thumbnailImg" style="width:100%" src="{{pathToRoot}}img/people/andrewM.jpg" alt="Generic placeholder thumbnail">
+			      <div class="caption">
+			        <b>Andrew<br/>Marshall</b>
+			      </div>
+			    </div>
+			</div>
+
+			
+
+			<!-- Col 2 -->
+			<div class="col-xs-6 col-sm-2 nopadding">
+				<div class="thumbnail">
+					<a href=""><span class="glyphicon glyphicon-envelope staffEmail" aria-hidden="true"></span></a>
+			      <img class="thumbnailImg" style="width:100%" src="{{pathToRoot}}img/people/averyWang.jpeg" alt="Generic placeholder thumbnail">
+			      <div class="caption">
+			        <b>Avery<br/>Wang</b>
+			      </div>
+			    </div>
+			</div>
+
+			<!-- Col 3 -->
+			<div class="col-xs-6 col-sm-2 nopadding">
+				<div class="thumbnail">
+					<a href=""><span class="glyphicon glyphicon-envelope staffEmail" aria-hidden="true"></span></a>
+			      <img class="thumbnailImg" style="width:100%" src="{{pathToRoot}}img/people/allen.jpeg" alt="Generic placeholder thumbnail">
+			      <div class="caption">
+			        <b>Ben<br/>Allen</b>
+			      </div>
+			    </div>
+			</div>
+			
+
+			<!-- Col 4 -->
+			<div class="col-xs-6 col-sm-2 nopadding">
+				<div class="thumbnail">
+					<a href=""><span class="glyphicon glyphicon-envelope staffEmail" aria-hidden="true"></span></a>
+			      <img class="thumbnailImg" style="width:100%" src="{{pathToRoot}}img/people/barnett.jpeg" alt="Generic placeholder thumbnail">
+			      <div class="caption">
+			        <b>Ben<br/>Barnett</b>
+			      </div>
+			    </div>
+			</div>
+			
+
+			<!-- Col 5 -->
+			<div class="col-xs-6 col-sm-2 nopadding">
+				<div class="thumbnail">
+					<a href=""><span class="glyphicon glyphicon-envelope staffEmail" aria-hidden="true"></span></a>
+			      <img class="thumbnailImg" style="width:100%" src="{{pathToRoot}}img/people/catXu.jpeg" alt="Generic placeholder thumbnail">
+			      <div class="caption">
+			        <b>Cat<br/>Xu</b>
+			      </div>
+			    </div>
+			</div>
+
+			
+			<!-- Col 6 -->
+			<div class="col-xs-6 col-sm-2 nopadding">
+				<div class="thumbnail">
+					<a href=""><span class="glyphicon glyphicon-envelope staffEmail" aria-hidden="true"></span></a>
+			      <img class="thumbnailImg" style="width:100%" src="{{pathToRoot}}img/people/chase.jpeg" alt="Generic placeholder thumbnail">
+			      <div class="caption">
+			        <b>Chase<br/>Davis</b>
+			      </div>
+			    </div>
+			</div>
+		</div>
+		<div class="row">
+			<!-- Col 1 -->
+			<div class="col-xs-6 col-sm-2 nopadding">
+				<div class="thumbnail">
+					<a href=""><span class="glyphicon glyphicon-envelope staffEmail" aria-hidden="true"></span></a>
+			      <img class="thumbnailImg" style="width:100%" src="{{pathToRoot}}img/people/drew.jpeg" alt="Generic placeholder thumbnail">
+			      <div class="caption">
+			        <b>Drew<br/>Bassilakis</b>
+			      </div>
+			    </div>
+			</div>
+
+			<!-- Col 2 -->
+			<div class="col-xs-6 col-sm-2 nopadding">
+				<div class="thumbnail">
+					<a href=""><span class="glyphicon glyphicon-envelope staffEmail" aria-hidden="true"></span></a>
+			      <img class="thumbnailImg" style="width:100%" src="{{pathToRoot}}img/people/ella.jpeg" alt="Generic placeholder thumbnail">
+			      <div class="caption">
+			        <b>Ella Tessier<br/>Lavigne</b>
+			      </div>
+			    </div>
+			</div>
+
+			<!-- Col 3 -->
+			<div class="col-xs-6 col-sm-2 nopadding">
+				<div class="thumbnail">
+					<a href=""><span class="glyphicon glyphicon-envelope staffEmail" aria-hidden="true"></span></a>
+			      <img class="thumbnailImg" style="width:100%" src="{{pathToRoot}}img/people/esteban.jpeg" alt="Generic placeholder thumbnail">
+			      <div class="caption">
+			        <b>Esteban<br/>Rey</b>
+			      </div>
+			    </div>
+			</div>
+
+			<!-- Col 4 -->
+			<div class="col-xs-6 col-sm-2 nopadding">
+				<div class="thumbnail">
+					<a href=""><span class="glyphicon glyphicon-envelope staffEmail" aria-hidden="true"></span></a>
+			      <img class="thumbnailImg" style="width:100%" src="{{pathToRoot}}img/people/garrick.JPG" alt="Generic placeholder thumbnail">
+			      <div class="caption">
+			        <b>Garrick<br/>Fernandez</b>
+			      </div>
+			    </div>
+			</div>
+
+			<!-- Col 5 -->
+			<div class="col-xs-6 col-sm-2 nopadding">
+				<div class="thumbnail">
+					<a href=""><span class="glyphicon glyphicon-envelope staffEmail" aria-hidden="true"></span></a>
+			      <img class="thumbnailImg" style="width:100%" src="{{pathToRoot}}img/people/james.jpeg" alt="Generic placeholder thumbnail">
+			      <div class="caption">
+			        <b>James<br/>Mayclin</b>
+			      </div>
+			    </div>
+			</div>
+
+			
+			<!-- Col 6 -->
+			<div class="col-xs-6 col-sm-2 nopadding">
+				<div class="thumbnail">
+					<a href=""><span class="glyphicon glyphicon-envelope staffEmail" aria-hidden="true"></span></a>
+			      <img class="thumbnailImg" style="width:100%" src="{{pathToRoot}}img/people/jamesZ.jpeg" alt="Generic placeholder thumbnail">
+			      <div class="caption">
+			        <b>James<br/>Zhuang</b>
+			      </div>
+			    </div>
+			</div>
+
+		</div>
+
+		<div class="row">
+			<!-- Col 1 -->
+			<div class="col-xs-6 col-sm-2 nopadding">
+				<div class="thumbnail">
+					<a href=""><span class="glyphicon glyphicon-envelope staffEmail" aria-hidden="true"></span></a>
+			      <img class="thumbnailImg" style="width:100%" src="{{pathToRoot}}img/people/jonathan.jpeg" alt="Generic placeholder thumbnail">
+			      <div class="caption">
+			        <b>Jonathan<br/>Kula</b>
+			      </div>
+			    </div>
+			</div>
+
+			<!-- Col 2 -->
+			<div class="col-xs-6 col-sm-2 nopadding">
+				<div class="thumbnail">
+					<a href=""><span class="glyphicon glyphicon-envelope staffEmail" aria-hidden="true"></span></a>
+			      <img class="thumbnailImg" style="width:100%" src="{{pathToRoot}}img/people/juliaD.jpg" alt="Generic placeholder thumbnail">
+			      <div class="caption">
+			        <b>Julia<br/>Daniel</b>
+			      </div>
+			    </div>
+			</div>
+
+			<!-- Col 3 -->
+			<div class="col-xs-6 col-sm-2 nopadding">
+				<div class="thumbnail">
+					<a href=""><span class="glyphicon glyphicon-envelope staffEmail" aria-hidden="true"></span></a>
+			      <img class="thumbnailImg" style="width:100%" src="{{pathToRoot}}img/people/juliaT.jpeg" alt="Generic placeholder thumbnail">
+			      <div class="caption">
+			        <b>Julia<br/>Truitt</b>
+			      </div>
+			    </div>
+			</div>
+
+			<!-- Col 4 -->
+			<div class="col-xs-6 col-sm-2 nopadding">
+				<div class="thumbnail">
+					<a href=""><span class="glyphicon glyphicon-envelope staffEmail" aria-hidden="true"></span></a>
+			      <img class="thumbnailImg" style="width:100%" src="{{pathToRoot}}img/people/justinXu.jpeg" alt="Generic placeholder thumbnail">
+			      <div class="caption">
+			        <b>Justin<br/>Xu</b>
+			      </div>
+			    </div>
+			</div>
+
+			<!-- Col 5 -->
+			<div class="col-xs-6 col-sm-2 nopadding">
+				<div class="thumbnail">
+					<a href=""><span class="glyphicon glyphicon-envelope staffEmail" aria-hidden="true"></span></a>
+			      <img class="thumbnailImg" style="width:100%" src="{{pathToRoot}}img/people/kaitlyn.jpeg" alt="Generic placeholder thumbnail">
+			      <div class="caption">
+			        <b>Kaitlyn<br/>Lagattuta</b>
+			      </div>
+			    </div>
+			</div>
+
+			
+			<!-- Col 6 -->
+			<div class="col-xs-6 col-sm-2 nopadding">
+				<div class="thumbnail">
+					<a href=""><span class="glyphicon glyphicon-envelope staffEmail" aria-hidden="true"></span></a>
+			      <img class="thumbnailImg" style="width:100%" src="{{pathToRoot}}img/people/kate.jpeg" alt="Generic placeholder thumbnail">
+			      <div class="caption">
+			        <b>Kate<br/>Rydberg</b>
+			      </div>
+			    </div>
+			</div>
+		</div>
+
+		<div class="row">
+			<!-- Col 1 -->
+			<div class="col-xs-6 col-sm-2 nopadding">
+				<div class="thumbnail">
+					<a href=""><span class="glyphicon glyphicon-envelope staffEmail" aria-hidden="true"></span></a>
+			      <img class="thumbnailImg" style="width:100%" src="{{pathToRoot}}img/people/luciano.jpeg" alt="Generic placeholder thumbnail">
+			      <div class="caption">
+			        <b>Luciano<br/>Gonzalez</b>
+			      </div>
+			    </div>
+			</div>
+
+			<!-- Col 2 -->
+			<div class="col-xs-6 col-sm-2 nopadding">
+				<div class="thumbnail">
+					<a href=""><span class="glyphicon glyphicon-envelope staffEmail" aria-hidden="true"></span></a>
+			      <img class="thumbnailImg" style="width:100%" src="{{pathToRoot}}img/people/maggie.jpeg" alt="Generic placeholder thumbnail">
+			      <div class="caption">
+			        <b>Maggie<br/>Davis</b>
+			      </div>
+			    </div>
+			</div>
+
+			<!-- Col 3 -->
+			<div class="col-xs-6 col-sm-2 nopadding">
+				<div class="thumbnail">
+					<a href=""><span class="glyphicon glyphicon-envelope staffEmail" aria-hidden="true"></span></a>
+			      <img class="thumbnailImg" style="width:100%" src="{{pathToRoot}}img/people/marilyn.jpeg" alt="Generic placeholder thumbnail">
+			      <div class="caption">
+			        <b>Marilyn<br/>Zhang</b>
+			      </div>
+			    </div>
+			</div>
+
+			<!-- Col 4 -->
+			<div class="col-xs-6 col-sm-2 nopadding">
+				<div class="thumbnail">
+					<a href=""><span class="glyphicon glyphicon-envelope staffEmail" aria-hidden="true"></span></a>
+			      <img class="thumbnailImg" style="width:100%" src="{{pathToRoot}}img/people/meng.jpeg" alt="Generic placeholder thumbnail">
+			      <div class="caption">
+			        <b>Meng<br/>Zhang</b>
+			      </div>
+			    </div>
+			</div>
+
+			<!-- Col 5 -->
+			<div class="col-xs-6 col-sm-2 nopadding">
+				<div class="thumbnail">
+					<a href=""><span class="glyphicon glyphicon-envelope staffEmail" aria-hidden="true"></span></a>
+			      <img class="thumbnailImg" style="width:100%" src="{{pathToRoot}}img/people/nidhi.jpeg" alt="Generic placeholder thumbnail">
+			      <div class="caption">
+			        <b>Nidhi<br/>Manoj</b>
+			      </div>
+			    </div>
+			</div>
+
+			
+			<!-- Col 6 -->
+			<div class="col-xs-6 col-sm-2 nopadding">
+				<div class="thumbnail">
+					<a href=""><span class="glyphicon glyphicon-envelope staffEmail" aria-hidden="true"></span></a>
+			      <img class="thumbnailImg" style="width:100%" src="{{pathToRoot}}img/people/niki.jpeg" alt="Generic placeholder thumbnail">
+			      <div class="caption">
+			        <b>Niki<br/>Agrawal</b>
+			      </div>
+			    </div>
+			</div>
+		</div>
+
+		<div class="row">
+			<!-- Col 1 -->
+			<div class="col-xs-6 col-sm-2 nopadding">
+				<div class="thumbnail">
+					<a href=""><span class="glyphicon glyphicon-envelope staffEmail" aria-hidden="true"></span></a>
+			      <img class="thumbnailImg" style="width:100%" src="{{pathToRoot}}img/people/peter.jpeg" alt="Generic placeholder thumbnail">
+			      <div class="caption">
+			        <b>Peter<br/>Maldonado</b>
+			      </div>
+			    </div>
+			</div>
+
+			<!-- Col 2 -->
+			<div class="col-xs-6 col-sm-2 nopadding">
+				<div class="thumbnail">
+					<a href=""><span class="glyphicon glyphicon-envelope staffEmail" aria-hidden="true"></span></a>
+			      <img class="thumbnailImg" style="width:100%" src="{{pathToRoot}}img/people/rachel.jpeg" alt="Generic placeholder thumbnail">
+			      <div class="caption">
+			        <b>Rachel<br/>Gardner</b>
+			      </div>
+			    </div>
+			</div>
+
+			<!-- Col 3 -->
+			<div class="col-xs-6 col-sm-2 nopadding">
+				<div class="thumbnail">
+					<a href=""><span class="glyphicon glyphicon-envelope staffEmail" aria-hidden="true"></span></a>
+			      <img class="thumbnailImg" style="width:100%" src="{{pathToRoot}}img/people/rhea.jpeg" alt="Generic placeholder thumbnail">
+			      <div class="caption">
+			        <b>Rhea<br/>Karuturi</b>
+			      </div>
+			    </div>
+			</div>
+
+			<!-- Col 4 -->
+			<div class="col-xs-6 col-sm-2 nopadding">
+				<div class="thumbnail">
+					<a href=""><span class="glyphicon glyphicon-envelope staffEmail" aria-hidden="true"></span></a>
+			      <img class="thumbnailImg" style="width:100%" src="{{pathToRoot}}img/people/robbie.jpeg" alt="Generic placeholder thumbnail">
+			      <div class="caption">
+			        <b>Robbie<br/>Jones</b>
+			      </div>
+			    </div>
+			</div>
+
+
+			<!-- Col 5 -->
+			<div class="col-xs-6 col-sm-2 nopadding">
+				<div class="thumbnail">
+					<a href=""><span class="glyphicon glyphicon-envelope staffEmail" aria-hidden="true"></span></a>
+			      <img class="thumbnailImg" style="width:100%" src="{{pathToRoot}}img/people/ruiqi.jpeg" alt="Generic placeholder thumbnail">
+			      <div class="caption">
+			        <b>Ruiqi<br/>Chen</b>
+			      </div>
+			    </div>
+			</div>
+
+			
+			<!-- Col 6 -->
+			<div class="col-xs-6 col-sm-2 nopadding">
+				<div class="thumbnail">
+					<a href=""><span class="glyphicon glyphicon-envelope staffEmail" aria-hidden="true"></span></a>
+			      <img class="thumbnailImg" style="width:100%" src="{{pathToRoot}}img/people/semir.jpeg" alt="Generic placeholder thumbnail">
+			      <div class="caption">
+			        <b>Semir<br/>Shafi</b>
+			      </div>
+			    </div>
+			</div>
+		</div>
+		<div class="row">
+			<!-- Col 1 -->
+			<div class="col-xs-6 col-sm-2 nopadding">
+				<div class="thumbnail">
+					<a href=""><span class="glyphicon glyphicon-envelope staffEmail" aria-hidden="true"></span></a>
+			      <img class="thumbnailImg" style="width:100%" src="{{pathToRoot}}img/people/shanon.jpeg" alt="Generic placeholder thumbnail">
+			      <div class="caption">
+			        <b>Shanon<br/>Reckinger</b>
+			      </div>
+			    </div>
+			</div>
+
+			<!-- Col 2 -->
+			<div class="col-xs-6 col-sm-2 nopadding">
+				<div class="thumbnail">
+					<a href=""><span class="glyphicon glyphicon-envelope staffEmail" aria-hidden="true"></span></a>
+			      <img class="thumbnailImg" style="width:100%" src="{{pathToRoot}}img/people/tessera.jpeg" alt="Generic placeholder thumbnail">
+			      <div class="caption">
+			        <b>Tessera<br/>Chin</b>
+			      </div>
+			    </div>
+			</div>
+
+			<!-- Col 3 -->
+			<div class="col-xs-6 col-sm-2 nopadding">
+				<div class="thumbnail">
+					<a href=""><span class="glyphicon glyphicon-envelope staffEmail" aria-hidden="true"></span></a>
+			      <img class="thumbnailImg" style="width:100%" src="{{pathToRoot}}img/people/thariq.jpeg" alt="Generic placeholder thumbnail">
+			      <div class="caption">
+			        <b>Thariq<br/>Ridha</b>
+			      </div>
+			    </div>
+			</div>
+
+
+			<!-- Col 5 -->
+			<div class="col-xs-6 col-sm-2 nopadding">
+				<div class="thumbnail">
+					<a href=""><span class="glyphicon glyphicon-envelope staffEmail" aria-hidden="true"></span></a>
+			      <img class="thumbnailImg" style="width:100%" src="{{pathToRoot}}img/people/vineet.jpeg" alt="Generic placeholder thumbnail">
+			      <div class="caption">
+			        <b>Vineet<br/>Kosaraju</b>
+			      </div>
+			    </div>
+			</div>
+
+		</div>
+
+	
+
+		%include templates/parts/footer.html
+
+	</div>
+
+</body>

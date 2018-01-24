@@ -20,7 +20,7 @@ public class ProgrammingAwesome extends GraphicsProgram {
 		// make and add a blue square
 		GRect blueSquare = new GRect(80, 90, 70, 70); // width and height are 70
 		blueSquare.setColor(Color.BLUE); // make the square blue
-		blueSquare.setFilled(true); // fill the square
+		//blueSquare.setFilled(true); // fill the square
 		add(blueSquare); // add the square to the screen
 		
 		// make and add a purple background
@@ -48,8 +48,9 @@ public class ProgrammingAwesome extends GraphicsProgram {
 		add(label, 10, centerY);
 		
 		// this object is never added
-		GRect dudeWheresMyRect = new GRect(600, 600);
+		GRect dudeWheresMyRect = new GRect(10, 10, 600, 600);
 		dudeWheresMyRect.setFilled(true);
+		add(dudeWheresMyRect);
 	}
 
 	
