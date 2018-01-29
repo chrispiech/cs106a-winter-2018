@@ -24,10 +24,20 @@ public class BouncingBall extends GraphicsProgram {
 	private static final Color BALL_COLOR = Color.BLUE;
 
 	public void run() {	
-		GOval ball = makeBall();
 		// setup
+		GOval ball = makeBall();
+		
+		waitForClick();
+		double vx = 1;
+		double vy = 1;
+		
 		while(true) {
 			// update world
+			ball.move(vx,vy);
+			
+			if(ball.getY() > getHeight() - ball.getHeight()) {
+				vy = -vy;
+			}
 			
 			// pause
 			pause(DELAY);

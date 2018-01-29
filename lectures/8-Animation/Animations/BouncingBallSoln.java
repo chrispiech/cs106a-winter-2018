@@ -31,7 +31,6 @@ public class BouncingBallSoln extends GraphicsProgram {
 		
 		waitForClick();
 		while(true) {
-			//makeShadow(ball);
 
 			// update velocity
 			if(hitLeftWall(ball) || hitRightWall(ball)) {

@@ -19,6 +19,22 @@ public class MovingSquare extends GraphicsProgram {
 		// setup
 		GRect r = makeSquare();
 		
+		while(!isPastMiddle(r)) {
+			//update
+			r.move(1, 0);
+			
+			//pause
+			pause(DELAY);
+		}
+		
+	}
+
+	private boolean isPastMiddle(GRect r) {
+		double rectX = r.getX();
+		// maximum x you can have before you are
+		// passed the middle of the screen.
+		double maxX = getWidth() / 2 - r.getWidth()/2;
+		return rectX > maxX;
 	}
 
 	/**
