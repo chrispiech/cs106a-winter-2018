@@ -18,11 +18,18 @@ public class MouseTracker extends GraphicsProgram {
 	/* The color of the square */
 	private static final Color SQUARE_COLOR = Color.BLUE;
 	
+	private GRect square = null;
 	
 	public void run() {	
-		GRect square = makeSquare();
+		square = makeSquare();
 		addSquareToCenter(square);
 		addMouseListeners();
+	}
+	
+	public void mouseMoved(MouseEvent e) {
+		int x = e.getX();
+		int y = e.getY();
+		square.setLocation(x, y);
 	}
 	
 	/**

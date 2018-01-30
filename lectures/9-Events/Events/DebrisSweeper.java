@@ -17,6 +17,7 @@ public class DebrisSweeper extends GraphicsProgram {
 	private static final int DEBRIS_MAX_WIDTH = 200;
 	private static final int DEBRIS_MAX_HEIGHT = 200;
 	
+	// special variable to create random numbers
 	private RandomGenerator rg = new RandomGenerator();
 	
 	public void run() {	
@@ -26,12 +27,13 @@ public class DebrisSweeper extends GraphicsProgram {
 	
 	// Called when the mouse is clicked
 	public void mouseClicked(MouseEvent e) {
-		int clickX = e.getX();
-		int clickY = e.getY();
-		GObject obj = getElementAt(clickX, clickY);
-		if(obj != null) {
-			remove(obj);
+		double mouseX = e.getX();
+		double mouseY = e.getY();
+		GObject clicked = getElementAt(mouseX, mouseY);
+		if(clicked != null) {
+			remove(clicked);
 		}
+		
 	}
 	
 	private void makeDebris() {
