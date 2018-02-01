@@ -41,6 +41,7 @@ public class MemorySoln extends GraphicsProgram {
 
 	/* Object which can give us random numbers */
 	private RandomGenerator rg = new RandomGenerator();
+	
 	/* Graphical label showing how much time has passed */
 	private GLabel timeLabel = null;
 	
@@ -140,7 +141,7 @@ public class MemorySoln extends GraphicsProgram {
 	}
 
 	/**
-	 * Put black sqaure on top of all the colored cards to 
+	 * Put black square on top of all the colored cards to 
 	 * hide them.
 	 */
 	private void placeCovers() {
