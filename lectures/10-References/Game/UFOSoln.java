@@ -19,7 +19,7 @@ public class UFOSoln extends GraphicsProgram {
 
 	/** Size and speed of bullets */
 	private static final int BULLET_SPEED = 10;
-	private static final int BULLET_DIAM = 5;
+	private static final int BULLET_DIAM = 10;
 
 	/** Animation cycle delay */
 	private static final int DELAY = 5;
@@ -47,7 +47,7 @@ public class UFOSoln extends GraphicsProgram {
 	}
 
 	private void addBackground() {
-		GImage background = new GImage("background.png");
+		GImage background = new GImage("background.jpg");
 		background.setSize(getWidth(), getHeight());
 		add(background, 0, 0);
 	}
