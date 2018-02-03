@@ -694,7 +694,7 @@ while (<em>frontIsClear()</em>) {
  * Pre:  Karel is next to a jumpable hurdle, facing east.
  * Post: Karel will be over the hurdle, one column to the right, facing east.
  */</span>
-public void jumpHurdle() {
+private void jumpHurdle() {
 	...
 }</pre>
 	</dd>
@@ -817,7 +817,7 @@ public class MyKarel extends Karel {
 
 		<pre class="code-bad">
 <span class="code-comment">// bad</span>
-public void walk(<em>int numSteps</em>) {
+private void walk(<em>int numSteps</em>) {
 	for (int i = 0; i &lt; numSteps; i++) {
 		move();
 	}
