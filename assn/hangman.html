@@ -52,13 +52,13 @@
             <li><a href="//web.stanford.edu/class/cs106a/lectures/3-Decomposition">3 Decomposition</a></li>
             <li><a href="//web.stanford.edu/class/cs106a/lectures/4-Variables">4 Variables</a></li>
             <li><a href="//web.stanford.edu/class/cs106a/lectures/5-ControlFlowRevisited">5 ControlFlowRevisited</a></li>
-            <li><a href="//web.stanford.edu/class/cs106a/lectures/6-NestedLoops">6-NestedLoops</a></li>
-            <li><a href="//web.stanford.edu/class/cs106a/lectures/7-Methods">7-Methods</a></li>
-            <li><a href="//web.stanford.edu/class/cs106a/lectures/8-Animation">8-Animation</a></li>
-            <li><a href="//web.stanford.edu/class/cs106a/lectures/9-Events">9-Events</a></li>
-            <li><a href="//web.stanford.edu/class/cs106a/lectures/10-References">10-References</a></li>
-            <li><a href="//web.stanford.edu/class/cs106a/lectures/11-Memory">11-Memory</a></li>
-            <li><a href="//web.stanford.edu/class/cs106a/lectures/12-TextProcessing">12-TextProcessing</a></li>
+            <li><a href="//web.stanford.edu/class/cs106a/lectures/6-NestedLoops">6 NestedLoops</a></li>
+            <li><a href="//web.stanford.edu/class/cs106a/lectures/7-Methods">7 Methods</a></li>
+            <li><a href="//web.stanford.edu/class/cs106a/lectures/8-Animation">8 Animation</a></li>
+            <li><a href="//web.stanford.edu/class/cs106a/lectures/9-Events">9 Events</a></li>
+            <li><a href="//web.stanford.edu/class/cs106a/lectures/10-References">10 References</a></li>
+            <li><a href="//web.stanford.edu/class/cs106a/lectures/11-Memory">11 Memory</a></li>
+            <li><a href="//web.stanford.edu/class/cs106a/lectures/12-TextProcessing">12 TextProcessing</a></li>
             <!--<li><a href="//web.stanford.edu/class/cs106a/lectures/13-Files">13-FileReading</a></li>
             <li><a href="//web.stanford.edu/class/cs106a/lectures/14-Files+ArrayLists">14-FileReading+ArrayLists</a></li>
             <li><a href="//web.stanford.edu/class/cs106a/lectures/106AMidtermReviewSession.pdf">Midterm Review Session</a></li>
@@ -88,6 +88,8 @@
             
             
             <li><a href="//web.stanford.edu/class/cs106a/handouts/10 - Assignment 3.pdf">10 Assignment 3</a></li>
+            <li><a href="//web.stanford.edu/class/cs106a/handouts/11 - Strings Examples.pdf">11 String Examples</a></li>
+            <li><a href="//web.stanford.edu/class/cs106a/handouts/12 - Assignment4.pdf">12 Assignment 4</a></li>
            <!-- <li><a href="//web.stanford.edu/class/cs106a/handouts/16 - Coding Style.pdf">16-Coding Style</a></li>
             <li><a href="//web.stanford.edu/class/cs106a/handouts/17 - Variables.pdf">17-Variables</a></li>
             <li><a href="//web.stanford.edu/class/cs106a/handouts/18 - Ufo Game.pdf">18-Ufo Game</a></li>
@@ -113,8 +115,8 @@
             <li><a href="//web.stanford.edu/class/cs106a/assn/karel.html">1 Karel</a></li>
             <li><a href="//web.stanford.edu/class/cs106a/assn/simpleJava.html">2 Simple Java</a></li>
             <li><a href="//web.stanford.edu/class/cs106a/assn/breakout.html">3 Breakout</a></li>
-            <!--<li><a href="//web.stanford.edu/class/cs106a/assn/hangman.html">4-Hangman</a></li>
-            <li><a href="//web.stanford.edu/class/cs106a/assn/yahtzee.html">5-Yahtzee</a></li>
+            <li><a href="//web.stanford.edu/class/cs106a/assn/hangman.html">4 Hangman</a></li>
+            <!--<li><a href="//web.stanford.edu/class/cs106a/assn/yahtzee.html">5-Yahtzee</a></li>
             <li><a href="//web.stanford.edu/class/cs106a/assn/nameSurfer.html">6-NameSurfer</a></li>-->
             
             <li class="divider"></li>
@@ -224,9 +226,9 @@ materials.
 					<h1>
 						Assignment 4: Hangman
 					</h1>
-					<p class="subtleHeading"><span class="sidebaricon glyphicon glyphicon-calendar" aria-hidden="true"></span>Due: Friday, Feb 17th, 10:30A.M.</p>
+					<p class="subtleHeading"><span class="sidebaricon glyphicon glyphicon-calendar" aria-hidden="true"></span>Due: Friday, Feb 17th, 11A.M.</p>
 					
-					<p class="subtleHeading"><span class="sidebaricon glyphicon glyphicon-calendar" aria-hidden="true"></span>YEAH Hours: Thursday, Feb. 9th, 7:30-9P.M. in Bishop Auditorium</p>
+					<p class="subtleHeading"><span class="sidebaricon glyphicon glyphicon-calendar" aria-hidden="true"></span>YEAH Hours: Wednesday, Feb. 7th, 7:30-8:30P.M. in STLC 114</p>
 
 				</div>
 				<hr/>
@@ -261,33 +263,7 @@ materials.
 							<p>
 								<strong>This assignment may (optionally) be done in pairs.</strong>  As a reminder, you may only pair up with others with the same section time and location.
 							</p>
-							<br />
-							<br />
-							<p>
-							      <strong>NOTE:</strong> We found a small bug when running the Hangman starter code on Windows machines.  Specifically, due to the way Windows displays Eclipse programs, the height of the screen is 20 less than when running on a Mac.  For this reason, the constant Y value given for the incorrect guesses label (<code>INCORRECT_GUESSES_Y</code>) is off-screen.
-
-							      To resolve this issue (for consistency, every student please do this, Mac or PC), <strong>PLEASE CHANGE <code>INCORRECT GUESSES_Y</code> and <code>PARTIALLY_GUESSED_Y</code> to the following:</strong>
-
-							      <br />
-							      <br />
-
-							      <code>  
-							      /* The y-location to display the partially guessed string */
-							      <br />
-							      private static final int PARTIALLY_GUESSED_Y = 430;
-							      <br />
-							      /* The y-location to display the incorrectly guessed letters */
-							      <br />
-							      private static final int INCORRECT_GUESSES_Y = 460;
-							      </code>
-
-							      <br />
-							      <br />
-
-							      The starter code below has also been updated to reflect this change.
-
-							      We apologize for the last-minute change; if you do not make the above change, you will not be penalized if your incorrect guesses label is offscreen, as long as you are positioning it correctly.  But the above change may help ensure that your calculations are correct.
-							</p>
+						
 						</center>
 
 					</div>
@@ -297,13 +273,16 @@ materials.
 				<h2>Assignment Files</h2>
 				<p>
 					<div class="row">
-						<div class="col-sm-2"><a href="//web.stanford.edu/class/cs106a/handouts/20 - Assignment-4.pdf"><span class="glyphicon glyphicon-file" aria-hidden="true" style="font-size: 5em;margin-left:0px"></span><br><span style="margin-left:0px">Assn Handout</span></a>
+						<div class="col-sm-2"><a href="//web.stanford.edu/class/cs106a/handouts/12 - Assignment4.pdf"><span class="glyphicon glyphicon-file" aria-hidden="true" style="font-size: 5em;margin-left:0px"></span><br><span style="margin-left:0px">Assn Handout</span></a>
 						</div>
-						<div class="col-sm-2"><a href="//web.stanford.edu/class/cs106a/handouts/YEAH4.pdf"><span class="glyphicon glyphicon-file" aria-hidden="true" style="font-size: 5em;margin-left:0px"></span><br><span style="margin-left:0px">YEAH Hours Slides</span></a>
-						</div>
+						<!--<div class="col-sm-2"><a href="//web.stanford.edu/class/cs106a/handouts/YEAH4.pdf"><span class="glyphicon glyphicon-file" aria-hidden="true" style="font-size: 5em;margin-left:0px"></span><br><span style="margin-left:0px">YEAH Hours Slides</span></a>
+						</div>-->
 						<div class="col-sm-2">
-							<a href="//web.stanford.edu/class/cs106a/assignments/Assignment4.zip"><span class="glyphicon glyphicon-leaf" aria-hidden="true" style="font-size: 5em;margin-left:5px"></span><br>
+							<a href="//web.stanford.edu/class/cs106a/starterCode/Assignment4.zip"><span class="glyphicon glyphicon-leaf" aria-hidden="true" style="font-size: 5em;margin-left:5px"></span><br>
 					Starter Code</a>
+						</div>
+
+						<div class="col-sm-2 "><a href="//web.stanford.edu/class/cs106a/assn/style.html"><span class="glyphicon glyphicon-file" aria-hidden="true" style="font-size: 5em;margin-left:-10px"></span><br><span style="margin-left:-10px">Style Guide</span></a>
 						</div>
 						
 						
