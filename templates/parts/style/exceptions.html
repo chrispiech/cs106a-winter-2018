@@ -1,0 +1,59 @@
+<dl>
+	<!-- Empty catch -->
+	<dt>
+		Empty Catch
+	</dt>
+	<dd>
+		<p>Don't ever catch an exception with an empty <code>catch</code> block.</p>
+		<div class="row">
+			<div class="col-xs-12 col-sm-6">
+				<pre class="code-bad">
+<span class="code-comment">// bad</span>
+try {
+    foo();
+    bar();
+} catch (NullPointerException e) {}
+</pre>
+			</div>
+		</div>
+	</dd>
+
+	<!-- Catching programmer errors -->
+	<dt>
+		Don't Catch Programmer Errors
+	</dt>
+	<dd>
+		<p>Don't use <code>try/catch</code> to cover up an error that your program is generating.  Only use it for unavoidable program errors such as file errors.  If your program is generating an error, debug and sidestep the error to prevent it from happening instead.</p>
+		<div class="row">
+			<div class="col-xs-12 col-sm-6">
+				<pre class="code-bad">
+<span class="code-comment">// bad</span>
+try {
+    myFunctionThatCrashesForSomeReason();
+} catch (IndexOutOfBoundsException e) {
+    <span class="code-comment">//no crash now...</span>
+}
+</pre>
+			</div>
+		</div>
+	</dd>
+
+	<!-- Catching Exception -->
+	<dt>
+		Don't <code>catch(Exception e)</code>
+	</dt>
+	<dd>
+		<p>Don't ever <code>catch (Exception e)</code> unless told explicitly to do so, because this will catch a huge number of errors and will suppress important system error messages.  You should instead catch a more specific subcategory of exceptions such as <code>IOException</code> or <code>FileNotFoundException</code>.</p>
+		<div class="row">
+			<div class="col-xs-12 col-sm-6">
+				<pre class="code-bad">
+<span class="code-comment">// bad</span>
+try {
+    foo();
+    bar();
+} catch (<em>Exception e</em>) {}
+</pre>
+			</div>
+		</div>
+	</dd>
+</dl>

@@ -256,6 +256,7 @@ materials.
 		    <li role="presentation" class="active"><a href="#assn1" aria-controls="assn1" role="tab" data-toggle="tab">Assignment 1</a></li>
 		    <li role="presentation"><a href="#assn2" aria-controls="assn2" role="tab" data-toggle="tab">Assignment 2</a></li>
 		    <li role="presentation"><a href="#assn3" aria-controls="assn3" role="tab" data-toggle="tab">Assignment 3</a></li>
+		    <li role="presentation"><a href="#assn4" aria-controls="assn4" role="tab" data-toggle="tab">Assignment 4</a></li>
 		</ul>
 
 		<!-- Tab panes -->
@@ -1292,6 +1293,180 @@ Everything from the previous assignment, plus:
                 </a>
             </div>
             <div id="collapseforbiddenJavaFeatures3-2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="forbiddenJavaFeatures3Heading-2">
+                <div class="panel-body">
+Same as for the previous assignment.                </div>
+            </div>
+        </div>
+</div>		    </div>
+		    <div role="tabpanel" class="tab-pane fade" id="assn4">
+<!-- Accordion of style categories that expand to show content.
+
+Assumes a list of tuples in 'category', with each tuple representing a collapsible
+section to display.  tuple[0] is the section name, tuple[1] is the name of the
+file prefix (no filetype extension) containing that section's content.
+
+Also assumes a unique index for this accordion in 'index'.
+-->
+<div class="panel-group style-accordion" id="style-accordion-3" role="tablist" aria-multiselectable="true">
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="whitespaceIndentation3Heading-3">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#style-accordion-3" href="#collapsewhitespaceIndentation3-3" aria-expanded="false" aria-controls="collapsewhitespaceIndentation3-3">
+                    <h4 class="panel-title">
+                        <span class="glyphicon glyphicon-chevron-up"></span>
+                        Whitespace and Indentation
+                    </h4>
+                </a>
+            </div>
+            <div id="collapsewhitespaceIndentation3-3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="whitespaceIndentation3Heading-3">
+                <div class="panel-body">
+Same as for the previous assignment.                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="methods3Heading-3">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#style-accordion-3" href="#collapsemethods3-3" aria-expanded="false" aria-controls="collapsemethods3-3">
+                    <h4 class="panel-title">
+                        <span class="glyphicon glyphicon-chevron-up"></span>
+                        Methods
+                    </h4>
+                </a>
+            </div>
+            <div id="collapsemethods3-3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="methods3Heading-3">
+                <div class="panel-body">
+Same as for the previous assignment.                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="controlStatements3Heading-3">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#style-accordion-3" href="#collapsecontrolStatements3-3" aria-expanded="false" aria-controls="collapsecontrolStatements3-3">
+                    <h4 class="panel-title">
+                        <span class="glyphicon glyphicon-chevron-up"></span>
+                        Control Statements
+                    </h4>
+                </a>
+            </div>
+            <div id="collapsecontrolStatements3-3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="controlStatements3Heading-3">
+                <div class="panel-body">
+Same as for the previous assignment.                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="comments3Heading-3">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#style-accordion-3" href="#collapsecomments3-3" aria-expanded="false" aria-controls="collapsecomments3-3">
+                    <h4 class="panel-title">
+                        <span class="glyphicon glyphicon-chevron-up"></span>
+                        Comments
+                    </h4>
+                </a>
+            </div>
+            <div id="collapsecomments3-3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="comments3Heading-3">
+                <div class="panel-body">
+Same as for the previous assignment.                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="variables4Heading-3">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#style-accordion-3" href="#collapsevariables4-3" aria-expanded="false" aria-controls="collapsevariables4-3">
+                    <h4 class="panel-title">
+                        <span class="glyphicon glyphicon-chevron-up"></span>
+                        Variables
+                    </h4>
+                </a>
+            </div>
+            <div id="collapsevariables4-3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="variables4Heading-3">
+                <div class="panel-body">
+Same as for the previous assignment.                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="exceptionsHeading-3">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#style-accordion-3" href="#collapseexceptions-3" aria-expanded="false" aria-controls="collapseexceptions-3">
+                    <h4 class="panel-title">
+                        <span class="glyphicon glyphicon-chevron-up"></span>
+                        Exceptions
+                    </h4>
+                </a>
+            </div>
+            <div id="collapseexceptions-3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="exceptionsHeading-3">
+                <div class="panel-body">
+<dl>
+	<!-- Empty catch -->
+	<dt>
+		Empty Catch
+	</dt>
+	<dd>
+		<p>Don't ever catch an exception with an empty <code>catch</code> block.</p>
+		<div class="row">
+			<div class="col-xs-12 col-sm-6">
+				<pre class="code-bad">
+<span class="code-comment">// bad</span>
+try {
+    foo();
+    bar();
+} catch (NullPointerException e) {}
+</pre>
+			</div>
+		</div>
+	</dd>
+
+	<!-- Catching programmer errors -->
+	<dt>
+		Don't Catch Programmer Errors
+	</dt>
+	<dd>
+		<p>Don't use <code>try/catch</code> to cover up an error that your program is generating.  Only use it for unavoidable program errors such as file errors.  If your program is generating an error, debug and sidestep the error to prevent it from happening instead.</p>
+		<div class="row">
+			<div class="col-xs-12 col-sm-6">
+				<pre class="code-bad">
+<span class="code-comment">// bad</span>
+try {
+    myFunctionThatCrashesForSomeReason();
+} catch (IndexOutOfBoundsException e) {
+    <span class="code-comment">//no crash now...</span>
+}
+</pre>
+			</div>
+		</div>
+	</dd>
+
+	<!-- Catching Exception -->
+	<dt>
+		Don't <code>catch(Exception e)</code>
+	</dt>
+	<dd>
+		<p>Don't ever <code>catch (Exception e)</code> unless told explicitly to do so, because this will catch a huge number of errors and will suppress important system error messages.  You should instead catch a more specific subcategory of exceptions such as <code>IOException</code> or <code>FileNotFoundException</code>.</p>
+		<div class="row">
+			<div class="col-xs-12 col-sm-6">
+				<pre class="code-bad">
+<span class="code-comment">// bad</span>
+try {
+    foo();
+    bar();
+} catch (<em>Exception e</em>) {}
+</pre>
+			</div>
+		</div>
+	</dd>
+</dl>                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="forbiddenJavaFeatures3Heading-3">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#style-accordion-3" href="#collapseforbiddenJavaFeatures3-3" aria-expanded="false" aria-controls="collapseforbiddenJavaFeatures3-3">
+                    <h4 class="panel-title">
+                        <span class="glyphicon glyphicon-chevron-up"></span>
+                        Forbidden Java Features
+                    </h4>
+                </a>
+            </div>
+            <div id="collapseforbiddenJavaFeatures3-3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="forbiddenJavaFeatures3Heading-3">
                 <div class="panel-body">
 Same as for the previous assignment.                </div>
             </div>

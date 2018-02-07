@@ -47,6 +47,7 @@
 		    <li role="presentation" class="active"><a href="#assn1" aria-controls="assn1" role="tab" data-toggle="tab">Assignment 1</a></li>
 		    <li role="presentation"><a href="#assn2" aria-controls="assn2" role="tab" data-toggle="tab">Assignment 2</a></li>
 		    <li role="presentation"><a href="#assn3" aria-controls="assn3" role="tab" data-toggle="tab">Assignment 3</a></li>
+		    <li role="presentation"><a href="#assn4" aria-controls="assn4" role="tab" data-toggle="tab">Assignment 4</a></li>
 		</ul>
 
 		<!-- Tab panes -->
@@ -88,6 +89,20 @@
 		                ("Forbidden Java Features", "forbiddenJavaFeatures3")
 		            ]
 		            include('templates/parts/style/accordion.html', categories=categories, index=2)
+		        %>
+		    </div>
+		    <div role="tabpanel" class="tab-pane fade" id="assn4">
+		        <%
+		            categories = [
+		                ("Whitespace and Indentation", "whitespaceIndentation3"),
+		                ("Methods", "methods3"),
+		                ("Control Statements", "controlStatements3"),
+		                ("Comments", "comments3"),
+		                ("Variables", "variables4"),
+		                ("Exceptions", "exceptions"),
+		                ("Forbidden Java Features", "forbiddenJavaFeatures3"),
+		            ]
+		            include('templates/parts/style/accordion.html', categories=categories, index=3)
 		        %>
 		    </div>
 		</div>
