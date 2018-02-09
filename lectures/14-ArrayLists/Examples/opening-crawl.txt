@@ -1,0 +1,24 @@
+Karel Wars Episode VII:
+Revenge of the SuperKarel
+
+
+
+
+
+
+
+An evil SuperKarel is threatening to
+disturb the grid world once again.
+What was once a peaceful planet has
+now been thrown into chaos.
+
+By taking the turnRight() command
+hostage, SuperKarel has forced all
+other Karels to turnLeft() three times.
+
+The Karels' only hope to avoid code
+bloat is to re-implement turnRight()
+themselves.  However, all Karels have
+forgotten how to write a Karel program.
+
+All but one...
