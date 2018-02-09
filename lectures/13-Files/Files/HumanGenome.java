@@ -42,31 +42,17 @@ public class HumanGenome extends ConsoleProgram {
 
 	// Returns the string starting up until (not including) index i
 	private String getPrefix(String str, int i) {
-		String prefix = "";
-		for(int j = 0; j < i; j++) {
-			prefix += str.charAt(j);
-		}
-		return prefix;
+		return str.substring(0, i);
 	}
 
 	// Returns the string starting at index i
 	private String getSuffix(String str, int i) {
-		String suffix = "";
-		for(int j = i; j < str.length(); j++) {
-			suffix += str.charAt(j);
-		}
-		return suffix;
+		return str.substring(i);
 	}
 
 	// Returns true if the second input starts with the first
 	private boolean overlaps(String prefix, String longString) {
-		if(prefix.length() > longString.length()) return false;
-		for(int i = 0; i < prefix.length(); i++) {
-			if(longString.charAt(i) != prefix.charAt(i)) {
-				return false;
-			}
-		}
-		return true;
+		return longString.startsWith(prefix);
 	}
 
 	

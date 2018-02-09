@@ -43,7 +43,7 @@ public class MPedigree extends ConsoleProgram {
 	 * zeros until it is of length strLength.
 	 */
 	private String makeStringOfLength(int num, int strLength) {
-		String str = Integer.toString(num);
+		String str = "" + num;
 		while(str.length() < strLength) {
 			str = "0" + str;
 		}

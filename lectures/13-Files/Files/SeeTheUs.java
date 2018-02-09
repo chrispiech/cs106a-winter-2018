@@ -17,21 +17,27 @@ public class SeeTheUs extends GraphicsProgram {
 
 	public void run() {
 		try {
-			Scanner sc = new Scanner(new File(CITIES_FILE));
-			while(sc.hasNextLine()) {
-				// get info for city
-				String cityName = sc.nextLine();
-				String latitudeStr = sc.nextLine();
-				String longitudeStr = sc.nextLine();
+			Scanner cityScanner = new Scanner(new File(CITIES_FILE));
+			
+			while(cityScanner.hasNextLine()) {
 				
-				double lat = Double.parseDouble(latitudeStr);
-				double lon = Double.parseDouble(longitudeStr);
+				String cityName = cityScanner.nextLine();
+				String latString = cityScanner.nextLine();
+				String longString = cityScanner.nextLine();
+				
+				double lat = Double.parseDouble(latString);
+				double lon = Double.parseDouble(longString);
 				
 				plotOneCity(lat, lon);
+				
+				println(cityName);
 			}
-		} catch (IOException e) {
-			e.printStackTrace();
+			
+			cityScanner.close();
+		} catch(IOException e) {
+			throw new RuntimeException(e);
 		}
+		// TODO: shall we?
 	}
 
 	/**

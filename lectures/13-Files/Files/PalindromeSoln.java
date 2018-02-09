@@ -40,7 +40,7 @@ public class PalindromeSoln extends ConsoleProgram {
 	private boolean isPalindrome(String original) {
 		String normalized = normalize(original);
 		String reversed = reverse(normalized);
-		return reversed.equals(normalized);
+		return reversed == normalized;
 	}
 	
 	private boolean isPalindrome2(String original) {
