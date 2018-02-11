@@ -14,12 +14,23 @@ public class Snow extends GraphicsProgram {
 	
 	// each snowflake is unique :-)
 	private RandomGenerator rg = new RandomGenerator();
+	
+	private ArrayList<GOval> flakes = new ArrayList<GOval>();
 
 	public void run() {
 		// typical animation loop
 		while(true) {
 			// update world
 			makeNewSnow();
+			
+			// moves all snowflakes
+			for(GOval flake : flakes) {
+				if(flake.getY() + SNOW_SIZE < getHeight()) {
+					flake.move(0, 1);
+				} else {
+					flakes.remove(flake);
+				}
+			}
 
 			// pause
 			pause(10);
@@ -29,7 +40,7 @@ public class Snow extends GraphicsProgram {
 
 	private void makeNewSnow() {
 		// make a new snowflake with 10% probability
-		if(rg.nextBoolean(0.10)) {
+		if(rg.nextBoolean()) {
 			// get a random x location
 			double x = rg.nextInt(getWidth() - SNOW_SIZE);
 			
@@ -39,8 +50,12 @@ public class Snow extends GraphicsProgram {
 			// put the filled, blue, oval on the screen
 			flake.setFilled(true);
 			flake.setColor(Color.BLUE);
+			
+			// adds to the screen
 			add(flake, x, 0);
+			
+			// add it to the list
+			flakes.add(flake);
 		}
-
 	}
 }

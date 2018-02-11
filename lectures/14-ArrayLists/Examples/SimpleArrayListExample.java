@@ -15,6 +15,7 @@ public class SimpleArrayListExample extends ConsoleProgram {
 		ArrayList<String> strList = new ArrayList<String>();
 		readList(strList);
 		printArrayList(strList);
+		printArrayList(strList);
 	}
 
 	private void readList(ArrayList<String> list) {
@@ -29,8 +30,8 @@ public class SimpleArrayListExample extends ConsoleProgram {
 
 	private void printArrayList(ArrayList<String> list) {
 		println("List contains "  + list.size() + " elements");
-		for(int i = 0; i < list.size(); i++) {
-			println(list.get(i));
+		for(String str : list) {
+			println(str);
 		}
 	}
 
