@@ -26,6 +26,8 @@ public class CountLetterFrequencies extends ConsoleProgram {
 	/* Counts the letter frequencies in a line of text */
 	private void countLetterFrequencies(String line) {
 		// TODO: this is your job.
+		int x = 5;
+		char r = (char)(x + 'a');
 	}
 
 	/* Initializes the frequency table to contain zeros */
