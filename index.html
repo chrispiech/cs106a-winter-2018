@@ -61,8 +61,8 @@
             <li><a href="//web.stanford.edu/class/cs106a/lectures/12-TextProcessing">12 TextProcessing</a></li>
             <li><a href="//web.stanford.edu/class/cs106a/lectures/13-Files">13 FileReading</a></li>
             <li><a href="//web.stanford.edu/class/cs106a/lectures/14-ArrayLists">14 ArrayLists</a></li>
-            <li><a href="//web.stanford.edu/class/cs106a/lectures/15-Arrays">15-Arrays</a></li>
-            <li><a href="//web.stanford.edu/class/cs106a/lectures/16-Matrix">16-Matrix</a></li>
+            <li><a href="//web.stanford.edu/class/cs106a/lectures/15-Arrays">15 Arrays</a></li>
+            <li><a href="//web.stanford.edu/class/cs106a/lectures/16-Matrix">16 Matrix</a></li>
             <!--<li><a href="//web.stanford.edu/class/cs106a/lectures/17-HashMaps">17-HashMaps</a></li>
             <li><a href="//web.stanford.edu/class/cs106a/lectures/18-Interactors">18-Interactors</a></li>
             <li><a href="//web.stanford.edu/class/cs106a/lectures/19-Classes1">19-Classes-1</a></li>
@@ -94,6 +94,7 @@
             <li><a href="//web.stanford.edu/class/cs106a/handouts/15 - Exam Strategies.pdf">15 Exam Strategies</a></li>
             <li><a href="//web.stanford.edu/class/cs106a/handouts/16 - ArrayList.pdf">16 ArrayLists for Hangman</a></li>
             <li><a href="//web.stanford.edu/class/cs106a/handouts/17 - More Midterm Solutions.pdf">17 More Midterm Solutions</a></li>
+            <li><a href="//web.stanford.edu/class/cs106a/handouts/18 - Assignment 5.pdf">18 Assignment 5</a></li>
            <!-- <li><a href="//web.stanford.edu/class/cs106a/handouts/16 - Coding Style.pdf">16-Coding Style</a></li>
             <li><a href="//web.stanford.edu/class/cs106a/handouts/17 - Variables.pdf">17-Variables</a></li>
             <li><a href="//web.stanford.edu/class/cs106a/handouts/18 - Ufo Game.pdf">18-Ufo Game</a></li>
@@ -117,11 +118,11 @@
            
             <li><a href="https://goo.gl/forms/RjR4u0kIKY1uBQfq2">0 Who are you</a></li>
             <li><a href="//web.stanford.edu/class/cs106a/assn/karel.html">1 Karel</a></li>
-            <li><a href="//web.stanford.edu/class/cs106a/assn/simpleJava.html">2 Simple Java</a></li>
+            <li><a href="//web.stanford.edu/class/cs106a/assn/simpleJava.html">2 SimpleJava</a></li>
             <li><a href="//web.stanford.edu/class/cs106a/assn/breakout.html">3 Breakout</a></li>
             <li><a href="//web.stanford.edu/class/cs106a/assn/hangman.html">4 Hangman</a></li>
-            <!--<li><a href="//web.stanford.edu/class/cs106a/assn/yahtzee.html">5-Yahtzee</a></li>
-            <li><a href="//web.stanford.edu/class/cs106a/assn/nameSurfer.html">6-NameSurfer</a></li>-->
+            <li><a href="//web.stanford.edu/class/cs106a/assn/imageshop.html">5 ImageShop</a></li>
+            <!--<li><a href="//web.stanford.edu/class/cs106a/assn/nameSurfer.html">6-NameSurfer</a></li>-->
             
             <li class="divider"></li>
             <li><a href="//web.stanford.edu/class/cs106a/assn/style.html">Style Guide</a></li>
@@ -353,6 +354,10 @@ materials.
     </div>-->
 
     <div class="well well-sm" style="margin-bottom:10px">
+        <a href="//web.stanford.edu/class/cs106a/assn/imageshop.html">Assn 5: ImageShop</a> 
+    </div>
+
+    <div class="well well-sm" style="margin-bottom:10px">
         <a href="//web.stanford.edu/class/cs106a/assn/hangman.html">Assn 4: Hangman</a> 
     </div>
 
@@ -544,83 +549,22 @@ materials.
     <p class="subtleHeading">OLD ANNOUNCEMENTS</p>
 </div>
 
-<div class="well">
-    <div class="newsfeedHeader">
-        <div class="newsfeedTitle">Assignment 5: Yahtzee</div>
-        <div class="moment">2017021710</div>
-    </div>
-
-    <p>
-          In your fifth assignment you will program the classic game of Yahtzee! See the <a href="//web.stanford.edu/class/cs106a/assn/yahtzee.html">assignment page</a> for the handout and starter code.  <strong>Assignment 5 YEAH hours will be Tuesday 2/21, 7:30-9PM in Bishop Auditorium </strong> (in Lathrop Library).   As a reminder, YEAH hours, or  “Your Early Assignment Help” hours, are optional sessions meant to provide additional help getting started with each assignment.  We hope to see you there!
-    </p>
-
-    <p>
-        <img style="width:100%" src="//web.stanford.edu/class/cs106a/img/assn/yahtzee.png"></img>
-    </p>
-</div>
-
-<div class="well">
-    <div class="newsfeedHeader">
-        <div class="newsfeedTitle">Assignment 4 Correction</div>
-        <div class="moment">2017021616</div>
-    </div>
-
-    <p>
-          We found a small bug when running the Hangman starter code on Windows machines.  Specifically, due to the way Windows displays Eclipse programs, the height of the screen is 20 less than when running on a Mac.  For this reason, the constant Y value given for the incorrect guesses label (<code>INCORRECT_GUESSES_Y</code>) is off-screen.
-
-          <br />
-
-          To resolve this issue (for consistency, every student please do this, Mac or PC), <strong>PLEASE CHANGE <code>INCORRECT GUESSES_Y</code> and <code>PARTIALLY_GUESSED_Y</code> to the following:</strong>
-
-          <br />
-          <br />
-
-          <code>  
-          /* The y-location to display the partially guessed string */
-          <br />
-          private static final int PARTIALLY_GUESSED_Y = 430;
-          <br />
-          /* The y-location to display the incorrectly guessed letters */
-          <br />
-          private static final int INCORRECT_GUESSES_Y = 460;
-          </code>
-
-          <br />
-          <br />
-
-          The starter code on the website has also been updated to reflect this change.
-
-          We apologize for the last-minute change; if you do not make the above change, you will not be penalized if your incorrect guesses label is offscreen, as long as you are positioning it correctly.  But the above change may help ensure that your calculations are correct.
-    </p>
-</div>
-
- 
-
-<div class="well">
-    <div class="newsfeedHeader">
-        <div class="newsfeedTitle">UPDATED [x3]: Midterm Exam</div>
-        <div class="moment">2017021121</div>
-    </div>
-
-    <p>
-            To give you resources to help prepare for the midterm, we have posted <a href="//web.stanford.edu/class/cs106a/handouts/21%20-%20Practice%20Midterm.pdf">practice midterm</a> and <a href="//web.stanford.edu/class/cs106a//handouts/22%20-%20Exam%20Strategies.pdf">exam strategies</a> handouts.  We recommend taking the practice midterm under similar conditions to the regular exam.  Solutions to the practice midterm have also been posted.  As a reminder, the midterm exam is <strong>Monday 2/13 7-9PM and is open book, open notes, closed-electronic-device.</strong>  It will cover everything through lecture on 2/8 except for file-reading.  <strong>UPDATED:</strong> Notably, you will <strong>not be required to write imports</strong> on the exam.
-            <br />
-            <br />
-
-             <strong>UPDATED:</strong> We held a midterm review session <strong> Sat. 2/11 4-6PM</strong> in Bishop Auditorium.  We went over class concepts that may appear on the midterm, and additional practice problems.  The slides are available <a href="//web.stanford.edu/class/cs106a/lectures/106AMidtermReviewSession.pdf">here</a>.  Due to technical troubles, unfortunately we were only able to capture the audio from the session, which is available on the lecture videos page.
-
-             <br />
-             <br />
-             <strong>UPDATED:</strong> The midterm exam will take place in <strong>Memorial Auditorium:</strong>
-             <div class="mapOverlay" onClick="style.pointerEvents='none'"></div>
-             <div class="google-maps">
-                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3168.342165229091!2d-122.1686374846748!3d37.429020879823916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fbad6282cb75f%3A0x414fc29202fde37f!2sStanford+Memorial+Auditorium!5e0!3m2!1sen!2sus!4v1486712578451" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-
-             </div>
-    </p>
-</div>
-
 -->
+
+<div class="well">
+    <div class="newsfeedHeader">
+        <div class="newsfeedTitle">Assignment 5: ImageShop</div>
+        <div class="moment">2018021612</div>
+    </div>
+
+    <p>
+          For your fifth assignment, you will implement the algorithms for an image editing program. This assignment will give you practice with concepts like 1D arrays, 2D arrays, and image manipulation. Checkout the <a href="//web.stanford.edu/class/cs106a/assn/imageshop.html">assignment page</a> and make sure to get started early!
+    </p>
+
+    <p>
+        <img style="width:100%" src="//web.stanford.edu/class/cs106a/img/assn/imageshop.png"></img>
+    </p>
+</div>
 
 
 
