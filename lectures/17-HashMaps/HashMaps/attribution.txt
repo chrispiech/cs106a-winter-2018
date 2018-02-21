@@ -1,0 +1,3 @@
+Sound files are modified from those at http://theremin.music.uiowa.edu/
+XKCD color files are based on the data from http://xkcd.com/color/colorsurvey.tar.gz (CAREFUL: NSFW!)
+US cities data from http://www.census.gov/geo/www/gazetteer/places2k.html
