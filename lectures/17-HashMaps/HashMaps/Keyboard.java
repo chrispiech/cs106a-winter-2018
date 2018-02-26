@@ -21,9 +21,19 @@ public class Keyboard extends GraphicsProgram {
 	/* The file containing the keyboard layout. */
 	private static final String KEYBOARD_FILE = "keyboardC.txt";
 	
+	
+	/* the mainframe database */
+	private HashMap<GRect, AudioClip> pianoKeyMap = new HashMap<GRect, AudioClip>();
 
 	public void run() {
 		loadKeyboard();
+		addMouseListeners();
+	}
+	
+	public void mousePressed(MouseEvent e) {
+		GObject clicked = getElementAt(e.getX(), e.getY());
+		AudioClip clip = pianoKeyMap.get(clicked);
+		clip.play();
 	}
 
 	private void loadKeyboard() {
@@ -42,30 +52,24 @@ public class Keyboard extends GraphicsProgram {
 				String keyBinding = scanner.readLine();
 				if (keyBinding == null) break;
 				
-				// Make a GRect to display the note's key
-				GRect key = new GRect(Double.parseDouble(x),
+				// This is the body of the file reading for loop
+				// 1. Make a GRect to display the note's key
+				GRect pianoKeyRect = new GRect(Double.parseDouble(x),
 						Double.parseDouble(y),
 						Double.parseDouble(width),
 						Double.parseDouble(height));
 				// Some keys are filled #musictheory
 				if (isWhiteKey.equals("false")) {
-					key.setFilled(true);
+					pianoKeyRect.setFilled(true);
 				}
 				// Adds the key to the screen
-				add(key); 
+				add(pianoKeyRect); 
 				
-				// Load the audioclip file for the key
+				// 2. Load the audioclip file for the key
 				AudioClip sound = MediaTools.loadAudioClip(noteName);
 				
-				/*
-				 *  TODO: Your code here
-				 *  --------------
-				 *  At this point you have:
-				 *  GRect key
-				 *  AudioClip sound
-				 *  And you need to store them in a way that will allow
-				 *  you to play the sound when a key is pressed.
-				 */
+				pianoKeyMap.put(pianoKeyRect, sound);
+				
 				
 			}
 			scanner.close();			

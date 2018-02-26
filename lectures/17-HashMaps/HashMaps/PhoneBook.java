@@ -17,6 +17,8 @@ public class PhoneBook extends ConsoleProgram {
 		phoneBook.put("Chris", 8666586);
 		phoneBook.put("Waddie", 6701679);
 		phoneBook.put("Jenny", 8675309);
+		phoneBook.put("Julia", 1238888);
+		phoneBook.put("Brahm", 2345678);
 		
 		// Run a loop which allows the user to interact with
 		// the database
@@ -48,10 +50,14 @@ public class PhoneBook extends ConsoleProgram {
 
 	// Ask the user for the name, and look up the corresponding phone #
 	private void lookup(HashMap<String, Integer> phoneBook) {
+		// get a key from the user
 		String key = readLine("Key: ");
+		
+		// if the key is in the map, look it up
 		if(!phoneBook.containsKey(key)) {
 			println("Sorry but there is no number for " + key);
 		} else {
+			// does a normal lookup into the phoneook
 			int phoneNumber = phoneBook.get(key);
 			println(key + ": " + phoneNumber);
 		}
@@ -59,16 +65,33 @@ public class PhoneBook extends ConsoleProgram {
 
 	// Adds a new key/value pair to the hashmap
 	private void addToMap(HashMap<String, Integer> phoneBook) {
+		// get a key and a value from the user
 		String key = readLine("Key: ");
 		int phoneNumber = readInt("Phone number: " );
+		
+		// add the key/value to the map
 		phoneBook.put(key, phoneNumber);
 		println("Added " + key);
 	}
 
 	// Print out all key value pairs
 	private void printMap(HashMap<String, Integer> phoneBook) {
+		// get keys one at a time
+		for(String key : phoneBook.keySet()) {
+			// TODO: fill this in
+			
+			// 1. Get the value associate with the current key
+			int value = phoneBook.get(key);
+			
+			// 2. Print out the key value pair!!!!??!!!@#$
+			println(key + " is " + value);
+			
+			// At this point you have access to a variale called key
+			// key is going to take on each value in the phoneBook one
+			// at a time. So for example the first time key = "Brahm".
+			// The second time, key = "Chris"... etc
+		}
 		
-		// TODO: fill this in
 		
 	}
 	
