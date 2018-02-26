@@ -10,6 +10,8 @@ public class BouncingBalls extends GraphicsProgram {
 
 	private static final int DELAY = 3;
 		
+	ArrayList<Ball> balls = new ArrayList<Ball>();
+	
 	public void init() {
 		JButton ballButton = new JButton("Add ball");
 		add(ballButton, SOUTH);
@@ -17,11 +19,22 @@ public class BouncingBalls extends GraphicsProgram {
 	}
 	
 	public void run() {
-		// TODO: your code here
+		while(true) {
+			animateBalls();
+			pause(DELAY);
+		}
+	}
+	
+	private void animateBalls() {
+		for(Ball ball : balls) {
+			ball.heartbeat(getWidth(), getHeight());
+		}
 	}
 	
 	public void actionPerformed(ActionEvent e) {
-		// TODO: your code here
+		Ball newBall = new Ball(getWidth(), getHeight());
+		balls.add(newBall);
+		add(newBall.getGOval());
 	}
 
 }

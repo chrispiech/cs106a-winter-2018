@@ -17,9 +17,13 @@ public class Ball {
 		RandomGenerator rg = RandomGenerator.getInstance();
 		double x = rg.nextInt(screenWidth - BALL_SIZE);
 		double y = rg.nextInt(screenHeight - BALL_SIZE);
+		
+		// make the ball's circle
 		this.circle = new GOval(x, y, BALL_SIZE, BALL_SIZE);
 		this.circle.setFilled(true);
 		this.circle.setColor(Color.BLUE);
+		
+		// gets a random dx and a random dy
 		this.dx = getRandomSpeed();
 		this.dy = getRandomSpeed();
 	}
