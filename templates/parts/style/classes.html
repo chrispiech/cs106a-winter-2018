@@ -1,0 +1,71 @@
+<dl>
+	<!-- Private ivars -->
+	<dt>
+		Private Instance Variables
+	</dt>
+	<dd>
+		<p>Properly encapsulate your objects by making any instance variables in your class <code>private</code>.</p>
+		<pre>
+public class Player {
+	<em>private</em> int numberOfLives;
+	...
+}
+</pre>
+	</dd>
+
+	<!-- ivars -->
+	<dt>
+		Avoid Unnecessary Instance Variables
+	</dt>
+	<dd>
+		<p>Use instance variables only when they are required to implement certain functionality, or if it makes sense for that variable to persist outside of any given method.  Don't use them to store temporary values used in only a single call to one method, for instance; use them to store important data of your objects.</p>
+	</dd>
+
+	<!-- Empty constructors -->
+	<dt>
+		Avoid Empty Zero-Argument Constructors
+	</dt>
+	<dd>
+		<p>If you don't need to do anything to initialize your object, just omit the constructor.</p>
+		<pre>
+public class Player {
+	...
+	<del>public Player() {}</del>
+}			
+</pre>
+	</dd>
+
+	<!-- Helper methods -->
+	<dt>
+		Helper or Internal Methods
+	</dt>
+	<dd>
+		<p>If you add a method to a class that is not part of the homework spec, or that is an internal helper method, make it <code>private</code> so that other external code cannot call it.</p>
+		<pre>
+public class Player {
+	...
+	<em>private</em> double computeScoreHelper() {
+		...
+	}
+}
+</pre>
+	</dd>
+
+	<!-- Instance vs. static -->
+	<dt>
+		Instance vs. Static
+	</dt>
+	<dd>
+		<p>A static variable in a class is a single occurrence shared by that class and all of its objects.  An instance variable is one that each object has its own copy of.  When designing your class, any data that should be unique to each object should be an instance variable.  This still holds even if the assignment only happens to construct one instance of your class.</p>
+		<pre>
+public class Player {
+	<del>private static int numberOfLives;</del>  <span class="code-comment"></span>// all players share one life count (bad)
+	private int numberOfLives; <span class="code-comment"></span> // each player has their own life count (good)
+
+	public Player() {
+		<em>numberOfLives = 10;</em>
+	}
+}
+</pre>
+	</dd>
+</dl>
