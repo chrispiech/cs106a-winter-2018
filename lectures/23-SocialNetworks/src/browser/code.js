@@ -1,6 +1,6 @@
 var msgIndex = 0
 var username = ""
-var HOST = "http://localhost:8080/"
+var HOST = "http://5e3e3cb9.ngrok.io/"
 
 function getMessageHtml(msg) {
 	var html = ''
