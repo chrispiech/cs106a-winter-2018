@@ -5,6 +5,9 @@
  * management system.
  */
 
+import java.util.ArrayList;
+import java.util.List;
+
 import acm.program.*;
 
 public class ChatServer extends ConsoleProgram implements SimpleServerListener {
@@ -45,14 +48,25 @@ public class ChatServer extends ConsoleProgram implements SimpleServerListener {
 		return result;	
 	}
 
+	// ever growin list of messages
+	private ArrayList<String> allMessages = new ArrayList<String>();
+	
 	// respond to a "getMsgs" command
 	private String getMessages(Request request) {
-		return "";
+		
+		int index = Integer.parseInt(request.getParam("index"));
+		List<String> sub = allMessages.subList(index, allMessages.size());
+		
+		return sub.toString();
 	}
 
 	// respond to a "newMsg" command
 	private String addMessage(Request request) {
-		return "";
+		String newMessage = request.getParam("msg");
+		
+		allMessages.add(newMessage);
+		
+		return "success";
 	}
 
 
