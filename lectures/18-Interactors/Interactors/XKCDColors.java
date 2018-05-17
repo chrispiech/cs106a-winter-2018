@@ -27,27 +27,11 @@ public class XKCDColors extends GraphicsProgram {
 	
 	/* Sets up interactors. */
 	public void init() {	
-		//colorMap = loadXKCDColors();
 		
-		/* Pressing Enter in the text box sends a "Graph" action */
-		colorInput.addActionListener(this);
-		colorInput.setActionCommand("Graph");
-		add(colorInput, SOUTH);
-		
-		JButton graphButton = new JButton("Graph");
-		add(graphButton, SOUTH);
-		
-		JButton clearButton = new JButton("Clear");
-		add(clearButton, SOUTH);
-		
-		addActionListeners();
 	}
 	
 	/* Handles user action */
-	public void actionPerformed(ActionEvent e) {
-		
-		// TODO: Handle Graph and Clear actions
-		
+	public void actionPerformed(ActionEvent e) {	
 	}
 	
 	public void run() {
